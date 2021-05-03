@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miss覓食</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./style6.css">
+    <!-- top view -->
+    <link rel="shortcut icon" href="./img/Miss 覓食 logo.png">
+    <link rel="bookmark" href="./img/Miss 覓食 logo.png">
+    <!-- reset web -->
+    <link rel="resetcss" href="./reset.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.Bootstrapcdn.com/Bootstrap/4.3.1/css/Bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/a828d3f0db.js" crossorigin="anonymous"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #fef7e6;">
+    
+    <!-- header -->
+    <div class="header">
+        <!-- logo+文字 +購物車+登入-->
+        <div class="logo">
+            <img src="./img/Miss 覓食 logo.png" alt="Miss覓食">
+            <h1>
+                Miss覓食
+            </h1>
+            <a href="#">LOG IN</a>
+            <a href="./shopcart.html"><i class="fas fa-shopping-cart"></i></a>          
+            <!-- 搜尋框 -->
+            <div class="search">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+                <input class="searchbar" type="text" name="search" id="search" placeholder="我想要找...">
+            </div>
+        </div>
+
+        
+            <!-- 漢堡選單 -->
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id="menu">
+                        <a href="./index.html"><li>首頁</li></a>
+                        <a href="./neighbor.html"><li>鄰里共享</li></a>
+                        <a href="./recipe.html"><li>食譜社群</li></a>
+                        <a href="#"><li>個人介面</li></a>
+                        <a href="#"><li>登出</li></a>
+                    </ul>
+                </div>
+            </nav>
+    </div>
+    
+    <!-- 產品說明 -->
+    <div class="wrap">
+        <div class="item">
+            <div class="product-item">
+                <!-- 產品圖 -->
+                <img src="./img/liubov-ilchuk-HBAdcw7hRdY-unsplash.jpg" alt="">
+                <!-- 聊天室 -->
+                <button>聊天室</button>
+            </div>
+    
+            <div class="info">
+
+                <!-- 詳細說明 -->
+                <div class="info1">
+                    <h2>倩碧 - Superbalanced Silk Makeup SPF 15 粉底霜 #13</h2>
+                    <p>商品描述: 買錯色號，所以只用了一次，不小心放著就忘記用了</p>
+                    <p>商品效期: 1個月</p>
+                    <p>庫存數量: 1份</p>
+                    <p>距離: 480 公尺</p>
+
+                    <!-- 數量&價格 鈕-->
+                    <div class="pricebutton">
+                        <form id="myform" method="POST" action="#">
+                            <input type="button" value="-" class="qtyminus" field="quantity" />
+                            <input type="text" name="quantity" value="0" class="qty" />
+                            <input type="button" value="+" class="qtyplus" field="quantity" />
+                            <input type="text" name="price" value="$ 300" class="price">
+                        </form>
+                    </div>
+                </div>
+                <div class="heart">
+                    <a href="#"><i class="fas fa-heart fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 賣家資訊 -->
+    <div class="seller">
+        <div class="title">
+            <h3>賣家資訊</h3>
+        </div>
+        <div class="seller-info">
+            <img src="./img/1618757563954.jpg" alt="">
+            <h3>han</h3>
+        </div>
+        <div class="details">
+            <p>希望交易方式: 透過聊天室溝通</p>
+            <p>賣家評價: <span>4.5</span><span>/5.0</span></p>
+        </div>
+        <div class="tag">
+            <button>生活用品</button>
+            <button>9成新</button>
+            <button>新北市</button>
+        </div>
+    </div>
+
+    <!-- 賣家評價 -->
+    <div class="comment">
+        <div class="title">
+            <h3>賣家評價</h3>
+        </div>
+        <table>
+            <!-- 第一個評價 -->
+            <tr>
+                <td><img src="./img/1618757411207.jpg" alt="" class="user"></td>
+                <td>betty01</td>
+                <td><img src="./img/kelly-sikkema-KJ-us7cIsl0-unsplash.jpg" alt="" class="comment-item"></td>
+                <td>買了一顆來試試看，品質還保存得很好~</td>
+            </tr>
+            <tr>
+                <td>2021/03/22 12:34</td>
+                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <div class="nocomment">
+            <p>-沒有更多評論了-</p>
+        </div>
+    </div>
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+            <div class="col-xs-6 col-md-4">
+              <h6>關於我們</h6>
+              <ul>
+                <li>
+                    <a href="#"><i class="fas fa-utensils"></i> 關於Miss覓食</a>
+                </li>
+            </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-4">
+                <h6>與我們合作</h6>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fas fa-user-plus"></i> 廠商合作表單</a>
+                    </li>
+                </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-4">
+              <h6>聯絡我們</h6>
+              <ul>
+                <li>
+                    <a href="#"><i class="fas fa-phone-alt"></i> 電話:02-29012345</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-envelope"></i> 信箱:abc123@gmail.com</a>
+                </li>
+            </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-4">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fas fa-mobile-alt"></i> APP版</a>
+                        <a href="#"><img src="./img/381407_0.jpg" alt="APP QRcode"></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <br>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">&copy; copyright 2021 by Miss覓食.
+              </p>
+            </div>
+
+          </div>
+        </div>
+        </div>
+  </footer>
+
+  <!-- 返回頂端箭頭 -->
+  <div class="top">
+    <a href="#"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a>
+  </div>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-/* index */
+/* neighbor */
 * {
   margin: 0;
   padding: 0;
@@ -183,7 +183,7 @@
   padding-bottom: 8px;
   margin: 0;
   list-style: none;
-  margin-left: 15px;
+  margin-left: 80px;
 }
 .header nav li {
   list-style-type: none;
@@ -307,10 +307,18 @@
 .products .wrap .item a:hover {
   color: #67755c;
 }
+/* 產品價錢 */
 .products .wrap .item p {
   background-color: white;
   justify-content: center;
-  padding-bottom: 10px;
+}
+/* 產品距離 */
+.products .wrap .distance {
+  display: inline-flex;
+}
+.products .wrap .distance i {
+  width: 25px;
+  padding-top: 3px;
 }
 /* 產品愛心 */
 .products .wrap .heart {
