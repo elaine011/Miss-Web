@@ -221,6 +221,7 @@
 }
 .recipeall .wrap {
   border-bottom: 1px solid #000;
+  padding-top: 1rem;
 }
 .user {
   width: 15%;
@@ -246,14 +247,24 @@
 }
 .recipe-item h2 {
   margin-bottom: 10px;
+  color: #9A6363;
 }
 .recipe-item p {
   text-align: left;
   margin-bottom: 24px;
+  color: #67755C;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal; */顯示兩行
 }
 .recipe-icon i {
   padding: 0 5px;
   cursor: pointer;
+  color: #67755C;
 }
 .recipe-icon i:hover {
   color: red;
@@ -262,6 +273,7 @@
   text-align: right;
   margin-right: 1rem;
   margin-bottom: 1rem;
+  color: #67755c;
 }
 /* 頁碼 */
 ul.pagination {
