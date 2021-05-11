@@ -250,7 +250,10 @@ nav i {
 #footer {
   clear: both;
 }
-/*鄰里共享上架商品*/
+/*右側資料*/
+.content {
+  margin-bottom: 5rem;
+}
 div h2 {
   font-weight: 600;
   font-size: 2rem;
@@ -258,7 +261,7 @@ div h2 {
   margin: 50px 100px 0px 300px;
 }
 th {
-  background-color: white;
+  background-color: #ebdfc3;
   border-bottom: 1px solid #67755c;
   font-size: 1rem;
   padding: 25px;
@@ -266,155 +269,23 @@ th {
 td {
   background-color: white;
   border-bottom: 1px solid #67755c;
-  padding: 25px;
+  padding: 25px 25px 25px 25px;
+  text-align: center;
+}
+.checkbox {
+  margin-left: 102px;
+  box-shadow: 1px 2px 3px 0px rgb(0 0 0 / 42%);
+}
+.checkboxall {
+  margin-left: 102px;
+  margin-right: 10px;
+  box-shadow: 1px 2px 3px 0px rgb(0 0 0 / 42%);
 }
 table {
   width: 800px;
   border: 3px dotted #67755c;
   border-collapse: collapse;
   margin-top: 50px;
-}
-.goodsname {
-  width: 80%;
-  height: 30px;
-  color: #67755c;
-}
-.category {
-  width: 30%;
-  height: 30px;
-  color: #67755c;
-}
-.amount {
-  width: 30%;
-  height: 30px;
-  color: #67755c;
-}
-.price {
-  width: 30%;
-  height: 30px;
-  color: #67755c;
-  margin-left: 0px;
-}
-.money {
-  display: inline;
-  margin-right: 5px;
-}
-.picture {
-  width: 200px;
-  padding: 10px 10px;
-  font-size: 14px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 0px 0px 0px;
-}
-.picturetext {
-  color: black;
-  font-size: 12px;
-  display: inline;
-}
-.fa-map-marked-alt {
-  color: #67755c;
-  margin-left: 10px;
-}
-
-textarea {
-  width: 80%;
-  height: 300px;
-  color: #67755c;
-}
-
-.fa-eye-slash,
-.fa-eye {
-  float: right;
-}
-.fa-asterisk {
-  color: red;
-  font-size: 1rem;
-}
-
-/*下方按鈕*/
-.see {
-  width: 100px;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 20px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #67755c;
-  background-color: #ffe000;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px #67755c;
-  margin: 30px 50px 30px 160px;
-}
-
-.see:hover {
-  background-color: #ffe000;
-  color: white;
-}
-
-.see:active {
-  background-color: #ffe000;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-.cancel {
-  width: 100px;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 20px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #67755c;
-  background-color: #ffe000;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px #67755c;
-  margin: 30px 50px 30px 50px;
-}
-
-.cancel:hover {
-  background-color: #ffe000;
-  color: white;
-}
-
-.cancel:active {
-  background-color: #ffe000;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-.submit {
-  width: 100px;
-  display: inline-block;
-  padding: 10px 10px;
-  font-size: 20px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #67755c;
-  background-color: #ffe000;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px #67755c;
-  margin: 30px 100px 30px 50px;
-}
-
-.submit:hover {
-  background-color: #ffe000;
-  color: white;
-}
-
-.submit:active {
-  background-color: #ffe000;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
 }
 
 /* Site footer */

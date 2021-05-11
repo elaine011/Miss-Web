@@ -14,9 +14,15 @@
       <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./welfareneed.css"/>
-    
     <script src="https://kit.fontawesome.com/71e88eb3c1.js" crossorigin="anonymous"></script>
     
+<script type="text/javascript">
+    function check_all(obj,cName)
+    {
+        var checkboxs = document.getElementsByName(cName);
+        for(var i=0;i<checkboxs.length;i++){checkboxs[i].checked = obj.checked;}
+    }
+</script>
 </head>
 <body>
     <body bgcolor="#FEF7E6">
@@ -76,61 +82,39 @@
             <h2><i class="far fa-list-alt" style="margin-right: 0.5rem;"></i>受贈通知</h2>
         </div>
         <!--右側資料 -->
-        <div id="content">
+    <div id="content">
         <div class="content">
             <form action="" method="GET">
-            <table>
-            <tr>
-                <th><i class="fas fa-asterisk"></i>需求物資:</th>
-                <td><input class="goodsname" type="text" name="goodsname" value="" placeholder="限25字" maxlength="25" required></td>
-            </tr>
-            <tr>
-                <th><i class="fas fa-asterisk"></i>物資類別:</th>
-                <td><select class="category" name="category" id="category"placeholder="未分類" >
-                    <option value="life">生活用品</option>
-                    <option value="food">食品</option>
-                    <option value="healthyfood">健康食品</option>
-                    <option value="machine">保健器材</option>
-                    <option value="other">其他</option>
-                   </select>
-            </td>
-            </tr>
-            <tr>
-                <th><i class="fas fa-asterisk"></i>需求數量:</th>
-                <td>
-                    <input class="amount" type="number" name="amount" id="amount" value="" min="0" required/>    
-                </td>
-            </tr>
-            <tr>
-                <th>商品價格:</th>
-                <td>
-                    
-                    <p class="money">$</p><input class="price" type="number" name="price" id="price" value="" min="0" />    
-                </td>
-            </tr>
-            <tr>
-                <th>上傳圖片:</th>
-                <td>
-                    <input class="picture" id="pictre" type="file" name="picture" value="">
-                    <p class="picturetext">請上傳jpg.png檔，建議尺寸370*370，上傳前務必確認圖片是否清晰</p>
-                    <img id="demo" >
-                </td>
-                
-            </tr>
-                <th><i class="fas fa-asterisk"></i>需求用途:</th>
-                <td>
-                    <textarea class="description" placeholder="限200字" minlength="1" maxlength="200" rows="20" cols="50" required ></textarea>
-                </td>
-                
-            </tr>
-        <!--下方按鈕-->
-            </table>
-            <input class="see" type="button" value="預覽">
-            <input class="cancel" type="reset" value="取消">
-            <input class="submit" type="submit" value="刊登需求">
-        </form>
+                <table>
+                    <tr>
+                        <th>需求商品</th>
+                        <th>需求數量</th>
+                        <th>目前受贈數量</th>
+                    </tr>
+                    <tr>
+                        <td>衛生紙</td>
+                        <td>50包</td>
+                        <td>20包</td>
+                    </tr>
+                    <tr>
+                        <td>牙膏</td>
+                        <td>15條</td>
+                        <td>15條</td>
+                    </tr>
+                    <tr>
+                        <td>沐浴乳</td>
+                        <td>8罐</td>
+                        <td>1罐</td>
+                    </tr>
+                    <tr>
+                        <td>洗髮精</td>
+                        <td>8罐</td>
+                        <td>4罐</td>
+                    </tr>
+                </table>
+            </form>
         </div>
-</div>
+    </div>
 <!--footer-->
 <div id="footer">
     <footer class="site-footer">
