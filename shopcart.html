@@ -19,6 +19,14 @@
      <!-- google font -->
      <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+        function check_all(obj,cName)
+        {
+            var checkboxs = document.getElementsByName(cName);
+            for(var i=0;i<checkboxs.length;i++){checkboxs[i].checked = obj.checked;}
+        }
+    </script>
 </head>
 <body style="background-color: #fef7e6;">
 
@@ -39,24 +47,24 @@
             </div>
         </div>
 
-        
-            <!-- 漢堡選單 -->
-            <nav role="navigation">
-                <div id="menuToggle">
-                    <input type="checkbox" />
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <!-- 漢堡選單 -->
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
 
-                    <ul id="menu">
-                        <a href="./index.html"><li>首頁</li></a>
-                        <a href="./neighbor.html"><li>鄰里共享</li></a>
-                        <a href="./recipe.html"><li>食譜社群</li></a>
-                        <a href="#"><li>個人介面</li></a>
-                        <a href="#"><li>登出</li></a>
-                    </ul>
-                </div>
-            </nav>
+                <ul id="menu">
+                    <a href="./index.html"><li>首頁</li></a>
+                    <a href="./neighbor.html"><li>鄰里共享</li></a>
+                    <a href="./recipe.html"><li>食譜社群</li></a>
+                    <a href="#"><li>個人介面</li></a>
+                    <a href="#"><li>登出</li></a>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
 
         <div id="app">
@@ -64,70 +72,73 @@
                 <!-- 標題欄位 -->
                 <div class="item_header">
                     <div class="check">
-                        <input type="checkbox" id="check" name="check1" value="all"></div>
+                        <input type="checkbox" id="check" name="all" value="all" onclick="check_all(this,'c')"></div>
                     <div class="item_detail">商品</div>
                     <div class="count">數量</div> 
                     <div class="price">單價</div>
                     <div class="operate">編輯</div>
                 </div>
-                <!-- 購物車內容 1 -->
-                <div class="item_header item_body">
-                    <div>
-                        <input type="checkbox"id="check" name="check2" value="item1">
+                
+                <div class="item-container" >
+                    <!-- 購物車內容 1 -->
+                    <div class="item_header item_body">
+                        <div>
+                            <input type="checkbox"id="check" name="c" value="item1">
+                        </div>
+                        <div class="item_detail">
+                            <img src="./img/logan-weaver-i9TXlc52aeg-unsplash.jpg" alt="">
+                            <div class="name">Murdock Lodon Bread Shampoo 250ML</div>
+                        </div>
+            
+                        <div class="count">
+                            <button>-</button>
+                            1
+                            <button>+</button>
+                        </div> 
+                        <div class="price"><span>$</span>500</div>
+                        <div class="operate">
+                            <button>刪除</button>
+                        </div>
                     </div>
-                    <div class="item_detail">
-                        <img src="./img/logan-weaver-i9TXlc52aeg-unsplash.jpg" alt="">
-                        <div class="name">Murdock Lodon Bread Shampoo 250ML</div>
+                    <!-- 購物車內容 2 -->
+                    <div class="item_header item_body">
+                        <div>
+                            <input type="checkbox" id="check" name="c" value="item1">
+                        </div>
+                        <div class="item_detail">
+                            <img src="./img/theme-inn-yi1YB_FubH8-unsplash.jpg" alt="">
+                            <div class="name">橘子</div>
+                        </div>
+            
+                        <div class="count">
+                            <button>-</button>
+                            1
+                            <button>+</button>
+                        </div> 
+                        <div class="price"><span>$</span>5</div>
+                        <div class="operate">
+                            <button>刪除</button>
+                        </div>
                     </div>
-        
-                    <div class="count">
-                        <button>-</button>
-                        1
-                        <button>+</button>
-                    </div> 
-                    <div class="price"><span>$</span>500</div>
-                    <div class="operate">
-                        <button>刪除</button>
-                    </div>
-                </div>
-                <!-- 購物車內容 2 -->
-                <div class="item_header item_body">
-                    <div>
-                        <input type="checkbox"id="check" name="check2" value="item1">
-                    </div>
-                    <div class="item_detail">
-                        <img src="./img/theme-inn-yi1YB_FubH8-unsplash.jpg" alt="">
-                        <div class="name">橘子</div>
-                    </div>
-        
-                    <div class="count">
-                        <button>-</button>
-                        1
-                        <button>+</button>
-                    </div> 
-                    <div class="price"><span>$</span>5</div>
-                    <div class="operate">
-                        <button>刪除</button>
-                    </div>
-                </div>
-                <!-- 購物車內容 3 -->
-                <div class="item_header item_body">
-                    <div>
-                        <input type="checkbox"id="check" name="check2" value="item1">
-                    </div>
-                    <div class="item_detail">
-                        <img src="./img/eefc194cecc1c03804ea590934a8e9c0.jfif" alt="">
-                        <div class="name">舒跑鋁箔包裝</div>
-                    </div>
-        
-                    <div class="count">
-                        <button>-</button>
-                        1
-                        <button>+</button>
-                    </div> 
-                    <div class="price"><span>$</span>8</div>
-                    <div class="operate">
-                        <button>刪除</button>
+                    <!-- 購物車內容 3 -->
+                    <div class="item_header item_body">
+                        <div>
+                            <input type="checkbox"id="check" name="c" value="item1">
+                        </div>
+                        <div class="item_detail">
+                            <img src="./img/eefc194cecc1c03804ea590934a8e9c0.jfif" alt="">
+                            <div class="name">舒跑鋁箔包裝</div>
+                        </div>
+            
+                        <div class="count">
+                            <button>-</button>
+                            1
+                            <button>+</button>
+                        </div> 
+                        <div class="price"><span>$</span>8</div>
+                        <div class="operate">
+                            <button>刪除</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,7 +153,7 @@
             </div>
         </div>
 
-        <!-- Site footer -->
+    <!-- Site footer -->
     <footer class="site-footer">
         <div class="container">
             <div class="row">
