@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miss覓食</title>
+    <!-- vue -->
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="./shopcart.css">
     <!-- top view -->
@@ -19,14 +21,7 @@
      <!-- google font -->
      <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
-
-    <script type="text/javascript">
-        function check_all(obj,cName)
-        {
-            var checkboxs = document.getElementsByName(cName);
-            for(var i=0;i<checkboxs.length;i++){checkboxs[i].checked = obj.checked;}
-        }
-    </script>
+    
 </head>
 <body style="background-color: #fef7e6;">
 
@@ -66,155 +61,115 @@
         </nav>
     </div>
 
-
-        <div id="app">
-            <div class="container">
-                <!-- 標題欄位 -->
-                <div class="item_header">
-                    <div class="check">
-                        <input type="checkbox" id="check" name="all" value="all" onclick="check_all(this,'c')"></div>
-                    <div class="item_detail">商品</div>
-                    <div class="count">數量</div> 
-                    <div class="price">單價</div>
-                    <div class="operate">編輯</div>
-                </div>
-                
-                <div class="item-container" >
-                    <!-- 購物車內容 1 -->
-                    <div class="item_header item_body">
-                        <div>
-                            <input type="checkbox"id="check" name="c" value="item1">
-                        </div>
-                        <div class="item_detail">
-                            <img src="./img/logan-weaver-i9TXlc52aeg-unsplash.jpg" alt="">
-                            <div class="name">Murdock Lodon Bread Shampoo 250ML</div>
-                        </div>
-            
-                        <div class="count">
-                            <button>-</button>
-                            1
-                            <button>+</button>
-                        </div> 
-                        <div class="price"><span>$</span>500</div>
-                        <div class="operate">
-                            <button>刪除</button>
-                        </div>
-                    </div>
-                    <!-- 購物車內容 2 -->
-                    <div class="item_header item_body">
-                        <div>
-                            <input type="checkbox" id="check" name="c" value="item1">
-                        </div>
-                        <div class="item_detail">
-                            <img src="./img/theme-inn-yi1YB_FubH8-unsplash.jpg" alt="">
-                            <div class="name">橘子</div>
-                        </div>
-            
-                        <div class="count">
-                            <button>-</button>
-                            1
-                            <button>+</button>
-                        </div> 
-                        <div class="price"><span>$</span>5</div>
-                        <div class="operate">
-                            <button>刪除</button>
-                        </div>
-                    </div>
-                    <!-- 購物車內容 3 -->
-                    <div class="item_header item_body">
-                        <div>
-                            <input type="checkbox"id="check" name="c" value="item1">
-                        </div>
-                        <div class="item_detail">
-                            <img src="./img/eefc194cecc1c03804ea590934a8e9c0.jfif" alt="">
-                            <div class="name">舒跑鋁箔包裝</div>
-                        </div>
-            
-                        <div class="count">
-                            <button>-</button>
-                            1
-                            <button>+</button>
-                        </div> 
-                        <div class="price"><span>$</span>8</div>
-                        <div class="operate">
-                            <button>刪除</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 總計&結帳 -->
-        <div class="checkout">
-            <div class="price">總計:</div>
-            <div class="totalprice"><span>$</span>0</div>
-            <div class="button">
-                <button><a href="./checkout.html">去結帳</a></button>
-            </div>
-        </div>
-
-    <!-- Site footer -->
-    <footer class="site-footer">
+    <div id="app">
         <div class="container">
-            <div class="row">
-            <div class="col-xs-6 col-md-4">
-              <h6>關於我們</h6>
-              <ul>
+            <div class="item_header">
+                <div class="checkbox">
+                    <input type="checkbox" id="check" name="all" value="all" onclick="check_all(this,'c')">
+                </div>
+                <div class="item_detail">商品</div>
+                <div class="price">單價</div>
+                <div class="count">數量</div> 
+                <div class="amount">總計</div>
+                <div class="operate">操作</div>
+            </div>
+            <div class="item_container" v-for="(item, index) in itemList" :key="item.id" >
+                    <div class="item_header item_body">
+                            <div class="checkboxall">
+                                <input type="checkbox"id="check" name="c" value="item1">
+                            </div>
+                            <div class="item_detail">
+                                <img v-bind:src="item.imgUrl" alt="">
+                                <div class="name">{{item.itemName}}</div>
+                            </div>
+                            
+                            <div class="price"><span>$</span>{{item.price}}</div>
+                            <div class="count">
+                                <button @click="handleSub(item)">-</button>
+                                {{item.count}}
+                                <button @click="handlePlus(item)">+</button>
+                            </div> 
+                            <div class="amount">{{item.price * item.count}}</div>
+                            <div class="operate">
+                                <button @click="handledelete(index)">刪除</button>
+                            </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 總計&結帳 -->
+    <div class="checkout">
+        <div class="price">總計:</div>
+        <div class="totalprice"><span>$</span>{{totalPrice}}</div>
+        <div class="button">
+            <button><a href="./checkout.html">去結帳</a></button>
+        </div>
+    </div>
+
+<!-- Site footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+        <div class="col-xs-6 col-md-4">
+          <h6>關於我們</h6>
+          <ul>
+            <li>
+                <a href="./aboutus.html"><i class="fas fa-utensils"></i> 關於Miss覓食</a>
+            </li>
+        </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-4">
+            <h6>與我們合作</h6>
+            <ul>
                 <li>
-                    <a href="./aboutus.html"><i class="fas fa-utensils"></i> 關於Miss覓食</a>
+                    <a href="#"><i class="fas fa-user-plus"></i> 廠商合作表單</a>
                 </li>
             </ul>
-            </div>
-  
-            <div class="col-xs-6 col-md-4">
-                <h6>與我們合作</h6>
-                <ul>
-                    <li>
-                        <a href="#"><i class="fas fa-user-plus"></i> 廠商合作表單</a>
-                    </li>
-                </ul>
-            </div>
-  
-            <div class="col-xs-6 col-md-4">
-              <h6>聯絡我們</h6>
-              <ul>
+        </div>
+
+        <div class="col-xs-6 col-md-4">
+          <h6>聯絡我們</h6>
+          <ul>
+            <li>
+                <a href="#"><i class="fas fa-phone-alt"></i> 電話:02-29012345</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-envelope"></i> 信箱:abc123@gmail.com</a>
+            </li>
+        </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-4">
+            <ul>
                 <li>
-                    <a href="#"><i class="fas fa-phone-alt"></i> 電話:02-29012345</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-envelope"></i> 信箱:abc123@gmail.com</a>
+                    <a href="#"><i class="fas fa-mobile-alt"></i> APP版</a>
+                    <a href="#"><img src="./img/381407_0.jpg" alt="APP QRcode"></a>
                 </li>
             </ul>
-            </div>
-
-            <div class="col-xs-6 col-md-4">
-                <ul>
-                    <li>
-                        <a href="#"><i class="fas fa-mobile-alt"></i> APP版</a>
-                        <a href="#"><img src="./img/381407_0.jpg" alt="APP QRcode"></a>
-                    </li>
-                </ul>
-            </div>
-
         </div>
-        <br>
-        <hr>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class="copyright-text">&copy; copyright 2021 by Miss覓食.
-              </p>
-            </div>
 
-          </div>
+    </div>
+    <br>
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">&copy; copyright 2021 by Miss覓食.
+          </p>
         </div>
-        </div>
-  </footer>
 
-  <!-- 返回頂端箭頭 -->
-  <div class="top">
-    <a href="#"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a>
-  </div>
+      </div>
+    </div>
+    </div>
+</footer>
+
+<!-- 返回頂端箭頭 -->
+<div class="top">
+<a href="#"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a>
+</div>
 
 </body>
+<script src="shopcart.js"></script>
 </html>

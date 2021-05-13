@@ -186,10 +186,12 @@
   color: #67755c;
   line-height: 30px;
 }
+.container input {
+  margin-left: 40px;
+}
 /* 商品欄位 */
 .item_header .item_detail {
   width: 50%;
-  margin-left: -120px;
 }
 /* 購物車內容 */
 .item_body {
@@ -204,6 +206,11 @@
   background: #f8f8f8;
   border: 0px;
   padding: 2px 5px;
+}
+/* 商品數量 */
+.item_body .count input {
+  text-align: center;
+  width: 20px;
 }
 /* 刪除鈕 */
 .item_body .operate button {
