@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miss覓食</title>
     <!-- css -->
-    <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="../css/neighborProduct.css">
     <!-- top view -->
-    <link rel="shortcut icon" href="./img/Miss 覓食 logo.png">
-    <link rel="bookmark" href="./img/Miss 覓食 logo.png">
+    <link rel="shortcut icon" href="../img/Miss 覓食 logo.png">
+    <link rel="bookmark" href="../img/Miss 覓食 logo.png">
     <!-- reset web -->
-    <link rel="resetcss" href="./reset.css">
+    <link rel="resetcss" href="../css/reset.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.Bootstrapcdn.com/Bootstrap/4.3.1/css/Bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Font awesome -->
@@ -26,11 +26,11 @@
     <div class="header">
         <!-- logo+文字 +購物車+登入-->
         <div class="logo">
-            <img src="./img/Miss 覓食 logo.png" alt="Miss覓食">
+            <img src="../img/Miss 覓食 logo.png" alt="Miss覓食">
             <h1>
                 Miss覓食
             </h1>
-            <a href="#">LOG IN</a>
+            <a href="./alllogin.html">LOG IN</a>
             <a href="./shopcart.html"><i class="fas fa-shopping-cart"></i></a>          
             <!-- 搜尋框 -->
             <div class="search">
@@ -52,7 +52,7 @@
                         <a href="./index.html"><li>首頁</li></a>
                         <a href="./neighbor.html"><li>鄰里共享</li></a>
                         <a href="./recipe.html"><li>食譜社群</li></a>
-                        <a href="#"><li>個人介面</li></a>
+                        <a href="./personindex.html"><li>個人介面</li></a>
                         <a href="#"><li>登出</li></a>
                     </ul>
                 </div>
@@ -64,19 +64,20 @@
         <div class="item">
             <div class="product-item">
                 <!-- 產品圖 -->
-                <img src="./img/charlie-solorzano-utTJUcvNXXo-unsplash.jpg" alt="">
-                <!-- 加入購物車 -->
-                <button>加入購物車</button>
+                <img src="../img/liubov-ilchuk-HBAdcw7hRdY-unsplash.jpg" alt="">
+                <!-- 聊天室 -->
+                <button>聊天室</button>
             </div>
     
             <div class="info">
 
                 <!-- 詳細說明 -->
                 <div class="info1">
-                    <h2>美國板腱牛排</h2>
-                    <p>效期: 1個月</p>
-                    <p>原價: $ 975 元</p>
-                    <p>剩餘數量: 3份</p>
+                    <h2>倩碧 - Superbalanced Silk Makeup SPF 15 粉底霜 #13</h2>
+                    <p>商品描述: 買錯色號，所以只用了一次，不小心放著就忘記用了</p>
+                    <p>商品效期: 1個月</p>
+                    <p>庫存數量: 1份</p>
+                    <p>距離: 480 公尺</p>
 
                     <!-- 數量&價格 鈕-->
                     <div class="pricebutton">
@@ -84,77 +85,59 @@
                             <input type="button" value="-" class="qtyminus" field="quantity" />
                             <input type="text" name="quantity" value="0" class="qty" />
                             <input type="button" value="+" class="qtyplus" field="quantity" />
-                            <input type="text" name="price" value="$ 585" class="price">
+                            <input type="text" name="price" value="$ 300" class="price">
                         </form>
                     </div>
                 </div>
-
-                <!-- 更多資訊 -->
-                <div class="info2">
-                    <p>更多資訊:</p>
-                    <div class="info2-item">
-                        <p>產地:美國</p>
-                        <p>規格:100g±10</p>
-                    </div>
+                <div class="heart">
+                    <a href="#"><i class="fas fa-heart fa-2x"></i></a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 相關食譜 -->
-    <div class="recipe">
+    <!-- 賣家資訊 -->
+    <div class="seller">
         <div class="title">
-            <h3>相關食譜</h3>
+            <h3>賣家資訊</h3>
         </div>
-        <table>
-            <tr>
-                <td><img src="./img/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt=""></td>
-                <td><img src="./img/chad-montano-M0lUxgLnlfk-unsplash.jpg" alt=""></td>
-                <td><img src="./img/vladimir-gladkov-oSZ8WBaCbcg-unsplash.jpg" alt=""></td>
-            </tr>
-            <tr>
-                <td><p>【西班牙料理】板腱牛排烤飯</p></td>
-                <td><p>嫩煎板腱牛</p></td>
-                <td><p>板腱牛排佐三色料理</p></td>
-            </tr>
-        </table>
+        <div class="seller-info">
+            <img src="../img/1618757563954.jpg" alt="">
+            <h3>han</h3>
+        </div>
+        <div class="details">
+            <p>希望交易方式: 透過聊天室溝通</p>
+            <p>賣家評價: <span>4.5</span><span>/5.0</span></p>
+        </div>
+        <div class="tag">
+            <button>生活用品</button>
+            <button>9成新</button>
+            <button>新北市</button>
+        </div>
     </div>
 
-    <!-- 商家評論 -->
+    <!-- 賣家評價 -->
     <div class="comment">
         <div class="title">
-            <h3>商家評論</h3>
+            <h3>賣家評價</h3>
         </div>
         <table>
-            <!-- 第一個評論 -->
+            <!-- 第一個評價 -->
             <tr>
-                <td><img src="./img/1618757411207.jpg" alt="" class="user"></td>
+                <td><img src="../img/1618757411207.jpg" alt="" class="user"></td>
                 <td>betty01</td>
-                <td>太好吃了太好吃了!!!</td>
-                <td><img src="./img/karly-gomez-lK1Q5RyD6tc-unsplash.jpg" alt="" class="comment-item"></td>
+                <td><img src="../img/kelly-sikkema-KJ-us7cIsl0-unsplash.jpg" alt="" class="comment-item"></td>
+                <td>買了一顆來試試看，品質還保存得很好~</td>
             </tr>
             <tr>
                 <td>2021/03/22 12:34</td>
                 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></td>
                 <td></td>
-                <td>草莓奶酪</td>
-            </tr>
-            <!-- 第二個評論 -->
-            <tr class="comment2">
-                <td><img src="./img/1618757580950.jpg" alt="" class="user"></td>
-                <td>sam02v</td>
-                <td>好吃是好吃，但是我不會煮啊QQ</td>
-                <td><img src="./img/justus-menke-62XLglIrTJc-unsplash.jpg" alt="" class="comment-item"></td>
-            </tr>
-            <tr>
-                <td>2021/03/22 12:34</td>
-                <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></td>
                 <td></td>
-                <td>美國牛小排</td>
             </tr>
         </table>
-        <div class="more">
-            <p>更多評論(1)></p>
+        <div class="nocomment">
+            <p>-沒有更多評論了-</p>
         </div>
     </div>
 
@@ -175,7 +158,7 @@
                 <h6>與我們合作</h6>
                 <ul>
                     <li>
-                        <a href="#"><i class="fas fa-user-plus"></i> 廠商合作表單</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuCcohHqSJ25OHygFkPcasDdK-MNfgpJjpbtSPw9_B2dgStg/viewform?usp=sf_link"><i class="fas fa-user-plus"></i> 廠商合作表單</a>
                     </li>
                 </ul>
             </div>
@@ -196,7 +179,7 @@
                 <ul>
                     <li>
                         <a href="#"><i class="fas fa-mobile-alt"></i> APP版</a>
-                        <a href="#"><img src="./img/381407_0.jpg" alt="APP QRcode"></a>
+                        <a href="#"><img src="../img/381407_0.jpg" alt="APP QRcode"></a>
                     </li>
                 </ul>
             </div>

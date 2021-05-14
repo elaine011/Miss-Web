@@ -30,7 +30,7 @@ var app = new Vue({
             price:'40',
             count:'1'
           },
-        ]
+        ],
     },
     methods:{
         handlePlus: function(item){
@@ -49,10 +49,10 @@ var app = new Vue({
     computed:{
         totalPrice() {
             var total = 0;
-            this.itemList.forEach((v, k) => {
-                if (this.itemList.indexOf(v.id)!=-1)
-                    total += v.count * v.price;
-            });
+            for(var i=0;i<this.itemList.length;i++){
+                var item=this.itemList[i];
+                total+=item.price*item.count;
+            }
             return total;
         }
     }
