@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miss覓食</title>
-    <!-- vue -->
     <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="../css/shopcart.css">
@@ -21,10 +20,8 @@
      <!-- google font -->
      <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
-    
 </head>
 <body style="background-color: #fef7e6;">
-
     <!-- header -->
     <div class="header">
         <!-- logo+文字 +購物車+登入-->
@@ -63,51 +60,63 @@
 
     <div id="app">
         <div class="container">
+            <!-- 頭 -->
             <div class="item_header">
                 <div class="checkbox">
                     <input type="checkbox" id="check" name="all" value="all" onclick="check_all(this,'c')">
                 </div>
+                <!-- 固定的 -->
                 <div class="item_detail">商品</div>
                 <div class="price">單價</div>
-                <div class="count">數量</div> 
+                <div class="count">數量</div>
                 <div class="amount">總計</div>
                 <div class="operate">操作</div>
             </div>
-            <div class="item_container" v-for="(item, index) in itemList" :key="item.id" >
-                    <div class="item_header item_body">
-                            <div class="checkboxall">
-                                <input type="checkbox"id="check" name="c" value="item1">
-                            </div>
-                            <div class="item_detail">
-                                <img v-bind:src="item.imgUrl" alt="">
-                                <div class="name">{{item.itemName}}</div>
-                            </div>
-                            
-                            <div class="price"><span>$</span>{{item.price}}</div>
-                            <div class="count">
-                                <button @click="handleSub(item)">-</button>
-                                {{item.count}}
-                                <button @click="handlePlus(item)">+</button>
-                            </div> 
-                            <div class="amount">{{item.price * item.count}}</div>
-                            <div class="operate">
-                                <button @click="handledelete(index)">刪除</button>
-                            </div>
-                    </div>
+          
+            <!-- 購買物的主體 -->
+            <div class="item_header item_body" v-for="(item,index) in itemList" :data-key="item.id">
+                <div class="checkboxall">
+                    <input type="checkbox"id="check" name="c" value="item1">
+                </div>
+                <!-- 不斷重複的item開始 -->
+                <div class="item_detail">
+                    <img :src="item.imgUrl" alt="">
+                    <div class="name">{{item.name}}</div>
+                </div>
+    
+                <!-- 後面沒span -->
+                <div class="price"><span>$</span>{{item.price}}</div>
+                <!--  -->
+                <div class="count">
+                    <button @click="handleSub(item)">-</button>
+                    {{item.count}}
+                    <button @click="handlePlus(item)">+</button>
+                </div>
+    
+    
+                <!-- 總價 -->
+                <div class="amount">{{item.price * item.count}}</div>
+                <div class="operate">
+                    <button @click="delHandler(index)">刪除</button>
+                </div>
+                <!-- 不斷重複的item結束 -->
+
+            </div>
+                    <!-- 總計&結帳 -->
+        <div class="checkout">
+            <div class="price">總計:</div>
+            <div class="totalprice">
+                <span>$</span>
+                <span>{{total}}</span>
+            </div>
+            <div class="button">
+                <button><a href="./checkout.html">去結帳</a></button>
             </div>
         </div>
-    </div>
-
-    <!-- 總計&結帳 -->
-    <div class="checkout">
-        <div class="price">總計:</div>
-        <div class="totalprice"><span>$</span>{{totalPrice}}</div>
-        <div class="button">
-            <button><a href="./checkout.html">去結帳</a></button>
         </div>
     </div>
 
-<!-- Site footer -->
+    <!-- Site footer -->
 <footer class="site-footer">
     <div class="container">
         <div class="row">
@@ -171,5 +180,5 @@
 </div>
 
 </body>
-<script src="../js/shopcart.js"></script>
+<script src="../js/shopcart .js"></script>
 </html>
