@@ -211,33 +211,35 @@
   display: block;
   margin-bottom: 20px;
 }
-.wrap .info p {
+.wrap .info p,
+s {
   line-height: 30px;
   margin-left: 30px;
   letter-spacing: 1px;
+  margin-right: 10px;
+}
+.info1 span {
+  color: red;
 }
 /* 數量&價格 鈕 */
 .pricebutton {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.qty {
-  width: 50px;
+#num {
+  width: 90px;
   height: 35px;
   text-align: center;
-  border: 0;
   border: 2px solid #aaa;
   border-radius: 39px;
+  margin-left: 10px;
+  padding: 3px 16px;
 }
-input.qtyplus {
-  width: 25px;
-  height: 35px;
-  border: 1px solid #aaa;
-  background: #f8f8f8;
-  border: 0px;
+.counter li {
+  display: inline;
+  margin: 6px;
 }
-
-input.qtyminus {
+#minus input {
   margin-left: 30px;
   width: 25px;
   height: 35px;
@@ -245,13 +247,12 @@ input.qtyminus {
   background: #f8f8f8;
   border: 0px;
 }
-input.price {
-  width: 90px;
+#plus input {
+  width: 25px;
   height: 35px;
-  text-align: center;
-  border: 2px solid #aaa;
-  border-radius: 39px;
-  margin-left: 10px;
+  border: 1px solid #aaa;
+  background: #f8f8f8;
+  border: 0px;
 }
 /* 更多資訊 */
 .info2-item {
