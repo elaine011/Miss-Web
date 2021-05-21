@@ -198,7 +198,10 @@
   background-color: #ffe000;
   color: #000;
   border: 0px;
-  padding: 3px 20px;
+  padding: 8px 20px;
+}
+.product-item button:hover {
+  background-color: #d4bf21;
 }
 /* 詳細說明 */
 .wrap .info {
@@ -289,14 +292,14 @@ s {
   margin-top: 3rem;
   margin-bottom: 3rem;
   text-align: center;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 .comment .title {
   background-color: #dfd0a8;
   padding: 15px;
 }
 .comment td {
-  padding: 0.5rem 4.25rem;
+  padding: 0.5rem 2.3rem;
 }
 .comment .user {
   max-width: 130px;
@@ -305,8 +308,14 @@ s {
 .comment .comment-item {
   max-width: 100px;
 }
-.comment .comment2 td {
+.comment2 td {
   border-top: 1px solid #000;
+}
+table {
+  width: 100%;
+}
+.more {
+  margin-top: 1rem;
 }
 
 /* Site footer */

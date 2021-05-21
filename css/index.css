@@ -222,7 +222,7 @@
 
 /* 推薦商品 */
 .recommand {
-  display: block;
+  display: inline-block;
   float: right;
   width: 16%;
   top: 60;
@@ -292,33 +292,34 @@
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.418);
 }
 .products .wrap .item img {
-  background-color: white;
-  max-height: 180px;
-  padding: 16px;
+  max-width: 160px;
   padding-bottom: 10px;
+  padding-top: 10px;
+  justify-content: center;
+  width: 90%;
 }
 .products .wrap .item a {
-  background-color: white;
   justify-content: center;
   text-decoration: none;
   color: #000;
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: bold;
 }
 .products .wrap .item a:hover {
   color: #67755c;
 }
 .products .wrap .item p {
-  background-color: white;
   justify-content: center;
   padding-bottom: 10px;
 }
 /* 產品愛心 */
-.products .wrap .heart {
+.products .wrap .item i {
   margin-left: 100px;
   margin-top: 3px;
   padding-bottom: 10px;
+  cursor: pointer;
 }
-.products .wrap .heart a:hover {
+.products .wrap .item i:hover {
   color: red;
 }
 /* 頁碼 */
