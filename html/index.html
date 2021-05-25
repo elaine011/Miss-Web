@@ -65,7 +65,7 @@
         <nav>
             <ul>
                 <li v-on:click="filter=false">
-                    <a href="#">全部</a>
+                    <a href="#">全部 </a>
                 </li>
                 <li v-on:click="filter='肉'">
                     <a href="#">肉  </a>
@@ -133,8 +133,8 @@
 
     <!-- 產品欄位 -->
     <div class="products">
-        <div class="wrap" v-for="item in products" :data-key="item.id">
-            <div class="item">
+        <div class="wrap">
+            <div class="item" v-for="item in products" :data-key="item.id" v-if="item.category==filter || !filter">
                 <img :src="item.img" alt="">
                 <a href="./product.html">{{item.name}}</a>
                 <p>${{item.price}}</p>
