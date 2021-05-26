@@ -17,7 +17,7 @@
   font-size: 1.8rem;
   display: inline;
   text-align: center;
-  margin-left: 30rem;
+  margin-left: 38rem;
   position: relative;
   top: 15px;
 }
@@ -42,7 +42,7 @@
   vertical-align: middle;
   display: inline;
   position: absolute;
-  left: 24rem;
+  left: 32rem;
 }
 /* 登入 */
 .header .logo a {
@@ -177,6 +177,7 @@
   display: flex;
   width: 100%;
   margin-top: 1rem;
+  margin-left: 4rem;
 }
 .header nav ul {
   padding: 0 30px;
@@ -216,13 +217,13 @@
   width: 82%;
 }
 .banner img {
-  margin: 10px 40px;
-  max-width: 48rem;
+  margin: 10px 70px;
+  max-width: 55rem;
 }
 
 /* 推薦商品 */
 .recommand {
-  display: inline-block;
+  display: inline;
   float: right;
   width: 16%;
   top: 60;
@@ -279,12 +280,12 @@
 .products .wrap {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 40px;
-  width: 800px;
+  margin-left: 80px;
+  width: 850px;
 }
 .products .wrap .item {
   width: 150px;
-  margin: 0 20px;
+  margin: 0 30px;
   margin-top: 25px;
   margin-bottom: 40px;
   text-align: center;
