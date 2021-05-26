@@ -6,7 +6,6 @@
   list-style: none;
   font-family: "Noto Sans TC", sans-serif;
 }
-
 /* header  */
 .header {
   padding: 6px 8px 0px 8px;
@@ -17,7 +16,7 @@
   font-size: 1.8rem;
   display: inline;
   text-align: center;
-  margin-left: 30rem;
+  margin-left: 38rem;
   position: relative;
   top: 15px;
 }
@@ -42,7 +41,7 @@
   vertical-align: middle;
   display: inline;
   position: absolute;
-  left: 24rem;
+  left: 32rem;
 }
 /* 登入 */
 .header .logo a {

@@ -11,8 +11,7 @@
 h2 {
   font-weight: normal;
 }
-
-/*header*/
+/* header  */
 .header {
   padding: 6px 8px 0px 8px;
   color: #67755c;
@@ -22,11 +21,11 @@ h2 {
   font-size: 1.8rem;
   display: inline;
   text-align: center;
-  margin-left: 21rem;
-  margin-left: 30rem;
+  margin-left: 38rem;
   position: relative;
   top: 15px;
 }
+
 /* 固定最上方欄位 */
 .header .logo {
   position: fixed;
@@ -39,6 +38,7 @@ h2 {
   background-color: #dfd0a8;
   padding-bottom: 1rem;
 }
+
 .header .logo img {
   height: 5rem;
   width: 5rem;
@@ -46,7 +46,7 @@ h2 {
   vertical-align: middle;
   display: inline;
   position: absolute;
-  left: 24rem;
+  left: 32rem;
 }
 /* 登入 */
 .header .logo a {
