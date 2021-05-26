@@ -63,7 +63,7 @@ let app = new Vue({
                 name: '鹹蛋', 
                 price: '89', 
                 category: '蛋', 
-                img:'../img/鹹蛋.jpg'
+                img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS-rYLEaXxWWvtKhOLOsDmS03ggj51-2LcAw&usqp=CAU'
             },
             {
                 id:'9', 
@@ -340,37 +340,25 @@ let app = new Vue({
             }
         ],
         filter: false,
-        cart: {
-            string: 'Cart',
-            total: 0.00,
-            products: [],
-            show: false
+        count:1,
+        price:699
+    },
+    methods: {
+        //單一產品頁商品價格加減鈕
+        adder: function () {
+          this.count++;
+        },
+        minuser: function (event) {
+          if(this.count<=0){
+              this.count=0;
+          }else{
+              this.count--;
           }
-    }
+        },
+        total: function(){
+            return count*price;
+        }
+      }
 });
 
-Vue.component('cart-item', {
-    props: ['product'],
-    template: '#cart-item-template'
-  });
-  
-  Vue.component('product-item', {
-    props: ['product'],
-    template: '#product-item-template',  
-    methods: {
-      addToCart: function (id) {  
-        
-        // get product
-        var product = store.products[id];      
-        
-        // place product in cart
-        store.cart.products.push(product);
-        
-        // update cart
-        store.cart.total += product.price;
-        
-        // update
-        alert('Adding ' + product.title + ' to cart');
-      }
-    }
-  });
+

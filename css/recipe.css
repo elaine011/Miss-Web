@@ -173,10 +173,11 @@
 /* 分類導覽列 */
 .header nav {
   text-align: center;
+  justify-content: center;
   letter-spacing: 1.5px;
   display: flex;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 .header nav ul {
   padding: 0 30px;
