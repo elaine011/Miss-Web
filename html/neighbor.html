@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miss覓食</title>
+    <!-- vue -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js'></script>
     <!-- css -->
     <link rel="stylesheet" href="../css/neighbor.css">
     <!-- top view -->
@@ -22,6 +24,7 @@
 </head>
 <body style="background-color: #fef7e6;">
 
+    <div id="app">
     <!-- header -->
     <div class="header">
         <!-- logo+文字 +購物車+登入-->
@@ -61,19 +64,19 @@
         <!-- 分類導覽列 -->
         <nav>
             <ul>
-                <li>
+                <li v-on:click="filter=false">
                     <a href="#">全部</a>
                 </li>
-                <li>
+                <li v-on:click="filter='生活用品'">
                     <a href="#">生活用品</a>
                 </li>
-                <li>
+                <li v-on:click="filter='零嘴'">
                     <a href="#">零嘴</a>
                 </li>
-                <li>
+                <li v-on:click="filter='生鮮食品'">
                     <a href="#">生鮮食品</a>
                 </li>
-                <li>
+                <li v-on:click="filter='其他'">
                     <a href="#">其他</a>
                 </li>
             </ul>
@@ -122,193 +125,13 @@
     <!-- 產品欄位 -->
     <div class="products">
         <div class="wrap">
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=1" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
+            <div class="item" v-for="item in products" :data-key="item.id" v-if="item.category==filter || !filter">
+                <img :src="item.img" alt="">
+                <a href="./neighborProduct.html">{{item.name}}</a>
+                <p>${{item.price}}</p>
                 <div class="distance">
                     <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=2" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=3" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=4" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=1" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=2" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=3" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=4" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=1" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=2" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=3" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=4" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=1" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=2" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=3" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-            <div class="item">
-                <img src="https://picsum.photos/150/200?random=4" alt="">
-                <a href="./neighborProduct.html">產品</a>
-                <p>$100</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離120公尺</p>
+                    <p>距離{{item.distance}}公尺</p>
                 </div>
                 <div class="heart">
                     <a href="#"><i class="fas fa-heart"></i></a>
@@ -317,17 +140,8 @@
         </div>
     </div>
 
-    <!-- 頁碼 -->
-    <div class="center">
-        <ul class="pagination">
-            <li><a href="#">«</a></li>
-            <li><a class="active" href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">»</a></li>
-        </ul>
+    <!-- #app end -->
     </div>
-
 
     <!-- Site footer -->
     <footer class="site-footer">
@@ -358,7 +172,7 @@
                     <a href="#"><i class="fas fa-phone-alt"></i> 電話:02-29012345</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fas fa-envelope"></i> 信箱:abc123@gmail.com</a>
+                    <a href="mailto:contact@yourwebsite.com"><i class="fas fa-envelope"></i> 信箱:abc123@gmail.com</a>
                 </li>
             </ul>
             </div>
@@ -393,4 +207,5 @@
   </div>
 
 </body>
+<script src="../js/neighbor.js"></script>
 </html>

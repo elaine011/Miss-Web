@@ -176,6 +176,7 @@
   display: flex;
   width: 100%;
   margin-top: 1rem;
+  margin-left: 4rem;
 }
 .header nav ul {
   padding: 0 30px;
@@ -215,8 +216,8 @@
   width: 82%;
 }
 .banner img {
-  margin: 10px 40px;
-  max-width: 48rem;
+  margin: 10px 70px;
+  max-width: 55rem;
 }
 
 /* 推薦商品 */
@@ -278,12 +279,13 @@
 .products .wrap {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 40px;
-  width: 800px;
+  margin-left: 80px;
+  width: 850px;
 }
 .products .wrap .item {
   width: 150px;
-  margin: 0 20px;
+  height: 280px;
+  margin: 0 30px;
   margin-top: 25px;
   margin-bottom: 40px;
   text-align: center;
@@ -291,17 +293,20 @@
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.418);
 }
 .products .wrap .item img {
-  background-color: white;
-  max-height: 180px;
-  padding: 16px;
+  max-height: 140px;
   padding-bottom: 10px;
+  padding-top: 10px;
+  justify-content: center;
+  width: 85%;
+  height: 60%;
 }
 .products .wrap .item a {
   background-color: white;
   justify-content: center;
   text-decoration: none;
   color: #000;
-  font-size: 24px;
+  font-size: 18px;
+  padding: 0 5px;
 }
 .products .wrap .item a:hover {
   color: #67755c;
@@ -314,10 +319,11 @@
 /* 產品距離 */
 .products .wrap .distance {
   display: inline-flex;
+  padding-top: 15px;
 }
 .products .wrap .distance i {
   width: 25px;
-  padding-top: 3px;
+  padding-top: 8px;
 }
 /* 產品愛心 */
 .products .wrap .heart {
@@ -369,6 +375,7 @@ div.center {
   text-align: center;
   position: relative;
   z-index: 0;
+  margin-top: 3rem;
 }
 .site-footer ul {
   padding-left: 0;
