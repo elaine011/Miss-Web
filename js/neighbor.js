@@ -284,7 +284,7 @@ let app = new Vue({
             },
             {
                 id:'23',
-                name:'hp',
+                name:'hp印表機墨水',
                 price:'60',
                 category:'生活用品',
                 img:'../img/家裡物資_210527_12_0.jpg',
