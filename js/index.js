@@ -337,7 +337,63 @@ let app = new Vue({
                 price: '39', 
                 category: '其他', 
                 img:'../img/杏鮑菇.jpg'
-            }
+            },
+            {
+                id:'48', 
+                name: '水蓮', 
+                price: '48', 
+                category: '蔬菜', 
+                img:'../img/水蓮.jpg'
+            },
+            {
+                id:'49', 
+                name: '雞蛋豆腐', 
+                price: '26', 
+                category: '其他', 
+                img:'../img/雞蛋豆腐.jpg'
+            },
+            {
+                id:'50', 
+                name: '綠竹筍', 
+                price: '89', 
+                category: '蔬菜', 
+                img:'../img/竹筍.jpg'
+            },
+            {
+                id:'51', 
+                name: '鮭魚', 
+                price: '158', 
+                category: '蔬菜', 
+                img:'../img/鮭魚.jpg'
+            },
+            {
+                id:'52', 
+                name: '冷凍松阪豬', 
+                price: '200', 
+                category: '肉', 
+                img:'../img/松阪豬.jpg'
+            },
+            {
+                id:'53', 
+                name: '莧菜', 
+                price: '25', 
+                category: '蔬菜', 
+                img:'../img/莧菜.jpg'
+            },
+            {
+                id:'54', 
+                name: '大黃瓜', 
+                price: '69', 
+                category: '蔬菜', 
+                img:'../img/大黃瓜.jpg'
+            },
+            {
+                id:'55', 
+                name: '里肌豬肉', 
+                price: '160', 
+                category: '肉', 
+                img:'../img/里肌肉(豬).jpg'
+            },
         ],
         filter: false,
         count:1,
