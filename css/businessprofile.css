@@ -196,7 +196,7 @@ div form button {
 }
 .side-menu nav {
   width: 10rem;
-  height: 25rem;
+  height: 29rem;
   background-color: #ffff;
   box-sizing: border-box;
   display: flex;
@@ -204,6 +204,7 @@ div form button {
   padding: 20px 10px 20px 18px;
   margin-left: 4rem;
   box-shadow: 5px 0px 5px #dfd0a8;
+  margin-bottom: 10px;
 }
 nav a {
   color: black;
