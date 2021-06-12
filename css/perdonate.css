@@ -253,24 +253,103 @@ div h2 {
   color: #000;
   margin: 50px 100px 0px 300px;
 }
-th {
-  background-color: #ebdfc3;
-  border-bottom: 1px solid #67755c;
-  font-size: 1rem;
-  padding: 25px 10px 25px 5px;
+
+/*上方福利機構資訊*/
+.topcontent img {
+  width: 250px;
+  height: 200px;
+  display: inline;
+  float: left;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 40px;
 }
-td {
-  background-color: white;
-  border-bottom: 1px solid #67755c;
-  padding: 25px 25px 25px 25px;
-  text-align: center;
+.topcontent p {
+  display: inline;
+  position: relative;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+.topcontent h3 {
+  display: inline-block;
+  position: relative;
+  margin-left: 40px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.topcontent hr {
+  width: 800px;
 }
 
-table {
+/*下方需求物資*/
+.downcontent .wrap {
+  display: flex;
+  flex-wrap: wrap;
   width: 800px;
-  border: 3px dotted #67755c;
-  border-collapse: collapse;
-  margin-top: 50px;
+  margin-left: 20px;
+}
+.downcontent .wrap .item {
+  display: inline-block;
+  width: 160px;
+  height: 360px;
+  margin: 0 20px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.418);
+  position: relative;
+}
+.downcontent .wrap .item img {
+  width: 140px;
+  height: 140px;
+  padding-bottom: 0px;
+  padding-top: 15px;
+  justify-content: center;
+}
+.downcontent .wrap .item .goods {
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+}
+.downcontent .wrap .item p {
+  margin-top: 20px;
+  line-height: 16px;
+}
+.donate,
+.many {
+  width: 60px;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #67755c;
+  background-color: #ffe000;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #67755c;
+  margin-top: 25px;
+  position: absolute;
+  left: 30%;
+  bottom: 20px;
+}
+.donate:hover,
+.many:hover {
+  background-color: #ffe000;
+  color: white;
+}
+
+.donate:active,
+.many:active {
+  background-color: #ffe000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 /* Site footer */

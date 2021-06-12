@@ -66,62 +66,76 @@ body {
 .list li.active ~ li::before {
   background-color: #627879;
 }
-table {
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 15px;
-  box-shadow: 3px 3px 9px darkgray;
-  margin-left: 390px;
-  margin-right: auto;
-  padding: 20px;
+.law {
+  background-color: white;
+  border: darkgrey 2px solid;
+  overflow: auto;
+  width: 750px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 60px 0 0 -380px;
+  padding: 10px 30px 10px 30px;
 }
-td {
-  padding-bottom: 10px;
+.law h4,
+.law h3 {
+  color: #7e7a7a;
+  margin-bottom: -10px;
+  margin-top: 30px;
 }
-.name,
-.pw,
-.pw2,
-.phone {
-  width: 300px;
-  height: 30px;
-  margin-left: 10px;
+.law p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #7e7a7a;
 }
-
-.fa-eye,
-.fa-eye-slash {
+.small {
+  margin-top: -10px;
+  padding-left: 15px;
+  color: #7e7a7a;
+}
+#check {
+  position: absolute;
+  margin-top: 485px;
+  left: 460px;
+  width: 20px;
+  height: 20px;
+}
+.check {
+  text-align: center;
+  margin-bottom: 50px;
+}
+label {
+  position: absolute;
+  margin-top: 480px;
+  margin-left: -140px;
+}
+.confirm {
+  width: 80px;
+  height: 40px;
   position: relative;
-  right: 22px;
-  margin-top: 7px;
-  color: #627879;
-}
-.register {
-  width: 70px;
-  height: 25px;
-  position: relative;
-  left: 190px;
+  top: 530px;
   background-color: #ffe000;
   border: 1px;
-  border-radius: 15px;
+  border-radius: 30px;
   box-shadow: 0 3px #627879;
   font-size: 15px;
+  padding: 10px 10px;
+  font-weight: bolder;
+  color: #627879;
 }
 
-.register:hover {
+.confirm:hover {
   background-color: #ffe000;
   color: #627879;
   border: 1px solid #fef7e6;
 }
 
-.register:active {
+.confirm:active {
   background-color: #ffe000;
   transform: translateY(4px);
 }
-
-.registertext {
-  color: red;
-  font-size: 13px;
-  padding-top: 10px;
-}
-.name {
-  margin-top: 8px;
+.adjust {
+  margin-top: 500px;
+  height: 50px;
 }

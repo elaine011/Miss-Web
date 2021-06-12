@@ -253,24 +253,86 @@ div h2 {
   color: #000;
   margin: 50px 100px 0px 300px;
 }
-th {
-  background-color: #ebdfc3;
-  border-bottom: 1px solid #67755c;
-  font-size: 1rem;
-  padding: 25px 10px 25px 5px;
-}
-td {
-  background-color: white;
-  border-bottom: 1px solid #67755c;
-  padding: 25px 25px 25px 25px;
-  text-align: center;
-}
-
-table {
+/*搜尋列*/
+.content form {
   width: 800px;
-  border: 3px dotted #67755c;
-  border-collapse: collapse;
+  height: 80px;
+  background-color: white;
   margin-top: 50px;
+  padding: 5px 10px 7px 10px;
+  border: #dfd0a8 dotted 2px;
+}
+.searchwel {
+  display: inline-block;
+  border: #dfd0a8 1px solid;
+  height: 40px;
+  width: 300px;
+  margin-left: 20px;
+  margin-right: -2px;
+}
+.searchbut {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-left: -1px;
+  background-color: #dfd0a8;
+  border: unset;
+  color: #67755c;
+  font-size: 15px;
+}
+.address {
+  border: 2px;
+  width: 300px;
+  height: 40px;
+  margin-right: -2px;
+  border-bottom-style: solid;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  color: #dfd0a8;
+}
+.location {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-left: -1px;
+  background-color: #dfd0a8;
+  border: unset;
+  color: #67755c;
+  font-size: 15px;
+}
+/*機構表格*/
+.table {
+  margin-top: 20px;
+  width: 800px;
+  height: auto;
+  line-height: 60px;
+  text-align: left;
+}
+.table tr:nth-child(odd) {
+  background-color: #e5e5e5;
+}
+.table tr:nth-child(even) {
+  background-color: white;
+}
+.table th {
+  background-color: #dfd0a8;
+  padding-left: 10px;
+  font-size: 18px;
+  cursor: hand;
+  font-weight: normal;
+}
+.table td {
+  padding-left: 10px;
+}
+.see {
+  display: inline;
+  margin-left: 5px;
+  width: 25px;
+  height: 25px;
+  background-color: #dfd0a8;
+  color: #67755c;
+  border: #67755c 1px solid;
 }
 
 /* Site footer */
