@@ -6,26 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miss覓食</title>
     <!-- vue -->
-    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js' ></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.2.1/vue-router.js'></script>
+    <!-- jquery -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <!-- css -->
-    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/goodsDetail.css">
     <!-- top view -->
     <link rel="shortcut icon" href="../img/Miss 覓食 logo.png">
     <link rel="bookmark" href="../img/Miss 覓食 logo.png">
     <!-- reset web -->
     <link rel="resetcss" href="../css/reset.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.Bootstrapcdn.com/Bootstrap/4.3.1/css/Bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Font awesome -->
-    <script src="https://kit.fontawesome.com/a828d3f0db.js" crossorigin="anonymous"></script>
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
-</head>
-<body style="background-color: #fef7e6;">
     
-    <div id="app">
-    <!-- header -->
+     <!-- Font awesome -->
+     <script src="https://kit.fontawesome.com/a828d3f0db.js" crossorigin="anonymous"></script>
+     <!-- google font -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="background-color: #fef7e6;">
+        
+	<!-- header -->
     <div class="header">
         <!-- logo+文字 +購物車+登入-->
         <div class="logo">
@@ -61,54 +64,44 @@
                 </div>
             </nav>
     </div>
-    
-    <!-- 產品說明 -->
-    <div class="wrap">
-        <div class="item">
-            <div class="product-item">
-                <!-- 產品圖 -->
-                <img src="https://s.yimg.com/zp/images/4C1E80B8803447128535D7B954E6514DBD1EABFF" alt="">
-                <!-- 加入購物車 -->
-                <button>加入購物車</button>
-            </div>
-    
-            <div class="info">
 
-                <!-- 詳細說明 -->
-                <div class="info1">
-                    <h2>牛肉片</h2>
-                    <p>效期: 1個月</p>
-                    <s>原價: $ 975 元</s>
-                    <span>$ 699</span>
-                    <p>剩餘數量: 3份</p>
+	<!-- 產品說明 -->
+	<div class="booksDeatail">
 
-                    <!-- 數量&價格 鈕-->
-                    <div class="pricebutton">
-                        <ul class="counter">
-                            <li id="minus">
-                                <input type="button" v-on:click="minuser" value="-"/></li>
-                            <li id="countnum">{{count}}</li>
-                            <li id="plus">
-                                <input type="button" v-on:click="adder" value="+"/></li>
-                            <li id="num" >
-                                $ {{count*price}}</li>
-                        </ul>
-                    </div>
-                </div>
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			//Get the parameters in the url
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //Construct a regular expression object with target parameters
+				var r = window.location.search.substr(1).match(reg); //Match target parameters
+				if(r != null) return unescape(r[2]);
+				return null; //Return parameter value
+			}
+			//Receive the goodsId parameter in the URL
+			var id = getUrlParam('goodsId');
+				
+			$.ajax({
+				type: 'get',
+				url: '../json/goods.json',
+				dataType: 'json',
+				success: function(res, status) {
+					$.each(res.goods, function(idx, val) {
+						//Acquire detailed data according to id
+						if(id == val.id) {
+							var str = "<div class=\"wrap\"><div class=\"product-item\"><img src='" + val.imgUrl + "'/><button>加入購物車</button></div><div class=\"info\"><h2>" + val.title + "</h2><p>效期: " + val.term + "</p><s>原價: $" + val.price + "元</s><span> $" + val.price + "元</span><p>剩餘數量: " + val.remain + "份</p><div class=\"pricebutton\"><ul class=\"counter\"><li id=\"minus\"><input type=\"button\" v-on:click=\"minuser\" value=\"-\"/></li><li id=\"countnum\">{{count}}</li><li id=\"plus\"><input type=\"button\" v-on:click=\"adder\" value=\"+\"/></li><li id=\"num\" >$ {{count*price}}</li></ul></div><div class=\"info2\"><p>更多資訊:</p><div class=\"info2-item\"><p>產地:美國</p><p>規格:100g±10</p></div></div></div></div></div>";
+						}
+						$('.booksDeatail').append(str);
+					});
+				},
+				error: function(error) {
+					console.log(error)
+				}
+			})
+		})
+	</script>
 
-                <!-- 更多資訊 -->
-                <div class="info2">
-                    <p>更多資訊:</p>
-                    <div class="info2-item">
-                        <p>產地:美國</p>
-                        <p>規格:100g±10</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 相關食譜 -->
+	<!-- 相關食譜 -->
     <div class="recipe">
         <div class="title">
             <h3>相關食譜</h3>
@@ -167,10 +160,7 @@
         </div>
     </div>
 
-    </div>
-    <!-- app end -->
-
-    <!-- Site footer -->
+	<!-- Site footer -->
     <footer class="site-footer">
         <div class="container">
             <div class="row">

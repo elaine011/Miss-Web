@@ -176,8 +176,6 @@
   display: flex;
   margin-left: 3rem;
   margin-top: 3rem;
-}
-.wrap .item {
   padding: 20px;
 }
 .wrap .product-item {
@@ -186,11 +184,11 @@
   margin-top: 3rem;
 }
 /* 產品圖 */
-.wrap .product-item img {
+.booksDeatail img {
   max-width: 200px;
   position: relative;
 }
-/* 加入購物車 */
+/* 加入購物車  */
 .wrap .product-item button {
   position: absolute;
   left: 155px;
@@ -210,19 +208,19 @@
   float: right;
   margin: 10px 80px;
 }
-.wrap .info .info1 h2 {
+.wrap h2 {
   text-align: center;
   display: block;
   margin-bottom: 20px;
 }
-.wrap .info p,
+.wrap p,
 s {
   line-height: 30px;
   margin-left: 30px;
   letter-spacing: 1px;
   margin-right: 10px;
 }
-.info1 span {
+.wrap span {
   color: red;
 }
 /* 數量&價格 鈕 */

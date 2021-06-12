@@ -5,7 +5,7 @@ let app = new Vue({
             {
                 id:'0',
                 name:'米乃藏煎餅',
-                price:'100',
+                price:'50',
                 category:'零嘴',
                 img:'../img/家裡物資_210527_0.jpg',
                 distance:'120'
@@ -76,8 +76,8 @@ let app = new Vue({
             },
             {
                 id:'9',
-                name:'草莓小蛋糕',
-                price:'100',
+                name:'草莓波士頓',
+                price:'90',
                 category:'生鮮食品',
                 img:'../img/家裡物資_210527_9.jpg',
                 distance:'120'
@@ -85,7 +85,7 @@ let app = new Vue({
             {
                 id:'10',
                 name:'oreo蛋糕',
-                price:'100',
+                price:'150',
                 category:'生鮮食品',
                 img:'../img/家裡物資_210527_10.jpg',
                 distance:'120'
@@ -93,7 +93,7 @@ let app = new Vue({
             {
                 id:'11',
                 name:'樂事餅乾組',
-                price:'100',
+                price:'60',
                 category:'零嘴',
                 img:'../img/家裡物資_210527_11.jpg',
                 distance:'120'
@@ -101,15 +101,15 @@ let app = new Vue({
             {
                 id:'12',
                 name:'滿漢大餐(單包)',
-                price:'15',
+                price:'25',
                 category:'其他',
                 img:'../img/家裡物資_210527_12.jpg',
                 distance:'120'
             },
             {
                 id:'13',
-                name:'滿漢大餐(剩3包)',
-                price:'60',
+                name:'滿漢大餐(開封過)',
+                price:'70',
                 category:'其他',
                 img:'../img/家裡物資_210527_13.jpg',
                 distance:'120'
@@ -117,15 +117,15 @@ let app = new Vue({
             {
                 id:'14',
                 name:'滿漢大餐',
-                price:'60',
+                price:'75',
                 category:'其他',
                 img:'../img/家裡物資_210527_14.jpg',
                 distance:'120'
             },
             {
                 id:'15',
-                name:'Nestle牛奶',
-                price:'60',
+                name:'雀巢全脂牛奶',
+                price:'45',
                 category:'生鮮食品',
                 img:'../img/家裡物資_210527_15.jpg',
                 distance:'120'
@@ -133,7 +133,7 @@ let app = new Vue({
             {
                 id:'16',
                 name:'香蕉',
-                price:'60',
+                price:'40',
                 category:'生鮮食品',
                 img:'../img/家裡物資_210527_0_0.jpg',
                 distance:'120'
@@ -141,7 +141,7 @@ let app = new Vue({
             {
                 id:'17',
                 name:'哈密瓜',
-                price:'60',
+                price:'150',
                 category:'生鮮食品',
                 img:'../img/家裡物資_210527_1_0.jpg',
                 distance:'120'
@@ -149,7 +149,7 @@ let app = new Vue({
             {
                 id:'18',
                 name:'白吐司',
-                price:'60',
+                price:'30',
                 category:'生鮮食品',
                 img:'../img/家裡物資_210527_2_0.jpg',
                 distance:'120'

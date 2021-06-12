@@ -7,6 +7,9 @@
     <title>Miss覓食</title>
     <!-- vue -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js' ></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.2.1/vue-router.js'></script>
+    <!-- jquery -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="../css/index.css">
     <!-- top view -->
@@ -14,17 +17,16 @@
     <link rel="bookmark" href="../img/Miss 覓食 logo.png">
     <!-- reset web -->
     <link rel="resetcss" href="../css/reset.css">
-    
      <!-- Font awesome -->
      <script src="https://kit.fontawesome.com/a828d3f0db.js" crossorigin="anonymous"></script>
      <!-- google font -->
      <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
-</head>
-<body style="background-color: #fef7e6;">
 
-    <div id="app">
-    <!-- 首頁header -->
+</head>
+
+<body style="background-color: #fef7e6;">
+        <!-- 首頁header -->
     <div class="header">
         <!-- logo+文字 +購物車+登入-->
         <div class="logo">
@@ -147,84 +149,94 @@
         </div>
     </div>
     
-
     <!-- 產品欄位 -->
-    <div class="products">
-        <div class="wrap">
-            <div class="item" v-for="item in products" :data-key="item.id" v-if="item.category==filter || !filter">
-                <img :src="item.img" alt="">
-                <a href="./product.html">{{item.name}}</a>
-                <p>${{item.price}}</p>
-                <i class="fas fa-heart"></i>
+	<div class="content">
+
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			$.ajax({
+				type: "get",
+				url: "../json/goods.json",
+				dataType: "json",
+				success: function(res) {
+					console.log(res.goods)
+					var str = "<ul class='con_ul'>";
+					$.each(res.goods, function(idx, val) {
+						str += "<li class=\"sec_li\"><a href='goodsDetail.html?goodsId=" + val.id + "' class='lp_li_a'><div class='lp_li_imgWrap'><img src='" + val.imgUrl + "'/></div><p class='lp_li_name'>" + val.title + "</p><p class='lp_li_price'>" + '$' + val.price +"</p></a></li>";
+						});
+						str += "</ul>";
+						$('.content').append(str);
+					},
+					error: function(error) {
+						console.log(error)
+					}
+				});
+			})
+		</script>
+
+        <!-- Site footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                <div class="col-xs-6 col-md-4">
+                <h6>關於我們</h6>
+                <ul>
+                    <li>
+                        <a href="./aboutus.html"><i class="fas fa-utensils"></i> 關於Miss覓食</a>
+                    </li>
+                </ul>
+                </div>
+    
+                <div class="col-xs-6 col-md-4">
+                    <h6>與我們合作</h6>
+                    <ul>
+                        <li>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuCcohHqSJ25OHygFkPcasDdK-MNfgpJjpbtSPw9_B2dgStg/viewform?usp=sf_link"><i class="fas fa-user-plus"></i> 廠商合作表單</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="col-xs-6 col-md-4">
+                <h6>聯絡我們</h6>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fas fa-phone-alt"></i> 電話:02-29012345</a>
+                    </li>
+                    <li>
+                        <a href="mailto:contact@yourwebsite.com"><i class="fas fa-envelope"></i> 信箱:abc123@gmail.com</a>
+                    </li>
+                </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-4">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-mobile-alt"></i> APP版</a>
+                            <a href="#"><img src="../img/381407_0.jpg" alt="APP QRcode"></a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
-        </div>
-    </div>
-
-    </div>
-    <!-- app end -->
-
-    <!-- Site footer -->
-    <footer class="site-footer">
-        <div class="container">
+            <br>
+            <hr>
+            <div class="container">
             <div class="row">
-            <div class="col-xs-6 col-md-4">
-              <h6>關於我們</h6>
-              <ul>
-                <li>
-                    <a href="./aboutus.html"><i class="fas fa-utensils"></i> 關於Miss覓食</a>
-                </li>
-            </ul>
-            </div>
-  
-            <div class="col-xs-6 col-md-4">
-                <h6>與我們合作</h6>
-                <ul>
-                    <li>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuCcohHqSJ25OHygFkPcasDdK-MNfgpJjpbtSPw9_B2dgStg/viewform?usp=sf_link"><i class="fas fa-user-plus"></i> 廠商合作表單</a>
-                    </li>
-                </ul>
-            </div>
-  
-            <div class="col-xs-6 col-md-4">
-              <h6>聯絡我們</h6>
-              <ul>
-                <li>
-                    <a href="#"><i class="fas fa-phone-alt"></i> 電話:02-29012345</a>
-                </li>
-                <li>
-                    <a href="mailto:contact@yourwebsite.com"><i class="fas fa-envelope"></i> 信箱:abc123@gmail.com</a>
-                </li>
-            </ul>
-            </div>
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">&copy; copyright 2021 by Miss覓食.
+                </p>
+                </div>
 
-            <div class="col-xs-6 col-md-4">
-                <ul>
-                    <li>
-                        <a href="#"><i class="fas fa-mobile-alt"></i> APP版</a>
-                        <a href="#"><img src="../img/381407_0.jpg" alt="APP QRcode"></a>
-                    </li>
-                </ul>
             </div>
-
-        </div>
-        <br>
-        <hr>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class="copyright-text">&copy; copyright 2021 by Miss覓食.
-              </p>
             </div>
+            </div>
+    </footer>
 
-          </div>
-        </div>
-        </div>
-  </footer>
-
-  <!-- 返回頂端箭頭 -->
-  <div class="top">
-    <a href="#"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a>
-  </div>
+    <!-- 返回頂端箭頭 -->
+    <div class="top">
+        <a href="#"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a>
+    </div>
 
 </body>
 <script src="../js/index.js"></script>
