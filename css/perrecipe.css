@@ -8,7 +8,7 @@
 }
 /* header  */
 .header {
-  padding: 6px 8px 0px 8px;
+  padding-top: 6px;
   color: #67755c;
   margin-top: 55px;
 }
@@ -337,6 +337,7 @@ div.center {
 
 /* Site footer */
 .site-footer {
+  margin-top: 3rem;
   background-color: #67755c;
   right: 0;
   left: 0;

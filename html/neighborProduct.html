@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miss覓食</title>
+    <!-- jquery -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="../css/neighborProduct.css">
     <!-- top view -->
@@ -60,41 +62,40 @@
     </div>
     
     <!-- 產品說明 -->
-    <div class="wrap">
-        <div class="item">
-            <div class="product-item">
-                <!-- 產品圖 -->
-                <img src="../img/liubov-ilchuk-HBAdcw7hRdY-unsplash.jpg" alt="">
-                <!-- 聊天室 -->
-                <button>聊天室</button>
-            </div>
-    
-            <div class="info">
+    <div class="neighborProduct">
 
-                <!-- 詳細說明 -->
-                <div class="info1">
-                    <h2>倩碧 - Superbalanced Silk Makeup SPF 15 粉底霜 #13</h2>
-                    <p>商品描述: 買錯色號，所以只用了一次，不小心放著就忘記用了</p>
-                    <p>商品效期: 1個月</p>
-                    <p>庫存數量: 1份</p>
-                    <p>距離: 480 公尺</p>
-
-                    <!-- 數量&價格 鈕-->
-                    <div class="pricebutton">
-                        <form id="myform" method="POST" action="#">
-                            <input type="button" value="-" class="qtyminus" field="quantity" />
-                            <input type="text" name="quantity" value="0" class="qty" />
-                            <input type="button" value="+" class="qtyplus" field="quantity" />
-                            <input type="text" name="price" value="$ 300" class="price">
-                        </form>
-                    </div>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart fa-2x"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			//Get the parameters in the url
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //Construct a regular expression object with target parameters
+				var r = window.location.search.substr(1).match(reg); //Match target parameters
+				if(r != null) return unescape(r[2]);
+				return null; //Return parameter value
+			}
+			//Receive the goodsId parameter in the URL
+			var id = getUrlParam('goodsId');
+				
+			$.ajax({
+				type: 'get',
+				url: '../json/neighbor.json',
+				dataType: 'json',
+				success: function(res, status) {
+					$.each(res.goods, function(idx, val) {
+						//Acquire detailed data according to id
+						if(id == val.id) {
+							var str = "<div class=\"wrap\"><div class=\"product-item\"><img src='" + val.imgUrl + "'/><button>聊天室</button><div class=\"heart\"><a href=\"#\"><i class=\"fas fa-heart fa-2x\"></i></a></div></div><div class=\"info\"><h2>" + val.title + "</h2><p>商品描述: " + val.desc + "</p><p>效期: " + val.term + "</p><p>價格: $" + val.price + "元</p><p>剩餘數量: " + val.remain + "份</p><p>距離: " + val.distance + "公尺</p><div class=\"pricebutton\"><ul class=\"counter\"><li id=\"minus\"><input type=\"button\" value=\"-\"/></li><li id=\"countnum\">"+1+"</li><li id=\"plus\"><input type=\"button\" value=\"+\"/></li></ul></div></div></div></div></div>";
+						}
+						$('.neighborProduct').append(str);
+					});
+				},
+				error: function(error) {
+					console.log(error)
+				}
+			})
+		})
+	</script>
 
     <!-- 賣家資訊 -->
     <div class="seller">

@@ -177,6 +177,7 @@
   display: flex;
   width: 100%;
   margin-top: 1.5rem;
+  margin-bottom: 2rem;
 }
 .header nav ul {
   padding: 0 30px;
@@ -214,8 +215,6 @@
   background-color: white;
   width: 90%;
   margin-left: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
   text-align: center;
   padding-top: 1rem;
 }
@@ -237,7 +236,7 @@
 .recipe-img .tag {
   margin-top: 1rem;
 }
-.tag a {
+.tag span {
   color: #67755c;
   text-decoration: none;
 }
@@ -246,9 +245,6 @@
   display: inline-block;
   text-align: left;
   margin-left: 10px;
-}
-.recipe-item a {
-  text-decoration: none;
 }
 .recipe-item h2 {
   margin-bottom: 10px;
@@ -269,6 +265,7 @@
 }
 .recipe-icon i {
   padding: 0 5px;
+  padding-left: 700px;
   cursor: pointer;
   color: #67755c;
 }
@@ -306,6 +303,7 @@ div.center {
 
 /* Site footer */
 .site-footer {
+  margin-top: 3rem;
   background-color: #67755c;
   right: 0;
   left: 0;

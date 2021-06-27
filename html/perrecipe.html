@@ -7,6 +7,8 @@
     <title>Miss覓食</title>
     <!-- vue -->
     <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <!-- jquery -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="../css/perrecipe.css">
     <!-- top view -->
@@ -61,80 +63,40 @@
 
 
     <!-- 單一食譜 -->
-    <div class="recipe">
-        <div class="recipe-img">
-            <span><h2>咖哩雞</h2></span>
-            <img src="../img/咖哩雞1.jpg" alt="">
-            
-            <div class="tag">
-                <a href="#">#肉</a>
-            </div>
-        </div>
-        <div class="recipe-item">
-            <span>
-                <ul>
-                    <li id="recipe-item-title">
-                        <img src="../img/Hands - Chicken.png" alt="">
-                        食材:
-                    </li>
-                    <li>
-                        <span class="name">洋蔥</span>
-                        <span class="amount">切塊(約2公分) 100 克</span>
-                    </li>
-                    <li>
-                        <span class="name">咖哩粉</span>
-                        <span class="amount">1 大匙</span>
-                    </li>
-                    <li>
-                        <span class="name">去骨雞腿排</span>
-                        <span class="amount">切塊(約5公分) 400 克</span>
-                    </li>
-                    <li>
-                        <span class="name">馬鈴薯</span>
-                        <span class="amount">去皮、切塊(約5公分) 250 克</span>
-                    </li>
-                    <li>
-                        <span class="name">紅蘿蔔</span>
-                        <span class="amount">去皮、切塊(約3公分) 100 克</span>
-                    </li>
-                    <li>
-                        <span class="name">咖哩塊</span>
-                        <span class="amount">(約半盒)，剝碎 120 克</span>
-                    </li>
-                    <li>
-                        <span class="name">油</span>
-                        <span class="amount">20 克</span>
-                    </li>
-                    <li>
-                        <span class="name">水</span>
-                        <span class="amount">依個人喜好調整 400-500 克</span>
-                    </li>
-                </ul>
-            </span>
-            <span class="recipe-icon">
-                <i class="fas fa-heart fa-1x"></i>
-                <i class="fas fa-share-square"></i>
-            </span>
-        </div>
-    </div>
-    <div class="step">
-        <div class="step-title">
-            <h3>製作步驟</h3>
-        </div>
-        <div class="step-item">
-            <div class="step-item-img">
-                <img src="../img/The Munchies - Plate.png" alt="">
-            </div>
-            <p><span>步驟一</span>
-                將油、洋蔥、紅蘿蔔、咖喱粉放入主鍋，以5 分/120°C/速度 1爆香
-                <span>步驟二</span>
-                加入雞腿排，不需蓋上量杯，以5 分/Varoma/反轉/速度 1拌炒，將雞腿排取出放入碗內備用
-                <span>步驟三</span>
-                加入水，以20 分/V/速度 1烹煮。架上蒸鍋組，放上馬鈴薯與雞腿肉
-                <span>步驟四</span>
-                取下蒸鍋組，加入咖哩塊，以5 分/100°C/反轉/速度 1烹煮。從量杯口加入馬鈴薯與雞腿肉，於主鍋內靜置10分鐘，即可享用</p>
-        </div>
-    </div>
+    <div class="perrecipe">
+
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			//Get the parameters in the url
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //Construct a regular expression object with target parameters
+				var r = window.location.search.substr(1).match(reg); //Match target parameters
+				if(r != null) return unescape(r[2]);
+				return null; //Return parameter value
+			}
+			//Receive the goodsId parameter in the URL
+			var id = getUrlParam('goodsId');
+				
+			$.ajax({
+				type: 'get',
+				url: '../json/recipe.json',
+				dataType: 'json',
+				success: function(res, status) {
+					$.each(res.goods, function(idx, val) {
+						//Acquire detailed data according to id
+						if(id == val.id) {
+							var str = "<div class=\"wrap\"><div class=\"recipe\"><div class=\"recipe-img\"><span><h2>"+val.title+"</h2></span><img src='" + val.imgUrl + "'/><div class=\"tag\"><a href=\"#\">#"+val.category+"</a></div></div><div class=\"recipe-item\"><span><ul><li id=\"recipe-item-title\"><img src=\"../img/Hands - Chicken.png\" alt=\"\">食材:</li><li><span class=\"name\">"+val["ingredients"][0]["name"]+"</span><span class=\"amount\">"+val["ingredients"][0]["weight"]+"</span></li><li><span class=\"name\">"+val["ingredients"][1]["name"]+"</span><span class=\"amount\">"+val["ingredients"][1]["weight"]+"</span></li><li><span class=\"name\">"+val["ingredients"][2]["name"]+"</span><span class=\"amount\">"+val["ingredients"][2]["weight"]+"</span></li><li><span class=\"name\">"+val["ingredients"][3]["name"]+"</span><span class=\"amount\">"+val["ingredients"][3]["weight"]+"</span></li><li><span class=\"name\">"+val["ingredients"][4]["name"]+"</span><span class=\"amount\">"+val["ingredients"][4]["weight"]+"</span></li><li><span class=\"name\">"+val["ingredients"][5]["name"]+"</span><span class=\"amount\">"+val["ingredients"][5]["weight"]+"</span></li><li><span class=\"name\">"+val["ingredients"][6]["name"]+"</span><span class=\"amount\">"+val["ingredients"][6]["weight"]+"</span></li><li><span class=\"name\">"+val["ingredients"][7]["name"]+"</span><span class=\"amount\">"+val["ingredients"][7]["weight"]+"</span></li></ul></span><span class=\"recipe-icon\"><i class=\"fas fa-share-square\"></i></span></div></div><div class=\"step\"><div class=\"step-title\"><h3>製作步驟</h3></div><div class=\"step-item\"><div class=\"step-item-img\"><img src=\"../img/The Munchies - Plate.png\" alt=\"\"></div><p>"+val.step+"</p></div></div></div>";
+						}
+						$('.perrecipe').append(str);
+					});
+				},
+				error: function(error) {
+					console.log(error)
+				}
+			})
+		})
+	</script>
 
     <!-- Site footer -->
     <footer class="site-footer">

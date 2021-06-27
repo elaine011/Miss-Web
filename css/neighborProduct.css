@@ -176,69 +176,68 @@
   display: flex;
   margin-left: 3rem;
   margin-top: 3rem;
-}
-.wrap .item {
   padding: 20px;
-  width: 886px;
+  padding-bottom: 50px;
 }
 .wrap .product-item {
   float: left;
+  margin-left: 3rem;
+  margin-top: 3rem;
 }
 /* 產品圖 */
-.wrap .product-item img {
+.neighborProduct img {
   max-width: 200px;
   position: relative;
 }
 /* 聊天室 */
 .wrap .product-item button {
   position: absolute;
-  left: 110px;
-  top: 370px;
+  left: 185px;
+  top: 400px;
   font-size: 16px;
   background-color: #ffe000;
   color: #000;
   border: 0px;
-  padding: 3px 20px;
+  padding: 8px 20px;
+}
+.product-item button:hover {
+  background-color: #d4bf21;
 }
 /* 詳細說明 */
 .wrap .info {
-  width: 580px;
+  width: 500px;
   float: right;
-  margin: 10px 30px;
+  margin: 10px 80px;
 }
-.wrap .info .info1 h2 {
+.wrap h2 {
   text-align: center;
   display: block;
   margin-bottom: 20px;
 }
-.wrap .info p {
+.wrap p {
   line-height: 30px;
   margin-left: 30px;
   letter-spacing: 1px;
+  margin-right: 10px;
 }
 /* 數量&價格 鈕 */
 .pricebutton {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
-
-.qty {
-  width: 50px;
+#num {
+  width: 90px;
   height: 35px;
   text-align: center;
-  border: 0;
-  border: 2px solid #aaa;
   border-radius: 39px;
+  margin-left: -14px;
+  padding: 3px 16px;
 }
-input.qtyplus {
-  width: 25px;
-  height: 35px;
-  border: 1px solid #aaa;
-  background: #f8f8f8;
-  border: 0px;
+.counter li {
+  display: inline;
+  margin: 6px;
 }
-
-input.qtyminus {
+#minus input {
   margin-left: 30px;
   width: 25px;
   height: 35px;
@@ -246,25 +245,26 @@ input.qtyminus {
   background: #f8f8f8;
   border: 0px;
 }
-input.price {
-  width: 90px;
+#plus input {
+  width: 25px;
   height: 35px;
-  text-align: center;
-  border: 2px solid #aaa;
-  border-radius: 39px;
-  margin-left: 10px;
-  position: relative;
+  border: 1px solid #aaa;
+  background: #f8f8f8;
+  border: 0px;
+  margin-right: 18rem;
 }
+
 /* 產品愛心 */
-.wrap .info .heart a {
-  margin-left: 600px;
-  margin-top: 176px;
+.heart a {
+  position: absolute;
+  left: 120px;
+  top: 405px;
   display: inline;
 }
-.wrap .info .heart i {
+.wrap i {
   color: #000;
 }
-.wrap .info .heart i:hover {
+.wrap i:hover {
   color: red;
 }
 /* 賣家資訊 */

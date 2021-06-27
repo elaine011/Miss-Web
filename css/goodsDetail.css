@@ -191,7 +191,7 @@
 /* 加入購物車  */
 .wrap .product-item button {
   position: absolute;
-  left: 155px;
+  left: 185px;
   top: 400px;
   font-size: 16px;
   background-color: #ffe000;
@@ -232,9 +232,8 @@ s {
   width: 90px;
   height: 35px;
   text-align: center;
-  border: 2px solid #aaa;
   border-radius: 39px;
-  margin-left: 10px;
+  margin-left: -14px;
   padding: 3px 16px;
 }
 .counter li {
@@ -255,12 +254,27 @@ s {
   border: 1px solid #aaa;
   background: #f8f8f8;
   border: 0px;
+  margin-right: 18rem;
+}
+/* 產品愛心 */
+.heart a {
+  position: absolute;
+  left: 120px;
+  top: 405px;
+  display: inline;
+}
+.wrap i {
+  color: #000;
+}
+.wrap i:hover {
+  color: red;
 }
 /* 更多資訊 */
 .info2-item {
   border: 1px solid black;
   margin-left: 30px;
   padding: 5px;
+  margin-bottom: 2rem;
 }
 /* 相關食譜 */
 .recipe {

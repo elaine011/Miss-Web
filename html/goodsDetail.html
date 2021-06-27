@@ -89,7 +89,7 @@
 					$.each(res.goods, function(idx, val) {
 						//Acquire detailed data according to id
 						if(id == val.id) {
-							var str = "<div class=\"wrap\"><div class=\"product-item\"><img src='" + val.imgUrl + "'/><button>加入購物車</button></div><div class=\"info\"><h2>" + val.title + "</h2><p>效期: " + val.term + "</p><s>原價: $" + val.price + "元</s><span> $" + val.price + "元</span><p>剩餘數量: " + val.remain + "份</p><div class=\"pricebutton\"><ul class=\"counter\"><li id=\"minus\"><input type=\"button\" v-on:click=\"minuser\" value=\"-\"/></li><li id=\"countnum\">{{count}}</li><li id=\"plus\"><input type=\"button\" v-on:click=\"adder\" value=\"+\"/></li><li id=\"num\" >$ {{count*price}}</li></ul></div><div class=\"info2\"><p>更多資訊:</p><div class=\"info2-item\"><p>產地:美國</p><p>規格:100g±10</p></div></div></div></div></div>";
+							var str = "<div class=\"wrap\"><div class=\"product-item\"><img src='" + val.imgUrl + "'/><button>加入購物車</button><div class=\"heart\"><a href=\"#\"><i class=\"fas fa-heart fa-2x\"></i></a></div></div><div class=\"info\"><h2>" + val.title + "</h2><p>效期: " + val.term + "</p><s>原價: $" + val.price + "元</s><span> $" + val.price + "元</span><p>剩餘數量: " + val.remain + "份</p><div class=\"info2\"><p>更多資訊:</p><div class=\"info2-item\"><p>產地:美國</p><p>規格:100g±10</p></div><div class=\"pricebutton\"><ul class=\"counter\"><li id=\"minus\"><input type=\"button\" value=\"-\"/></li><li id=\"countnum\">"+1+"</li><li id=\"plus\"><input type=\"button\" value=\"+\"/></li></ul></div></div></div></div></div>";
 						}
 						$('.booksDeatail').append(str);
 					});
@@ -100,6 +100,53 @@
 			})
 		})
 	</script>
+
+    <!-- 商品價格加減鈕
+    <div>
+        <table>
+            <tr>
+              <td class="cart_price">
+                <p class="price_jq">11</p>
+              </td>
+              <td class="cart_quantity">
+                <input type="button" value="-" class="qtyminus" field="quantity" />
+                <input type="text" name="quantity" value="1" class="qty" />
+                <input type="button" value="+" class="qtyplus" field="quantity" />
+              </td>
+              <td class="cart_total">
+                <p class="cart_total_price"></p>
+              </td>
+            </tr>
+          </table>
+    </div>
+
+    商品價格加減鈕 
+    <script>
+        $(document).ready(function() {
+    $('.qtyplus').click(function(e) {
+        e.preventDefault();
+        $(this).siblings(':text').val(function(i, val) {
+        return +val + 1 || 0;
+        }).change();
+    });
+    $(".qtyminus").click(function(e) {
+        e.preventDefault();
+        $(this).siblings(':text').val(function(i, val) {
+        return +val - 1 || 0;
+        }).change();
+    });
+
+    var sum = 0;
+    $('.qty').change(function() {
+        var $tr = $(this).closest('tr'),
+        $total = $tr.find('.cart_total_price'),
+        total = +$tr.find('.price_jq').text() * +this.value || 0;
+        sum = sum - (parseInt($total.text()) || 0) + total;
+        $total.text('$'+total);
+        $('#total').html("<h3>$" + sum + "</h3>");
+    }).change();
+    });
+    </script> -->
 
 	<!-- 相關食譜 -->
     <div class="recipe">

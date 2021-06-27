@@ -7,6 +7,8 @@
     <title>Miss覓食</title>
     <!-- vue -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js'></script>
+    <!-- jquery -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="../css/neighbor.css">
     <!-- top view -->
@@ -123,23 +125,31 @@
     
 
     <!-- 產品欄位 -->
-    <div class="products">
-        <div class="wrap">
-            <div class="item" v-for="item in products" :data-key="item.id" v-if="item.category==filter || !filter">
-                <img :src="item.img" alt="">
-                <a href="./neighborProduct.html">{{item.name}}</a>
-                <p>${{item.price}}</p>
-                <div class="distance">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>距離{{item.distance}}公尺</p>
-                </div>
-                <div class="heart">
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="content">
 
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			$.ajax({
+				type: "get",
+				url: "../json/neighbor.json",
+				dataType: "json",
+				success: function(res) {
+					console.log(res.goods)
+					var str = "<ul class='con_ul'>";
+					$.each(res.goods, function(idx, val) {
+						str += "<li class=\"sec_li\"><a href='neighborProduct.html?goodsId=" + val.id + "' class='lp_li_a'><div class='lp_li_imgWrap'><img src='" + val.imgUrl + "'/></div><p class='lp_li_name'>" + val.title + "</p><p class='lp_li_price'>" + '$' + val.price +"</p></a></li>";
+						});
+						str += "</ul>";
+						$('.content').append(str);
+					},
+					error: function(error) {
+						console.log(error)
+					}
+				});
+			})
+		</script>
+        
     <!-- #app end -->
     </div>
 

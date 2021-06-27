@@ -7,6 +7,8 @@
     <title>Miss覓食</title>
     <!-- Vue -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js'></script>
+    <!-- jquery -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="../css/recipe.css">
     <!-- top view -->
@@ -94,27 +96,31 @@
     </div>
 
     <!-- 食譜 -->
-    <div class="recipeall">
-        <div class="wrap" v-for="item in recipes" :data-key="item.id" v-if="item.category==filter || !filter">
-            <div class="recipe-img">
-                <img :src="item.img" alt="">
-                <div class="tag">
-                    <a href="#">#{{item.category}}</a>
-                </div>
-            </div>
-            <div class="recipe-item">
-                <a href="./perrecipe.html">
-                    <span><h2>{{item.name}}</h2></span>
-                    <span> <p>{{item.step}}</p></span>
-                </a>
-                <span class="recipe-icon">
-                    <i class="fas fa-heart fa-1x"></i>
-                    <i class="fas fa-share-square"></i>
-                </span>
-            </div>
-        </div>
+	<div class="content">
 
-    </div>
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			$.ajax({
+				type: "get",
+				url: "../json/recipe.json",
+				dataType: "json",
+				success: function(res) {
+					console.log(res.goods)
+					var str = "<ul class='con_ul'>";
+					$.each(res.goods, function(idx, val) {
+						str += "<li class=\"sec_li\"><a href='perrecipe.html?goodsId=" + val.id + "' class='lp_li_a'><div class=\"recipeall\"><div class=\"wrap\"><div class='recipe-img'><img src='" + val.imgUrl + "'/><div class=\"tag\"><span>#"+val.category+"</span></div></div><div class=\"recipe-item\"><span><h2 class='lp_li_name'>" + val.title + "</h2><span><span><p>"+val.step+"</p><span class=\"recipe-icon\"><i class=\"fas fa-share-square\"></i></span></div></div></div></a></li>";
+						});
+						str += "</ul>";
+						$('.content').append(str);
+					},
+					error: function(error) {
+						console.log(error)
+					}
+				});
+			})
+		</script>
+
     <!-- app end -->
     </div>
 
