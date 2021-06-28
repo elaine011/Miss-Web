@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descriotion" content="即期品與物資共享平台">
+    <meta name="robots" content="index,follow">
+    <!--網頁標籤-->
+    <link rel="shortcut icon" href="./images/盈盈ㄉlogo2_last_-removebg-preview (2).png"/>
+      <link rel="bookmark" href="./images/盈盈ㄉlogo2_last_-removebg-preview (2).png"/>
+      <title>Miss覓食</title>
+    <!--字型-->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./alllogin.css"/>
+    
+    <script src="https://kit.fontawesome.com/71e88eb3c1.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+<script>
+
+    $(document).ready(function() {  
+        //select all the a tag with name equal to modal
+        $('a[name=modal]').click(function(e) {
+            //Cancel the link behavior
+            e.preventDefault();
+            //Get the A tag
+            var id = $(this).attr('href');
+            //Get the screen height and width
+            var maskHeight = $(document).height();
+            var maskWidth = $(window).width();
+            //Set heigth and width to mask to fill up the whole screen
+            $('#mask1').css({'width':maskWidth,'height':maskHeight});
+            //transition effect     
+            $('#mask1').fadeIn(1000);    
+            $('#mask1').fadeTo("slow",0.8);  
+            //Get the window height and width
+            var winH = $(window).height();
+            var winW = $(window).width();
+            //Set the popup window to center
+            $(id).css('top',  winH/2-$(id).height()/2);
+            $(id).css('left', winW/2-$(id).width()/2);
+            //transition effect
+            $(id).fadeIn(2000); 
+        });
+        //if close button is clicked
+        $('.window .close').click(function (e) {
+            //Cancel the link behavior
+            e.preventDefault();
+            $('#mask1').hide();
+            $('.window').hide();
+        });             
+    });
+    </script>
+</head>
+<body>
+        <span>
+            <img  class="logo" src="./images/logo有背-removebg-preview.png" alt="Miss覓食">
+        </span><br>
+        <span>
+            <h2 class="logintext">Miss覓食登入</h2>  
+        </span><br>
+        <span>
+            <a  href="#dialog1" name="modal"><button class="person"><i class="fas fa-user-alt" aria-hidden="true"></i>我是個人</button></a>
+        </span>
+        <span>
+            <a  href="#dialog2" name="modal"><button class="business"><i class="fas fa-store" aria-hidden="true"></i>我是商家</button></a>
+        </span>
+        <span>
+            <a  href="#dialog3" name="modal"><button class="welfare"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i>我是福利機構</button></a>
+        </span>
+
+<div id="boxes1">
+<div id="dialog1" class="window">
+<form action="" class="login">
+    <span>
+        <a href="#" class="close"><i class="fas fa-times"></i></a>
+    </span>
+    <span>
+        <img  class="logo2" src="./images/logo有背-removebg-preview.png" alt="Miss覓食">
+    </span><br>
+    <span>
+        <p class="logintext2">個人登入</p>  
+    </span><br>
+    <span>
+        <div class="account">
+            <i class="far fa-user"></i>
+            <input type="email" placeholder="電子信箱" name="" value="" required>
+            
+        </div>
+        <div class="password">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="密碼" id="pwd" name="" minlength="6" maxlength="20" value="" required><i class="fa fa-eye-slash" onclick="hideShowPsw()" id="eye"></i>
+                
+                <script type="text/javascript">
+                    var eye = document.getElementById("eye");
+                    var pwd = document.getElementById("pwd");
+
+            function hideShowPsw(){
+
+                    if (pwd.type == "password") {
+                        pwd.type = "text";
+                            eye.className='fa fa-eye'
+                    }else {
+                        pwd.type = "password";
+                        eye.className='fa fa-eye-slash'
+                    }
+            }
+            </script>
+        </div>
+    </span>
+    <span>
+        <div>
+        <button class="loginbutton" type="submit">登入</button>
+        </div>
+    </span>
+    <span>
+        <div>
+            <a class="forget" href="">忘記密碼?</a>
+            <p class="row">|</p>
+            <a class="register" href="./law.html">註冊帳號</a>
+        </div>      
+    </span>
+        <div class="divide">
+            <span class="line"></span>
+            <span style="white-space:pre">   </span><span class="txt">或者</span>
+            <span style="white-space:pre">   </span><span class="line"></span>
+        </div>
+    <span>
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-google-plus"></i></a>
+        </span>
+   
+</form>
+</div>
+</div>
+
+<!-- Mask to cover the whole screen -->
+  <div id="mask1"></div>
+
+<div id="boxes2" >
+    <div id="dialog2" class="window">
+    <form action="" class="login">
+        <span>
+            <a href="#" class="close"><i class="fas fa-times"></i></a>
+        </span>
+        <span>
+            <img  class="logo2" src="./images/logo有背-removebg-preview.png" alt="Miss覓食">
+        </span><br>
+        <span>
+            <p class="logintext2">廠商登入</p>  
+        </span><br>
+        <span>
+            <p class="one">*</p><p class="two">廠商登入前須先填寫</p><a class="four" href="https://docs.google.com/forms/d/e/1FAIpQLSeuCcohHqSJ25OHygFkPcasDdK-MNfgpJjpbtSPw9_B2dgStg/viewform?embedded=true">登入表單</a><p class="three">驗證身份，受理後才可進行登入</p>
+        </span>
+        <span>
+            <div class="account2">
+                <i class="far fa-user"></i>
+                <input type="text" placeholder="帳號" name="" minlength="6" maxlength="20" value="" required>
+                
+            </div>
+            <div class="password2">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="密碼" id="pwd1" name="" minlength="6" maxlength="20" value="" required><i class="fa fa-eye-slash" onclick="hideShowPsw1()" id="eye1"></i>
+                
+                <script type="text/javascript">
+                    var eye1 = document.getElementById("eye1");
+                    var pwd1 = document.getElementById("pwd1");
+
+            function hideShowPsw1(){
+
+                    if (pwd1.type == "password") {
+                        pwd1.type = "text";
+                            eye1.className='fa fa-eye'
+                    }else {
+                        pwd1.type = "password";
+                        eye1.className='fa fa-eye-slash'
+                    }
+            }
+            </script>
+            </div>
+        </span>
+        
+        <span>
+            <div>
+            <button class="loginbutton" type="submit">登入</button>
+            </div>
+        </span>
+        <span>
+            <div>
+                <a class="forget" href="">忘記密碼?</a>
+                <p class="row">|</p>
+                <a class="register" href="https://docs.google.com/forms/d/e/1FAIpQLSeuCcohHqSJ25OHygFkPcasDdK-MNfgpJjpbtSPw9_B2dgStg/viewform?embedded=true">申請表單</a>
+            </div>      
+        </span>
+           
+       
+    </form>
+    </div>
+    </div>
+    
+    <!-- Mask to cover the whole screen -->
+      <div id="mask2"></div>
+    <div id="boxes3">
+        <div id="dialog3" class="window">
+        <form action="" class="login">
+            <span>
+                <a href="#" class="close"><i class="fas fa-times"></i></a>
+            </span>
+            <span>
+                <img  class="logo2" src="./images/logo有背-removebg-preview.png" alt="Miss覓食">
+            </span><br>
+            <span>
+                <p class="logintext2">福利機構登入</p>  
+            </span><br>
+            <span>
+                <p class="one2">*</p><p class="two2">福利機構登入前須先填寫</p><a class="four2" href="https://docs.google.com/forms/d/e/1FAIpQLSeuCcohHqSJ25OHygFkPcasDdK-MNfgpJjpbtSPw9_B2dgStg/viewform?embedded=true">登入表單</a><p class="three2">驗證身份，受理後才可進行登入</p>
+            </span>
+            <span>
+                <div class="account2">
+                    <i class="far fa-user"></i>
+                    <input type="text" placeholder="帳號" name="" minlength="6" maxlength="20" value="" required>
+                    
+                </div>
+                <div class="password2">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="密碼" id="pwd2" name="" minlength="6" maxlength="20" value="" required><i class="fa fa-eye-slash" onclick="hideShowPsw2()" id="eye2"></i>
+                    
+                    <script type="text/javascript">
+                        var eye = document.getElementById("eye");
+                        var pwd = document.getElementById("pwd");
+    
+                function hideShowPsw2(){
+    
+                        if (pwd2.type == "password") {
+                            pwd2.type = "text";
+                                eye2.className='fa fa-eye'
+                        }else {
+                            pwd2.type = "password";
+                            eye2.className='fa fa-eye-slash'
+                        }
+                }
+                </script>
+                </div>
+            </span>
+            
+            <span>
+                <div>
+                <button class="loginbutton" type="submit">登入</button>
+                </div>
+            </span>
+            <span>
+                <div>
+                    <a class="forget" href="">忘記密碼?</a>
+                    <p class="row">|</p>
+                    <a class="register" href="https://docs.google.com/forms/d/e/1FAIpQLSeuCcohHqSJ25OHygFkPcasDdK-MNfgpJjpbtSPw9_B2dgStg/viewform?embedded=true">申請表單</a>
+                </div>      
+            </span>
+               
+           
+        </form>
+        </div>
+        </div>
+        
+        <!-- Mask to cover the whole screen -->
+          <div id="mask3"></div>
+        
+</body>
+</html>
