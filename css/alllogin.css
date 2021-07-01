@@ -3,6 +3,7 @@ body {
   font-size: 20px;
   background-color: #fef7e6;
 }
+/*登入首頁*/
 a {
   color: #333;
   text-decoration: none;
@@ -11,7 +12,7 @@ a:hover {
   color: #627879;
   text-decoration: none;
 }
-#mask {
+#mask1 {
   position: absolute;
   left: 0;
   top: 0;
@@ -19,7 +20,9 @@ a:hover {
   background-color: #000;
   display: none;
 }
-#boxes .window {
+#boxes1 .window,
+#boxes2 .window,
+#boxes3 .window {
   position: absolute;
   left: 0;
   top: 0;
@@ -29,26 +32,27 @@ a:hover {
   z-index: 9999;
   padding: 20px;
 }
-#boxes #dialog1 {
+/*登入視窗跟按鈕*/
+#boxes1 #dialog1 {
   width: 375px;
   height: 450px;
   padding: 10px;
   background-color: #ffffff;
 }
-#boxes #dialog2 {
+#boxes2 #dialog2 {
   width: 375px;
   height: 450px;
   padding: 10px;
   background-color: #ffffff;
 }
-#boxes #dialog3 {
+#boxes3 #dialog3 {
   width: 375px;
   height: 450px;
   padding: 10px;
   background-color: #ffffff;
 }
 .close {
-  color: #627879;
+  color: #67755c;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -64,8 +68,14 @@ a:hover {
 .logintext {
   text-align: center;
   display: block;
-  color: #627879;
+  color: #67755c;
   margin-top: 0px;
+}
+.person,
+.business,
+.welfare {
+  color: #67755c;
+  font-weight: bolder;
 }
 .fa-user-alt {
   display: inline-block;
@@ -79,7 +89,7 @@ a:hover {
   right: 50px;
   font-size: 15px;
 }
-.fa-building {
+.fa-hand-holding-heart {
   display: inline-block;
   position: relative;
   right: 37px;
@@ -112,7 +122,7 @@ a:hover {
   background-color: white;
   border: 1px solid;
 }
-
+/*登入按鈕*/
 .person:hover,
 .business:hover,
 .welfare:hover {
@@ -126,7 +136,7 @@ a:hover {
   background-color: #ffe000;
   transform: translateY(4px);
 }
-
+/*視窗內logo跟字*/
 .logo2 {
   width: 180px;
   height: 130px;
@@ -139,27 +149,28 @@ a:hover {
   font-weight: 600;
   text-align: center;
   display: block;
-  color: #627879;
-  margin: 0px 10px 0px 0px;
+  color: #67755c;
+  margin: -10px 10px 0px 0px;
 }
+/*個人登入*/
 .account i {
   position: absolute;
-  left: 40px;
-  top: 236px;
+  left: 30px;
+  top: 230px;
   font-size: 15px;
-  color: #627879;
+  color: #67755c;
 }
 .password i {
   position: absolute;
-  left: 40px;
-  top: 286px;
+  left: 30px;
+  top: 285px;
   font-size: 15px;
-  color: #627879;
+  color: #67755c;
 }
 
 .account input {
   display: block;
-  width: 90%;
+  width: 85%;
   margin: auto;
   margin-top: 0px;
   margin-bottom: 10px;
@@ -169,7 +180,7 @@ a:hover {
 
 .password input {
   display: block;
-  width: 90%;
+  width: 85%;
   margin: auto;
   margin-top: 0px;
   margin-bottom: 10px;
@@ -186,12 +197,12 @@ a:hover {
   background-color: #ffe000;
   border: 1px;
   border-radius: 15px;
-  box-shadow: 0 3px #627879;
+  box-shadow: 0 3px #67755c;
   font-size: 15px;
 }
 .loginbutton:hover {
   background-color: #ffe000;
-  color: #627879;
+  color: #67755c;
   border: 1px solid #fef7e6;
 }
 
@@ -236,22 +247,25 @@ a:hover {
 .fa-facebook {
   font-size: 30px;
   color: #2e76aa;
-  margin: 0px 10px 5px 150px;
+  margin: -5px 10px 5px 150px;
 }
 .fa-google-plus {
   font-size: 30px;
   color: #e04646;
-  margin: 0px 20px 5px 5px;
+  margin: -5px 20px 5px 5px;
 }
 .fa-eye,
 .fa-eye-slash {
   position: absolute;
   right: 200px;
 }
-#eye {
+#eye,
+#eye1,
+#eye2 {
   position: absolute;
   left: 340px;
 }
+/*廠商*/
 .one,
 .two,
 .three,
@@ -260,26 +274,26 @@ a:hover {
   font-size: 12px;
   margin-left: 5px;
   margin-bottom: 10px;
-  margin-top: 0px;
+  margin-top: -20px;
 }
+/*廠商福利機構*/
 .account2 i {
   position: absolute;
-  left: 40px;
-  top: 267px;
+  left: 30px;
+  top: 270px;
   font-size: 15px;
-  color: #627879;
+  color: #67755c;
 }
 .password2 i {
   position: absolute;
-  left: 40px;
-  top: 322px;
+  left: 30px;
+  top: 330px;
   font-size: 15px;
-  color: #627879;
+  color: #67755c;
 }
-
 .account2 input {
   display: block;
-  width: 90%;
+  width: 85%;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -289,7 +303,7 @@ a:hover {
 
 .password2 input {
   display: block;
-  width: 90%;
+  width: 85%;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15px;

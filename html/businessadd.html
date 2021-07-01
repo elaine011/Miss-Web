@@ -14,11 +14,9 @@
       <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/businessadd.css"/>
-    <script type="text/javascript" src="../js/businessadd.js"></script>
     <script src="https://kit.fontawesome.com/71e88eb3c1.js" crossorigin="anonymous"></script>
     
 </head>
-<body>
     <body bgcolor="#FEF7E6">
         <div id="header">
         <div class="header">
@@ -47,7 +45,7 @@
 
             <ul id="menu">
                 <a href="./businessadd.html"><li>首頁</li></a>
-                <a href="./businessprofile.html"><li>商家介面</li></a>
+                <a href="./businessprofile.html#"><li>商家簡介</li></a>
                 <a href="#"><li>登出</li></a>
             </ul>
         </div>
@@ -58,13 +56,13 @@
         <div id="sidebar">
         <div class="face">
         <form>
-            <img style="border-radius: 50%;"width=120px height=120px src="../images/1618757563954.jpg" alt="圓形圖">
+            <img class="facephoto" src="../images/1618757563954.jpg" alt="圓形圖">
             <button>更換相片</button>
             
         </form>
         </div>
         <div class="side-menu">
-            <nav>
+            <nav id="side">
                 <a href="./businessprofile.html"><i class="far fa-address-book"></i>商家簡介</a>
                 <a href="./businessadd.html"><i class="far fa-plus-square"></i>上架商品</a>
                 <a href="#"><i class="far fa-list-alt"></i>我的訂單</a>
@@ -89,7 +87,7 @@
             </tr>
             <tr>
                 <th><i class="fas fa-asterisk"></i>商品類別:</th>
-                <td><select class="category" name="category" id="category"placeholder="未分類" >
+                <td><select class="category" name="category" id="category" placeholder="未分類" >
                     <option value="all">全部</option>
                     <option value="bread">麵包</option>
                     <option value="egg">蛋</option>
@@ -105,7 +103,7 @@
                 <th><i class="fas fa-asterisk"></i>商品效期:</th>
                 <td>
                     <input class="day" list="daylist" type="date" name="day" id="day" min="0" max="31" placeholder="日" required/>
-                    <datalist id=daylist>
+                    <datalist id="daylist">
                     </datalist>
                     </td>
             </tr>
@@ -128,27 +126,42 @@
             </tr>
             <tr>
                 <th><i class="fas fa-asterisk"></i>商品位置:</th>
-                <td><input class="address" type="text" name="address" value="" required><a href="#"><i class="fas fa-map-marked-alt"></i></td>
+                <td><input class="address" type="text" name="address" value="" required><a href="#"><i class="fas fa-map-marked-alt"></i></a></td>
             </tr>
             <tr>
                 <th><i class="fas fa-asterisk"></i>上傳圖片:</th>
                 <td>
-                    <input class="picture" id="pictre" type="file" name="picture" value="" required>
-                    <p class="picturetext">請上傳jpg.png檔，建議尺寸370*370，上傳前務必確認圖片是否清晰</p>
-                    <img id="demo" >
+                    <input class="pucture" type="file" onchange="readURL(this)" targetid="preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png" required/>
+                    <p class="picturetext">請上傳jpg.png檔，建議尺寸370*370，確認圖片是否清晰</p>
+                    <div>
+                        <img id="preview_progressbarTW_img" src="#" />
+                    </div>
+                     <script>
+                     function readURL(input){
+                       if(input.files && input.files[0]){
+                         var imageTagID = input.getAttribute("targetID");
+                         var reader = new FileReader();
+                         reader.onload = function (e) {
+                            var img = document.getElementById(imageTagID);
+                            img.setAttribute("src", e.target.result)}
+                         reader.readAsDataURL(input.files[0]);                   
+                        }     
+                     }
+                     </script>     
                 </td>
-                
             </tr>
+            <tr>
                 <th>商品描述:</th>
                 <td>
                     <textarea class="description" placeholder="限250字" minlength="0" maxlength="250" rows="20" cols="50" ></textarea>
                 </td>
+                
             </tr>
         <!--下方按鈕-->
             </table>
             <input class="see" type="button" value="預覽">
             <input class="cancel" type="reset" value="取消">
-            <input class="submit" type="submit" value="完成">
+            <input class="submit" type="submit" value="上架商品">
         </form>
         </div>
 </div>
@@ -170,7 +183,7 @@
                 <h6>與我們合作</h6>
                 <ul>
                     <li>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuCcohHqSJ25OHygFkPcasDdK-MNfgpJjpbtSPw9_B2dgStg/viewform?usp=sf_link"><i class="fas fa-user-plus"></i> 廠商合作表單</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuCcohHqSJ25OHygFkPcasDdK-MNfgpJjpbtSPw9_B2dgStg/viewform?embedded=true"><i class="fas fa-user-plus"></i> 廠商合作表單</a>
                     </li>
                 </ul>
             </div>
@@ -182,7 +195,7 @@
                     <a href="#"><i class="fas fa-phone-alt"></i> 電話:02-29012345</a>
                 </li>
                 <li>
-                    <a href="mailto:contact@yourwebsite.com"><i class="fas fa-envelope"></i> 信箱:abc123@gmail.com</a>
+                    <a href="#"><i class="fas fa-envelope"></i> 信箱:abc123@gmail.com</a>
                 </li>
             </ul>
             </div>
@@ -210,12 +223,12 @@
         </div>
         </div>
   </footer>
-
+</div>
+</div>
   <!-- 返回頂端箭頭 -->
   <div class="top">
     <a href="#"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a>
   </div>
 
-    </body>
 </body>
 </html>
