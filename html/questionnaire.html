@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descriotion" content="即期品與物資共享平台">
+    <meta name="robots" content="index,follow">
+    <!--網頁標籤-->
+    <link rel="shortcut icon" href="../images/盈盈ㄉlogo2_last_-removebg-preview (2).png"/>
+      <link rel="bookmark" href="../images/盈盈ㄉlogo2_last_-removebg-preview (2).png"/>
+      <title>Miss覓食</title>
+    <!--字型-->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/questionnaire.css"/>
+    
+    <script src="https://kit.fontawesome.com/71e88eb3c1.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <form action="" method="GET">
+    <div class="survey">
+        <div>
+            <img class="top" src="../images/問卷上.png" alt="">
+            <p class="toptext" >歡迎進入Miss覓食</p>    
+        </div>
+        <div class="surveytitle">
+            <p class="pertext">個人化推薦</p>
+            <hr>
+            <p class="suggestion">按照你的喜好挑選，希望我們推薦的商品</p>
+        </div>
+        <div class="q1">
+            <p class="question">1.  請問你/妳的性別是?</p>
+                <input class="male" type="radio" value="male" name="gender" id="male" required>
+                <label for="male">生理男<i class="fas fa-mars"></i></label> 
+              
+            <input class="female" type="radio" value="female" name="gender" id="female">
+            <label for="female">生理女<i class="fas fa-venus"></i></label><br>   
+        </div>
+        <div class="q2">
+            <p class="question">2.  請問你/妳今年幾歲?</p>
+            <input class="age" type="number" min="1" max="150" id="age" required>
+            <label for="age">歲</label>
+        </div>
+        <div class="q3">
+            <p class="question">3.  偏好的購物方式?</p>
+                <input class="net" type="radio" value="male" name="shop" id="net" required>
+                <label for="net">線上購物<i class="fas fa-globe-asia"></i></label> 
+              
+            <input class="store" type="radio" value="female" name="shop" id="store">
+            <label for="store">到店購物<i class="fas fa-store"></i></label><br>   
+        </div>
+        <div class="q4">
+            <p class="question">4.  你偏好哪些店家?</p>
+            <p class="hint">*可複選</p>
+                <img class="meetp" src="../images/全家.jpg" alt="">
+                <img src="../images/7-11.jpg" alt="">
+                <img src="../images/萊爾富.png" alt="">
+                <img src="../images/美聯社.jpg" alt="">
+                <br>
+                
+                <label for="fam">
+                    <input class="fam" type="checkbox" value="全家" name="market" id="fam">
+                    <span>全家</span>
+                </label>
+                <label for="711">
+                    <input class="711" type="checkbox" value="7-11" name="market" id="711">
+                    <span>7-11</span>
+                </label>  
+                <label for="lier">
+                    <input class="lier" type="checkbox" value="萊爾富" name="market" id="lier">
+                    <span>萊爾富</span>
+                </label>               
+                <label for="sim">
+                    <input class="sim" type="checkbox" value="美聯社" name="market" id="sim">
+                    <span>美聯社</span>
+                </label>
+                <br>
+                <img class="fruitp" src="../images/愛買.png" alt="">
+                <img src="../images/家樂福.jpg" alt="">
+                <img src="../images/家樂福便利購.jpg" alt="">
+                <img src="../images/全聯.png" alt=""><br>
+                
+                <label for="am">
+                    <input class="am" type="checkbox" value="愛買" name="market" id="am">
+                    <span>愛買</span>
+                </label>
+                
+                <label for="ca">
+                    <input class="ca" type="checkbox" value="家樂福" name="market" id="ca">
+                    <span>家樂福</span>
+                </label>
+                
+                <label for="cacon">
+                    <input class="cacon" type="checkbox" value="家樂福便利購" name="market" id="cacon">
+                    <span>便利購</span>
+                </label>
+                
+                <label for="px">
+                    <input class="px" type="checkbox" value="全聯" name="market" id="px">
+                    <span>全聯</span>
+                </label>
+                <br>
+        </div>
+        <div class="q4">
+            <p class="question">5.  你喜歡哪些?(食物類)</p>
+            <p class="hint">*可複選</p>
+                <img class="meetp" src="../images/牛排.jpg" alt="">
+                <img src="../images/麵包.jpg" alt="">
+                <img src="../images/蔬菜.jpg" alt="">
+                <img src="../images/蛋.jpg" alt=""><br>
+                
+                <label for="meet">
+                    <input class="meet" type="checkbox" value="肉" name="buy" id="meet">
+                    <span>肉</span>
+                </label>
+                <label for="bread">
+                    <input class="bread" type="checkbox" value="麵包" name="buy" id="bread">
+                    <span>麵包</span>
+                </label>  
+                <label for="vage">
+                    <input class="vage" type="checkbox" value="蔬菜" name="buy" id="vage">
+                    <span>蔬菜</span>
+                </label>               
+                <label for="egg">
+                    <input class="egg" type="checkbox" value="蛋" name="buy" id="egg">
+                    <span>蛋</span>
+                </label>
+                <br>
+                <img class="fruitp" src="../images/水果.jpg" alt="">
+                <img src="../images/海鮮.jpg" alt="">
+                <img src="../images/零食.jpg" alt="">
+                <img src="../images/飲料.jpg" alt=""><br>
+                
+                <label for="fruit">
+                    <input class="fruit" type="checkbox" value="水果" name="buy" id="fruit">
+                    <span>水果</span>
+                </label>
+                
+                <label for="sea">
+                    <input class="sea" type="checkbox" value="海鮮" name="buy" id="sea">
+                    <span>海鮮</span>
+                </label>
+                
+                <label for="cookie">
+                    <input class="cookie" type="checkbox" value="零嘴" name="buy" id="cookie">
+                    <span>零嘴</span>
+                </label>
+                
+                <label for="drink">
+                    <input class="drink" type="checkbox" value="飲料" name="buy" id="drink">
+                    <span>飲料</span>
+                </label>
+                <br>
+        </div>
+        <div class="q5">
+            <p class="question">6.  你喜歡哪些?(日常用品類)</p>
+            <p class="hint">*可複選</p>
+                <img class="meetp" src="../images/盥洗用品.jpg" alt="">
+                <img src="../images/廚衛用品.jpg" alt="">
+                <img src="../images/電器.jpg" alt="">
+                <img src="../images/居家小物.jpg" alt=""><br>
+                
+                <label for="wash">
+                    <input class="wash" type="checkbox" value="盥洗用品" name="buy" id="wash">
+                    <span>盥洗用品</span>
+                </label>
+                
+                <label for="kit">
+                    <input class="kit" type="checkbox" value="廚衛用品" name="buy" id="kit">
+                    <span>廚衛用品</span>
+                </label>
+                
+                <label for="ele">
+                    <input class="ele" type="checkbox" value="電器用品" name="buy" id="ele">
+                    <span>電器用品</span>
+                </label>
+                
+                <label for="home">
+                    <input class="home" type="checkbox" value="居家小物" name="buy" id="home">
+                    <span>居家小物</span>
+                </label>
+                <br>
+        </div>
+        <div class="q6">
+            <p class="question">7.  你喜歡哪些?(美妝用品類)</p>
+            <p class="hint">*可複選</p>
+                <img class="meetp" src="../images/護膚產品.jpg" alt="">
+                <img src="../images/唇膏.jpg" alt="">
+                <img src="../images/底妝產品.jpg" alt="">
+                <img src="../images/美髮.jpg" alt=""><br>
+                
+                <label for="skin">
+                    <input class="skin" type="checkbox" value="護膚用品" name="buy" id="skin">
+                    <span>護膚用品</span>
+                </label>               
+                <label for="lip">
+                    <input class="lip" type="checkbox" value="眼唇用品" name="buy" id="lip">
+                    <span>眼唇用品</span>
+                </label>              
+                <label for="foun">
+                    <input class="foun" type="checkbox" value="底妝用品" name="buy" id="foun">
+                    <span>底妝用品</span>
+                </label>                
+                <label for="hair">
+                    <input class="hair" type="checkbox" value="美髮保養" name="buy" id="hair">
+                    <span>美髮保養</span>
+                </label>
+                <br>
+        </div>
+        <div class="q7">
+            <p class="question">8.  其他(還有喜歡什麼類型的商品嗎)</p>
+            <input id="othergoods" class="text" type="text" name="textField" value="可自行輸入文字..." >
+        </div>
+        <div>
+            <input class="finish" type="submit" value="送出" >
+        </div>
+    </div>
+</form>
+</body>
+</html>

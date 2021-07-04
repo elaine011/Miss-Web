@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descriotion" content="即期品與物資共享平台">
+    <meta name="robots" content="index,follow">
+    <!--網頁標籤-->
+    <link rel="shortcut icon" href="../images/盈盈ㄉlogo2_last_-removebg-preview (2).png"/>
+      <link rel="bookmark" href="../images/盈盈ㄉlogo2_last_-removebg-preview (2).png"/>
+      <title>Miss覓食</title>
+    <!--字型-->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/perdonate.css"/>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script src="https://kit.fontawesome.com/71e88eb3c1.js" crossorigin="anonymous"></script>
+    
+</head>
+    <body bgcolor="#FEF7E6">
+        <div id="header">
+        <div class="header">
+            <!-- logo+文字 +購物車+登入-->
+            
+            <div class="logo">
+                <img src="../images/盈盈ㄉlogo2_last_-removebg-preview (2).png " alt="Miss覓食">
+                <h1>
+                    Miss覓食
+                </h1>
+                <a href="#">Hi~han</a>        
+                <a href="#"><i class="fas fa-bell"></i></a>          
+                <!-- 搜尋框 -->
+                <div class="search">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <input class="searchbar" type="text" name="search" id="search" placeholder="我想要找...">
+                </div>
+            </div>
+     <!-- 漢堡選單 -->
+     <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <a href="./businessadd.html"><li>首頁</li></a>
+                <a href="./businessprofile.html"><li>商家簡介</li></a>
+                <a href="#"><li>登出</li></a>
+            </ul>
+        </div>
+    </nav>
+    </div>
+</div>
+        <!--左側列表-->
+        <div id="sidebar">
+        <div class="face">
+        <form>
+            <img style="border-radius: 50%;" width="120px" height="120px" src="../images/1618757563954.jpg" alt="圓形圖">
+            <button>更換相片</button>
+            
+        </form>
+        </div>
+        <div class="side-menu">
+          <nav id="side">
+            <a href="./businessprofile.html"><i class="far fa-address-book"></i>商家簡介</a>
+            <a href="./businessgoods.html"><i class="far fa-plus-square"></i>上架商品</a>
+            <a href="#"><i class="far fa-list-alt"></i>我的訂單</a>
+            <a href="#"><i class="fas fa-star"></i>商家評價</a>
+            <a href="#" class="useranalist"><i class="far fa-chart-bar"></i>使用者分析</a>
+            <a href="./donate.html"><i class="fas fa-hand-holding-heart"></i>捐贈物資</a>
+        </nav>
+        </div>
+        </div>
+        <div class="title">
+            <h2><i class="fas fa-hand-holding-heart" style="margin-right: 0.5rem;"></i>捐贈物資</h2>
+        </div>
+        <!--右側資料 -->
+        <div id="content">
+            <div class="topcontent">
+             <a href="https://web.intersoft.com.tw/donation/OnlineGreenArk/Index.aspx"  target="_blank"><img src="../images/綠色方舟.png" alt=""></a>
+             <h3>綠色方舟全人關懷協會</h3><br>
+             <p>地址: 11075台北市信義區松德路64號4樓<br></p>
+             <p>聯絡電話: (02)8786-0810<br></p>
+             <p>捐贈方式: 商家寄送<br></p>
+            <hr>
+            </div> 
+            <div class="downcontent">
+                <div class="wrap">
+                    <div class="item">
+                      <p>物資:洗髮乳</p>
+                      <p>數量:15罐</p>
+                      <p>用途:日用品</p>
+                      <input class="donate" type="button" value="捐贈" onclick="don1()">
+                      <script>
+                        function don1() {
+                      var msg = "您確定要捐贈嗎？";
+                      if (confirm(msg)==true){
+                        alert('已傳送，請等待通知!!')
+                      return true;
+                      }else{
+                      return false;
+                      }
+                      }
+                    </script>
+                    </div>
+                    <div class="item">
+                        <p>物資:衛生紙</p>
+                        <p>數量:30捲</p>
+                        <p>用途:日用品</p>
+                        <input class="donate" type="button" value="捐贈" onclick="don2()">
+                        <script>
+                          function don2() {
+                        var msg = "您確定要捐贈嗎？";
+                        if (confirm(msg)==true){
+                          alert('已傳送，請等待通知!!')
+                        return true;
+                        }else{
+                        return false;
+                        }
+                        }
+                      </script>
+                      </div>
+                      <div class="item">
+                        <p>物資:衛生棉</p>
+                        <p>數量:30包</p>
+                        <p>用途:日用品</p>
+                        <input class="donate" type="button" value="捐贈" onclick="don3()">
+                        <script>
+                          function don3() {
+                        var msg = "您確定要捐贈嗎？";
+                        if (confirm(msg)==true){
+                          alert('已傳送，請等待通知!!')
+                        return true;
+                        }else{
+                        return false;
+                        }
+                        }
+                      </script>
+                      </div>
+                      <div class="item">
+                        <p>物資:濕紙巾</p>
+                        <p>數量:50包</p>
+                        <p>用途:日用品</p>
+                        <input class="donate" type="button" value="捐贈" onclick="don4()">
+                        <script>
+                          function don4() {
+                        var msg = "您確定要捐贈嗎？";
+                        if (confirm(msg)==true){
+                          alert('已傳送，請等待通知!!')
+                        return true;
+                        }else{
+                        return false;
+                        }
+                        }
+                      </script>
+                      </div>
+                      <div class="item">
+                        <p>物資:罐頭</p>
+                        <p>數量:30罐</p>
+                        <p>用途:食品</p>
+                        <input class="many" type="button" value="捐贈" onclick="don5()">
+                        <script>
+                          function don5() {
+                        var msg = "您確定要捐贈嗎？";
+                        if (confirm(msg)==true){
+                          alert('已傳送，請等待通知!!')
+                        return true;
+                        }else{
+                        return false;
+                        }
+                        }
+                      </script>
+                      </div>
+                      <div class="item">
+                        <p>物資:米</p>
+                        <p>數量:8袋</p>
+                        <p>用途:食品</p>
+                        <input class="many" type="button" value="捐贈" onclick="don6()">
+                        <script>
+                          function don6() {
+                        var msg = "您確定要捐贈嗎？";
+                        if (confirm(msg)==true){
+                          alert('已傳送，請等待通知!!')
+                        return true;
+                        }else{
+                        return false;
+                        }
+                        }
+                      </script>
+                      </div>
+                      <div class="item">
+                        <p>物資:泡麵</p>
+                        <p>數量:15包</p>
+                        <p>用途:食品</p>
+                        <input class="many" type="button" value="捐贈" onclick="don7()">
+                        <script>
+                          function don7() {
+                        var msg = "您確定要捐贈嗎？";
+                        if (confirm(msg)==true){
+                          alert('已傳送，請等待通知!!')
+                        return true;
+                        }else{
+                        return false;
+                        }
+                        }
+                      </script>
+                      </div>
+                      <div class="item">
+                        <p>物資:醫藥箱</p>
+                        <p>數量:10組</p>
+                        <p>用途:醫療用</p>
+                        <input class="many" type="button" value="捐贈" onclick="don8()">
+                        <script>
+                          function don8() {
+                        var msg = "您確定要捐贈嗎？";
+                        if (confirm(msg)==true){
+                          alert('已傳送，請等待通知!!')
+                        return true;
+                        }else{
+                        return false;
+                        }
+                        }
+                      </script>
+                      </div>
+                      <div class="item">
+                        <p>物資:酒精</p>
+                        <p>數量:15罐</p>
+                        <p>用途:消毒用</p>
+                        <input class="many" type="button" value="捐贈" onclick="don9()">
+                        <script>
+                          function don9() {
+                        var msg = "您確定要捐贈嗎？";
+                        if (confirm(msg)==true){
+                          alert('已傳送，請等待通知!!')
+                        return true;
+                        }else{
+                        return false;
+                        }
+                        }
+                      </script>
+                      </div>
+                      <div class="item">
+                        <p>物資:防蚊液</p>
+                        <p>數量:15瓶</p>
+                        <p>用途:日用品</p>
+                        <input class="donate" type="button" value="捐贈" onclick="don10()">
+                        <script>
+                          function don10() {
+                        var msg = "您確定要捐贈嗎？";
+                        if (confirm(msg)==true){
+                          alert('已傳送，請等待通知!!')
+                        return true;
+                        }else{
+                        return false;
+                        }
+                        }
+                      </script>
+                      </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!--
+        <div class="booksDeatail">
+
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				//获取url中的参数
+				function getUrlParam(name) {
+					var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+					var r = window.location.search.substr(1).match(reg); //匹配目标参数
+					if(r != null) return unescape(r[2]);
+					return null; //返回参数值
+				}
+				//接收URL中的参数goodsId
+				var id = getUrlParam('goodsId');
+				
+				$.ajax({
+					type: 'get',
+					url: './donate.json',
+					dataType: 'json',
+					success: function(res, status) {
+						$.each(res.goods, function(idx, val) {
+							//根据id获取详情数据
+							if(id == val.id) {
+								var str = "<img src='" + val.imgUrl + "'/><p>商品编号：" + val.id + "</p><p>产品名称：" + val.title + "</p><p>商品简介：" + val.desc + "</p>";
+							}
+							$('.booksDeatail').append(str);
+						});
+					},
+					error: function(error) {
+						console.log(error)
+					}
+				})
+			})
+		</script>
+-->
+
+<!--footer-->
+<div id="footer">
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+            <div class="col-xs-6 col-md-4">
+              <h6>關於我們</h6>
+              <ul>
+                <li>
+                    <a href="./aboutus.html"><i class="fas fa-utensils"></i> 關於Miss覓食</a>
+                </li>
+            </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-4">
+                <h6>與我們合作</h6>
+                <ul>
+                    <li>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuCcohHqSJ25OHygFkPcasDdK-MNfgpJjpbtSPw9_B2dgStg/viewform?embedded=true"><i class="fas fa-user-plus"></i> 廠商合作表單</a>
+                    </li>
+                </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-4">
+              <h6>聯絡我們</h6>
+              <ul>
+                <li>
+                    <a href="#"><i class="fas fa-phone-alt"></i> 電話:02-29012345</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-envelope"></i> 信箱:abc123@gmail.com</a>
+                </li>
+            </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-4">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fas fa-mobile-alt"></i> APP版</a>
+                        <a href="#"><img src="../images/381407_0.jpg" alt="APP QRcode"></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <br>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">&copy; copyright 2021 by Miss覓食.
+              </p>
+            </div>
+
+          </div>
+        </div>
+    </div>
+  </footer>
+</div>
+  <!-- 返回頂端箭頭 -->
+  <div class="top">
+    <a href="#"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a>
+  </div>
+
+</body>
+</html>
