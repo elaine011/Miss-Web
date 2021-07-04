@@ -1,0 +1,240 @@
+body {
+  background-color: #fef7e6;
+  z-index: -1;
+}
+
+.survey {
+  width: 800px;
+  min-height: 900px;
+  margin: 40px auto 70px;
+  position: relative;
+  border: 0px;
+  background: rgb(255, 255, 255);
+  overflow: hidden;
+  border-radius: 3.1px;
+  box-shadow: darkgray 0px 0px 12px 0px;
+  z-index: 0;
+}
+.top {
+  width: 100%;
+  height: 220px;
+  position: absolute;
+  z-index: 1;
+}
+.toptext {
+  position: absolute;
+  z-index: 2;
+  left: 310px;
+  top: 70px;
+  background-color: transparent;
+  font-size: 30px;
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 7px;
+}
+.surveytitle {
+  background-color: transparent;
+}
+.pertext {
+  display: block;
+  margin-top: 235px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  background-color: transparent;
+  font-size: 25px;
+  letter-spacing: 5px;
+}
+hr {
+  display: block;
+  border: 0;
+  height: 1px;
+  background-color: darkgrey;
+  color: black;
+  width: 95%;
+}
+.suggestion {
+  background-color: transparent;
+  margin-left: 20px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-bottom: 35px;
+}
+.q1 {
+  background-color: transparent;
+}
+.question {
+  background-color: transparent;
+  margin-left: 20px;
+  letter-spacing: 3px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.male,
+.female {
+  margin-left: 60px;
+  font-size: 1rem;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+input[type="radio"]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: white;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #67755c;
+}
+input[type="radio"]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #ffe000;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #67755c;
+}
+label {
+  background-color: transparent;
+  margin-left: 10px;
+  font-size: 17px;
+}
+.fa-mars {
+  color: skyblue;
+  font-size: 20px;
+  margin-left: 5px;
+}
+.fa-venus {
+  color: pink;
+  font-size: 20px;
+  margin-left: 5px;
+}
+i {
+  background-color: transparent;
+}
+.age {
+  margin-left: 55px;
+  width: 250px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+.fa-globe-asia {
+  color: skyblue;
+  font-size: 20px;
+  margin-left: 5px;
+}
+.fa-store {
+  color: #ffe000;
+  font-size: 20px;
+  margin-left: 5px;
+}
+.net,
+.store {
+  margin-left: 60px;
+  font-size: 1rem;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.q4 img,
+.q5 img,
+.q6 img {
+  width: 17%;
+  height: 120px;
+  padding: 10px 20px 10px 15px;
+  margin-right: 2px;
+}
+.q4 label,
+.q5 label,
+.q6 label {
+  padding: 0;
+  margin-right: 3px;
+  cursor: pointer;
+}
+.q4 input[type="checkbox"],
+.q5 input[type="checkbox"],
+.q6 input[type="checkbox"] {
+  display: none;
+}
+.q4 input[type="checkbox"] + span,
+.q5 input[type="checkbox"] + span,
+.q6 input[type="checkbox"] + span {
+  display: inline-block;
+  background-color: #ffe000;
+  width: 70px;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+  color: #67755c;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 70px;
+  font-weight: bolder;
+  user-select: none; /* 防止文字被滑鼠選取反白 */
+}
+
+.q4 input[type="checkbox"]:checked + span,
+.q5 input[type="checkbox"]:checked + span,
+.q6 input[type="checkbox"]:checked + span {
+  color: white;
+  background-color: #ffe000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.hint {
+  font-size: 12px;
+  color: red;
+  margin-left: 50px;
+}
+.meetp {
+  margin-left: 40px;
+}
+.fruitp {
+  margin-left: 40px;
+}
+.text {
+  width: 80%;
+  height: 30px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+/*送出按鈕*/
+.finish {
+  width: 80px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bolder;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #67755c;
+  background-color: #ffe000;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #67755c;
+  margin: 20px 20px 50px 350px;
+}
+
+.finish:hover {
+  background-color: #ffe000;
+  color: white;
+}
+
+.finish:active {
+  background-color: #ffe000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

@@ -1,0 +1,336 @@
+body {
+  font-family: verdana;
+  font-size: 20px;
+  background-color: #fef7e6;
+}
+/*登入首頁*/
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  color: #627879;
+  text-decoration: none;
+}
+#mask1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9000;
+  background-color: #000;
+  display: none;
+}
+#boxes1 .window,
+#boxes2 .window,
+#boxes3 .window {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 440px;
+  height: 200px;
+  display: none;
+  z-index: 9999;
+  padding: 20px;
+}
+/*登入視窗跟按鈕*/
+#boxes1 #dialog1 {
+  width: 375px;
+  height: 450px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+#boxes2 #dialog2 {
+  width: 375px;
+  height: 450px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+#boxes3 #dialog3 {
+  width: 375px;
+  height: 450px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+.close {
+  color: #67755c;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.logo {
+  width: 200px;
+  height: 150px;
+  display: block;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.logintext {
+  text-align: center;
+  display: block;
+  color: #67755c;
+  margin-top: 0px;
+}
+.person,
+.business,
+.welfare {
+  color: #67755c;
+  font-weight: bolder;
+}
+.fa-user-alt {
+  display: inline-block;
+  position: relative;
+  right: 50px;
+  font-size: 15px;
+}
+.fa-store {
+  display: inline-block;
+  position: relative;
+  right: 50px;
+  font-size: 15px;
+}
+.fa-hand-holding-heart {
+  display: inline-block;
+  position: relative;
+  right: 37px;
+  font-size: 15px;
+}
+.person {
+  display: block;
+  margin: auto;
+  width: 50%;
+  height: 40px;
+  margin-bottom: 20px;
+  background-color: white;
+  border: 1px solid;
+}
+.business {
+  display: block;
+  margin: auto;
+  width: 50%;
+  height: 40px;
+  margin-bottom: 20px;
+  background-color: white;
+  border: 1px solid;
+}
+.welfare {
+  display: block;
+  margin: auto;
+  width: 50%;
+  height: 40px;
+  margin-bottom: 20px;
+  background-color: white;
+  border: 1px solid;
+}
+/*登入按鈕*/
+.person:hover,
+.business:hover,
+.welfare:hover {
+  background-color: #ffe000;
+  color: #627879;
+}
+
+.person:active,
+.business:active,
+.welfare:active {
+  background-color: #ffe000;
+  transform: translateY(4px);
+}
+/*視窗內logo跟字*/
+.logo2 {
+  width: 180px;
+  height: 130px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+.logintext2 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+  color: #67755c;
+  margin: -10px 10px 0px 0px;
+}
+/*個人登入*/
+.account i {
+  position: absolute;
+  left: 30px;
+  top: 230px;
+  font-size: 15px;
+  color: #67755c;
+}
+.password i {
+  position: absolute;
+  left: 30px;
+  top: 285px;
+  font-size: 15px;
+  color: #67755c;
+}
+
+.account input {
+  display: block;
+  width: 85%;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  height: 40px;
+}
+
+.password input {
+  display: block;
+  width: 85%;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  height: 40px;
+}
+
+.loginbutton {
+  width: 70px;
+  height: 25px;
+  position: absolute;
+  display: block;
+  margin: 0px 200px 30px 153px;
+  background-color: #ffe000;
+  border: 1px;
+  border-radius: 15px;
+  box-shadow: 0 3px #67755c;
+  font-size: 15px;
+}
+.loginbutton:hover {
+  background-color: #ffe000;
+  color: #67755c;
+  border: 1px solid #fef7e6;
+}
+
+.loginbutton:active {
+  background-color: #ffe000;
+  transform: translateY(4px);
+}
+.forget {
+  display: inline-block;
+  font-size: 13px;
+  margin: 40px 40px 5px 80px;
+}
+.row {
+  display: inline-block;
+  font-size: 13px;
+  margin: 40px 0px 5px 0px;
+}
+.register {
+  display: inline-block;
+  font-size: 13px;
+  margin: 40px 0px 10px 35px;
+}
+.forget:hover,
+.register:hover {
+  color: #ffe000;
+}
+.divide {
+  height: 35px;
+  line-height: 20px;
+  text-align: center;
+}
+.divide .line {
+  display: inline-block;
+  width: 33%;
+  border-top: 1px solid;
+}
+.divide .txt {
+  color: #555;
+  vertical-align: middle;
+  font-size: 12px;
+}
+.fa-facebook {
+  font-size: 30px;
+  color: #2e76aa;
+  margin: -5px 10px 5px 150px;
+}
+.fa-google-plus {
+  font-size: 30px;
+  color: #e04646;
+  margin: -5px 20px 5px 5px;
+}
+.fa-eye,
+.fa-eye-slash {
+  position: absolute;
+  right: 200px;
+}
+#eye,
+#eye1,
+#eye2 {
+  position: absolute;
+  left: 340px;
+}
+/*廠商*/
+.one,
+.two,
+.three,
+.four {
+  display: inline;
+  font-size: 12px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  margin-top: -20px;
+}
+/*廠商福利機構*/
+.account2 i {
+  position: absolute;
+  left: 30px;
+  top: 270px;
+  font-size: 15px;
+  color: #67755c;
+}
+.password2 i {
+  position: absolute;
+  left: 30px;
+  top: 330px;
+  font-size: 15px;
+  color: #67755c;
+}
+.account2 input {
+  display: block;
+  width: 85%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 40px;
+  height: 40px;
+}
+
+.password2 input {
+  display: block;
+  width: 85%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 40px;
+  height: 40px;
+}
+.four {
+  color: #3778d9;
+  text-decoration: underline;
+}
+.one {
+  color: red;
+}
+.one2,
+.two2,
+.three2,
+.four2 {
+  display: inline;
+  font-size: 12px;
+  margin-left: 1px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+.four2 {
+  color: #3778d9;
+  text-decoration: underline;
+}
+.one2 {
+  color: red;
+}
