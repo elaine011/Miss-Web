@@ -26,7 +26,8 @@
 </head>
 
 <body style="background-color: #fef7e6;">
-        <!-- 首頁header -->
+
+    <!-- 首頁header -->
     <div class="header">
         <!-- logo+文字 +購物車+登入-->
         <div class="logo">
@@ -65,28 +66,28 @@
         <!-- 分類導覽列 -->
         <nav>
             <ul>
-                <li v-on:click="filter=false">
+                <li class=".filter_link">
                     <a href="#">全部 </a>
                 </li>
-                <li v-on:click="filter='肉'">
+                <li class=".filter_link">
                     <a href="#">肉  </a>
                 </li>
-                <li v-on:click="filter='蛋'">
+                <li class=".filter_link">
                     <a href="#">蛋  </a>
                 </li>
-                <li v-on:click="filter='蔬菜'">
+                <li class=".filter_link">
                     <a href="#">蔬菜</a>
                 </li>
-                <li v-on:click="filter='水果'">
+                <li class=".filter_link">
                     <a href="#">水果</a>
                 </li>
-                <li v-on:click="filter='海鮮'">
+                <li class=".filter_link">
                     <a href="#">海鮮</a>
                 </li>
-                <li v-on:click="filter='麵包'">
+                <li class=".filter_link">
                     <a href="#">麵包</a>
                 </li>
-                <li v-on:click="filter='其他'">
+                <li class=".filter_link">
                     <a href="#">其他</a>
                 </li>
             </ul>
@@ -147,8 +148,9 @@
                 </li>
             </ul>
         </div>
-    </div>
      -->
+    </div>
+    
     <!-- 產品欄位 -->
 	<div class="content">
 
@@ -162,8 +164,9 @@
 				success: function(res) {
 					console.log(res.goods)
 					var str = "<ul class='con_ul'>";
+
 					$.each(res.goods, function(idx, val) {
-						str += "<li class=\"sec_li\"><a href='goodsDetail.html?goodsId=" + val.id + "' class='lp_li_a'><div class='lp_li_imgWrap'><img src='" + val.imgUrl + "'/></div><p class='lp_li_name'>" + val.title + "</p><p class='lp_li_price'>" + '$' + val.price +"</p></a></li>";
+						str += "<li class=\"sec_li\"><a href='goodsDetail.html?goodsId=" + val.id + "' class='lp_li_a'><div class='lp_li_imgWrap'><img src='" + val.imgUrl + "'/></div><p class='lp_li_name' id='lp_li_name'>" + val.title + "</p><p class='lp_li_price' id='lp_li_price'>" + '$' + val.price +"</p></a></li>";
 						});
 						str += "</ul>";
 						$('.content').append(str);
@@ -173,6 +176,8 @@
 					}
 				});
 			})
+
+
 		</script>
 
         <!-- Site footer -->
@@ -238,6 +243,120 @@
         <a href="#"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a>
     </div>
 
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBzChAKyehauW4FXCk4DL8jRqtADWquNLA",
+        authDomain: "webtest-b833f.firebaseapp.com",
+        databaseURL: "https://webtest-b833f-default-rtdb.firebaseio.com",
+        projectId: "webtest-b833f",
+        storageBucket: "webtest-b833f.appspot.com",
+        messagingSenderId: "973102202097",
+        appId: "1:973102202097:web:cb78dfd5682687b519fd50"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    
+    // way1
+    // var goodNo=0;
+
+    // function addItemsToList(){
+    //     var p=document.getElementById('lp_li_name');
+    //     var p=document.getElementById('lp_li_price');
+        
+    // }
+
+    // function FetchAllData(){
+    //     firebase.database().ref('goods').once('value',function(snapshot){
+    //         snapshot.forEach(
+    //             function(ChildSnapshot){
+    //                 let name=ChildSnapshot.val().title;
+    //                 let price=ChildSnapshot.val().price;
+    //                 addItemsToList(name,price);
+    //             }
+    //         )
+    //     });
+    // }
+
+    // window.onload(FetchAllData());
+
+    // way2
+    // var firebaseRef=firebase.database().ref("goods");
+    // firebaseRef.once("value", function(snapshot){
+    //     snapshot.forEach(function(element){
+    //         document.querySelector('#lp_li_name').innerHTML +=`
+    //             <p>${element.val()}</p>
+    //         `
+    //     });
+    // })
+
+    // way3
+    database=firebase.database();
+
+    var ref=database.ref('goods');
+    ref.on('value', gotData, errData);
+
+    function gotData(data){
+        // console.log(data.val());
+        var goods=data.val();
+        var keys=Object.keys(goods);
+        console.log(keys);
+        for(var i=0;i<keys.length;i++){
+            var k=keys[i];
+            var title=goods[k].title;
+            console.log(title);
+            // var name=createElement('p');
+            // name.parent('goodsname');
+            
+        }
+        
+    }
+    function errData(data){
+        console.log('Error!');
+        console.log(err);
+    }
+
+    </script>
+
 </body>
 <script src="../js/index.js"></script>
+<!-- <script>
+
+    // 分類way1
+    // $('.filter_link a').click(function() {
+    //     $('.content:visible').slideUp();
+    //     $('.content .' + this.className).stop(true).slideDown;
+    // });
+
+    // 分類way2
+    // var $mediaElements = $("sec_li");
+    // $(".filter_link").click(function(e) {
+    // e.preventDefault();
+    // var filterVal = $(this).data("filter");
+    // if (filterVal === "all") {
+    //     $mediaElements.slideDown("slow");
+    // } else {
+    //     $mediaElements
+    //     .hide("slow")
+    //     .filter("." + filterVal)
+    //     .slideDown("slow");
+    // }
+    // });
+
+    // 分類way3
+    // const tag = "egg";
+    // const productArray = res.products.filter(item => item.tags.includes(tag));
+    // console.log(productArray);
+
+
+</script> -->
 </html>

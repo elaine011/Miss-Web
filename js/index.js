@@ -501,4 +501,3 @@ window.onload = function() {
     container.onmouseover = stopplay;
 	container.onmouseout = autoplay;
 }
-
