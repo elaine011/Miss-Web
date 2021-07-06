@@ -16,7 +16,20 @@
     <link rel="stylesheet" href="../css/businessgoods.css"/>
     
     <script src="https://kit.fontawesome.com/71e88eb3c1.js" crossorigin="anonymous"></script>
-    
+    <!--刪除功能-->
+    <script>
+        function deleteRow(r)
+        {
+        var i=r.parentNode.parentNode.rowIndex;
+        var msg = "您確定要刪除嗎？";
+        if (confirm(msg)==true){
+            document.getElementById('myTable').deleteRow(i);
+            return true;
+        }else{
+            return false;
+        }
+        }
+    </script>
 </head>
 <body bgcolor="#FEF7E6">
         <div id="header">
@@ -127,13 +140,13 @@
                        </script>
                 </div>
                 <form action="" method="GET">
-                    <table class="order-table">
+                    <table id="myTable" class="order-table">
                         <thead>
                         <tr>
-                            <th>現有架上商品</th>
-                            <th>剩餘數量</th>
-                            <th>效期</th>
-                            <th></th>
+                            <th style="width: 40%;">現有架上商品</th>
+                            <th style="width: 15%;">剩餘數量</th>
+                            <th style="width: 15%;">效期</th>
+                            <th style="width: 30%;"></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -141,25 +154,33 @@
                             <td>草莓蛋糕</td>
                             <td>20塊</td>
                             <td>1個月</td>
-                            <td><button class="edit">編輯</button></td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="刪除" onclick="deleteRow(this)">
+                            </td>
                         </tr>
                         <tr>
                             <td>鮭魚沙拉</td>
                             <td>10份</td>
                             <td>1個月</td>
-                            <td><button class="edit">編輯</button></td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="刪除" onclick="deleteRow(this)">
+                            </td>
                         </tr>
                         <tr>
                             <td>草莓</td>
                             <td>8袋</td>
                             <td>1個月</td>
-                            <td><button class="edit">編輯</button></td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="刪除" onclick="deleteRow(this)">
+                            </td>
                         </tr>
                         <tr>
                             <td>香蕉</td>
                             <td>8袋</td>
                             <td>1個月</td>
-                            <td><button class="edit">編輯</button></td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="刪除" onclick="deleteRow(this)">
+                            </td>
                         </tr>
                     </tbody>
                     </table>

@@ -275,14 +275,14 @@ table {
   margin-top: 50px;
 }
 .td2 {
-  max-width: 20%;
+  max-width: 10%;
 }
 .edit {
   width: 70px;
   height: 25px;
   position: absolute;
   display: block;
-  margin: -12px 250px 0px -20px;
+  margin: -12px 350px 0px 10px;
   background-color: #ffe000;
   border: 1px;
   border-radius: 15px;
@@ -295,6 +295,27 @@ table {
   border: 1px solid #fef7e6;
 }
 .edit:active {
+  background-color: #ffe000;
+  transform: translateY(4px);
+}
+.delete {
+  width: 70px;
+  height: 25px;
+  position: absolute;
+  display: block;
+  margin: -12px 0px 0px 100px;
+  background-color: #ffe000;
+  border: 1px;
+  border-radius: 15px;
+  box-shadow: 0 3px #67755c;
+  font-size: 15px;
+}
+.delete:hover {
+  background-color: #ffe000;
+  color: #67755c;
+  border: 1px solid #fef7e6;
+}
+.delete:active {
   background-color: #ffe000;
   transform: translateY(4px);
 }
