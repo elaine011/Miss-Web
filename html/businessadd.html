@@ -82,7 +82,7 @@
             <table>
             <tr>
                 <th><i class="fas fa-asterisk"></i>商品名稱:</th>
-                <td><input class="goodsname" type="text" name="goodsname" value="" placeholder="限25字" maxlength="25" required></td>
+                <td><input id="goodsname" class="goodsname" type="text" name="goodsname" value="" placeholder="限25字" maxlength="25" required></td>
             </tr>
             <tr>
                 <th><i class="fas fa-asterisk"></i>商品類別:</th>
@@ -152,7 +152,7 @@
             <tr>
                 <th>商品描述:</th>
                 <td>
-                    <textarea class="description" placeholder="限250字" minlength="0" maxlength="250" rows="20" cols="50" ></textarea>
+                    <textarea id="description" class="description" placeholder="限250字" minlength="0" maxlength="250" rows="20" cols="50" ></textarea>
                 </td>
                 
             </tr>
@@ -160,7 +160,7 @@
             </table>
             <input class="see" type="button" value="預覽">
             <input class="cancel" type="reset" value="取消">
-            <input class="submit" type="submit" value="上架商品">
+            <input class="submit" type="button" value="上架商品" onclick="insert()">
         </form>
         </div>
 </div>
@@ -228,6 +228,81 @@
   <div class="top">
     <a href="#"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a>
   </div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
 
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBzChAKyehauW4FXCk4DL8jRqtADWquNLA",
+    authDomain: "webtest-b833f.firebaseapp.com",
+    databaseURL: "https://webtest-b833f-default-rtdb.firebaseio.com",
+    projectId: "webtest-b833f",
+    storageBucket: "webtest-b833f.appspot.com",
+    messagingSenderId: "973102202097",
+    appId: "1:973102202097:web:cb78dfd5682687b519fd50"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  var storeProducts=document.getElementById("StoreProductList");
+  var databaseRef=firebase.database().ref('store_products/');
+
+         
+    
+  function insert(){
+        var nameV=document.getElementById("goodsname").value;
+        var dateV=document.getElementById("day").value;
+        var priceV=document.getElementById("price").value;
+        var quantityV=document.getElementById("amount").value;
+        var descriptionV=document.getElementById("description").value;
+        var StoreProduct=firebase.database().ref().child("store_products").push().key;
+        var data={
+            name:nameV,
+            date:dateV,
+            price:priceV,
+            quantity:quantityV,
+            description:descriptionV
+        }
+        var updates={};
+        updates['/store_products/'+StoreProduct]=data;
+        firebase.database().ref().update(updates);
+
+        alert('商品上架成功!');
+        reload_page();
+    }
+    function update_product(){
+        var nameV=document.getElementById("goodsname").value;
+        var dateV=document.getElementById("day").value;
+        var priceV=document.getElementById("price").value;
+        var quantityV=document.getElementById("amount").value;
+        var descriptionV=document.getElementById("description").value;
+    
+        var data={
+            name:nameV,
+            date:dateV,
+            price:priceV,
+            quantity:quantityV,
+            description:descriptionV
+        }
+        var updates={};
+        updates['/store_products/'+StoreProduct]=data;
+        firebase.database().ref.update(updates);
+
+        alert('商品更新成功!');
+        reload_page();
+    }  
+    function delete_product(){
+        firebase.database().ref().child('/store_products/').remove();
+        alert('商品刪除成功!');
+        reload_page();
+    }  
+    function reload_page(){
+        window.location.reload();
+    }  
+</script>
 </body>
 </html>
