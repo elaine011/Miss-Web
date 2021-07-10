@@ -1,0 +1,58 @@
+{
+	"goods": [
+		{
+			"id": 33,
+			"imgUrl":"../img/法國麵包1.jpeg",
+			"price": "39",
+			"title": "海鹽法國麵包",
+			"category": "麵包",
+			"term": "1個月",
+			"remain": "3"
+		},
+		{
+			"id": 34,
+			"imgUrl":"../img/冰心維也納麵包.jpeg",
+			"price": "29",
+			"title": "冰心維也納麵包",
+			"category": "麵包",
+			"term": "1個月",
+			"remain": "3"
+		},
+		{
+			"id": 35,
+			"imgUrl":"../img/羅宋麵包.jpeg",
+			"price": "30",
+			"title": "羅宋麵包",
+			"category": "麵包",
+			"term": "1個月",
+			"remain": "3"
+		},
+		{
+			"id": 36,
+			"imgUrl":"../img/克林姆麵包.jpeg",
+			"price": "22",
+			"title": "克林姆麵包",
+			"category": "麵包",
+			"term": "1個月",
+			"remain": "3"
+		},
+		{
+			"id": 37,
+			"imgUrl":"../img/三顆蔥麵包.jpeg",
+			"price": "22",
+			"title": "古早味三顆蔥麵包",
+			"category": "麵包",
+			"term": "1個月",
+			"remain": "3"
+		},
+		{
+			"id": 38,
+			"imgUrl":"../img/牛角麵包.jpeg",
+			"price": "22",
+			"title": "手工牛角麵包",
+			"category": "麵包",
+			"term": "1個月",
+			"remain": "3"
+		}
+	]
+}

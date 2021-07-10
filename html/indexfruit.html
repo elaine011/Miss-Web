@@ -159,7 +159,7 @@
 		$(function() {
 			$.ajax({
 				type: "get",
-				url: "../json/goods.json",
+				url: "../json/fruit.json",
 				dataType: "json",
 				success: function(res) {
 					console.log(res.goods)
@@ -329,4 +329,34 @@
 
 </body>
 <script src="../js/index.js"></script>
+<!-- <script>
+
+    // 分類way1
+    // $('.filter_link a').click(function() {
+    //     $('.content:visible').slideUp();
+    //     $('.content .' + this.className).stop(true).slideDown;
+    // });
+
+    // 分類way2
+    // var $mediaElements = $("sec_li");
+    // $(".filter_link").click(function(e) {
+    // e.preventDefault();
+    // var filterVal = $(this).data("filter");
+    // if (filterVal === "all") {
+    //     $mediaElements.slideDown("slow");
+    // } else {
+    //     $mediaElements
+    //     .hide("slow")
+    //     .filter("." + filterVal)
+    //     .slideDown("slow");
+    // }
+    // });
+
+    // 分類way3
+    // const tag = "egg";
+    // const productArray = res.products.filter(item => item.tags.includes(tag));
+    // console.log(productArray);
+
+
+</script> -->
 </html>

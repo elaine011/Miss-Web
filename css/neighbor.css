@@ -176,7 +176,7 @@
   display: flex;
   width: 100%;
   margin-top: 1rem;
-  margin-left: 4rem;
+  margin-left: 12rem;
 }
 .header nav ul {
   padding: 0 30px;
@@ -212,15 +212,74 @@
 
 /* 廣告欄位 */
 .banner {
-  float: left;
-  width: 82%;
+  margin: 20px 80px;
+  width: 880px; /*此寬度根據圖片寬度調整*/
+  height: 283px; /*此高度根據圖片高度調整*/
+  overflow: hidden; /*為了將圖片隱藏*/
+  position: relative;
+  display: inline-block;
+  margin-left: 155px;
 }
-.banner img {
-  margin: 10px 70px;
-  max-width: 55rem;
+#list {
+  width: 5280px; /*圖片總寬度*/
+  height: 483px;
+  position: absolute;
+  z-index: 1;
+}
+#list img {
+  float: left;
+  width: 880px;
+  height: 283px;
+}
+#buttons {
+  position: absolute;
+  height: 10px;
+  width: 100px;
+  z-index: 2; /*將buttons放在list上層*/
+  bottom: 20px;
+  right: 350px;
+}
+#buttons span {
+  cursor: pointer;
+  float: left;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  margin-right: 5px;
+  background: #e98352;
+}
+#buttons .on {
+  background: #474550;
+}
+.arrow {
+  display: none;
+  cursor: pointer;
+  line-height: 40px;
+  text-align: center;
+  font-size: 30px; /*設定箭頭的大小*/
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 2; /*將arrow放在list上層*/
+  top: 130px;
+  color: #fff;
+  background: #474550;
+}
+.arrow:hover {
+  background-color: #e98352;
+}
+#container:hover .arrow {
+  display: block;
+}
+#pre {
+  left: 20px;
+}
+#next {
+  right: 0px;
 }
 
-/* 推薦商品 */
+/* 推薦商品
 .recommand {
   display: block;
   float: right;
@@ -273,7 +332,7 @@
 }
 .recommand ul li a:hover {
   color: #000;
-}
+} */
 
 /* 產品欄位 */
 ul,
@@ -284,7 +343,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   margin-left: 80px;
-  width: 850px;
+  width: 1200px;
 }
 .sec_li {
   width: 150px;

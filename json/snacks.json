@@ -1,0 +1,69 @@
+{
+	"goods": [{
+			"id": 1,
+			"imgUrl":"../img/家裡物資_210527_0.jpg",
+			"price": "50",
+			"title": "米乃藏煎餅",
+			"category": "零嘴",
+			"term": "1個月",
+			"remain": "3",
+            "distance": "120",
+            "desc": "知名品牌煎餅，多買的"
+		},
+		{
+			"id": 12,
+			"imgUrl":"../img/家裡物資_210527_11.jpg",
+			"price": "60",
+			"title": "樂事餅乾組",
+			"category": "零嘴",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "太多包了，吃不完"
+		},
+		{
+			"id": 20,
+			"imgUrl":"../img/家裡物資_210527_3_0.jpg",
+			"price": "60",
+			"title": "密蘭諾黑巧酥",
+			"category": "零嘴",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "買錯口味"
+		},
+		{
+			"id": 21,
+			"imgUrl":"../img/家裡物資_210527_4_0.jpg",
+			"price": "60",
+			"title": "義美小泡芙",
+			"category": "零嘴",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "買錯口味"
+		},
+		{
+			"id": 22,
+			"imgUrl":"../img/家裡物資_210527_5_0.jpg",
+			"price": "60",
+			"title": "波的多餅乾",
+			"category": "零嘴",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "買錯口味"
+		},
+		{
+			"id": 23,
+			"imgUrl":"../img/家裡物資_210527_6_0.jpg",
+			"price": "60",
+			"title": "蚵仔煎餅乾",
+			"category": "零嘴",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "買錯口味"
+		}
+	]
+}

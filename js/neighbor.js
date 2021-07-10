@@ -294,3 +294,84 @@ let app = new Vue({
         filter: false
     }
 });
+
+// AD輪播
+window.onload = function() {
+    var list = document.getElementById('list');
+    var prev = document.getElementById('prev');
+    var next = document.getElementById('next');
+    var container = document.getElementById('container');
+    var buttons = document.getElementById('buttons').getElementsByTagName('span');
+	var index = 1;
+
+    // 為輪播圖片增加切換的動畫效果
+    function animate(offset) {
+        /*獲取的style.left，是相對左邊獲取距離，所以第一張圖後style.left都為負值*/
+        /*且style.left獲取的是字串，需要用parseInt()取整轉化為數字。*/
+        var newLeft = parseInt(list.style.left) + offset;
+        list.style.left = newLeft + 'px';
+		list.style.transition='300ms ease';
+        /*當left值小於4400時，因為沒有第6張圖片就出現空白，所以這裡我們需要對偏移量做一個判斷。應該在animate函式內加上*/
+        if(newLeft < -4400){
+        	list.style.left = 0 + 'px';
+        }
+        if(newLeft > 0){
+        	list.style.left = -4400 + 'px';
+        }
+    }
+
+    // 在這我們需要滑鼠移出圖片範圍，每隔指定時間就切換到下一張圖片。
+	var timer;//設定定時器
+	function autoplay(){
+        /*setInterval返回的是定時器的ID*/
+		timer = setInterval(function(){
+			next.onclick()
+		},4000);
+	}
+	autoplay();
+
+    // 當滑鼠移入圖片範圍時，清除定時器
+	function stopplay(){
+		clearInterval(timer);
+	}
+
+    // 切換到某一張圖片時，底部的按鈕樣式也跟著改變
+	function showButton(){
+		//清除之前的样式
+		for(let i = 0;i<buttons.length;i++){
+			if(buttons[i].className == 'on'){
+				buttons[i].className = '';
+			}
+		}
+		buttons[index-1].className = 'on';
+	}
+	prev.onclick = function() {   
+		index-=1;
+		if(index < 1){
+			index = 6;
+		}
+		showButton();
+    	animate(8800);
+    }
+    next.onclick = function() {  
+    	index+=1;
+    	if(index > 6){
+    		index = 1;
+    	}
+    	showButton();
+        animate(-880);
+    }
+
+    // 點選按鈕即會切換到相應位置的圖片
+    for(var i = 0;i<buttons.length;i++){
+    	buttons[i].onclick = function() {
+    		var clickIndex = parseInt(this.getAttribute('index'));
+    		var offset = 880*(index - clickIndex);
+			animate(offset);
+			index = clickIndex;
+			showButton();
+        }
+    }
+    container.onmouseover = stopplay;
+	container.onmouseout = autoplay;
+}

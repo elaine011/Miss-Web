@@ -1,0 +1,103 @@
+{
+	"goods": [
+		{
+			"id": 39,
+			"imgUrl":"../img/香菇.png",
+			"price": "39",
+			"title": "香菇",
+			"category": "其他",
+			"term": "1個月",
+			"remain": "3"
+		},
+		{
+			"id": 40,
+			"imgUrl":"../img/板豆腐.jpeg",
+			"price": "29",
+			"title": "大漢傳統板豆腐",
+			"category": "其他",
+			"term": "1個月",
+			"remain": "3"
+		},
+		{
+			"id": 41,
+			"imgUrl":"../img/中華豆花.jpeg",
+			"price": "36",
+			"title": "中華水果豆花",
+			"category": "其他",
+			"term": "1個月",
+			"remain": "3"
+		},
+		{
+			"id": 42,
+			"imgUrl":"../img/茉莉茶凍.jpeg",
+			"price": "58",
+			"title": "茉莉茶凍",
+			"category": "其他",
+			"term": "1個月",
+			"remain": "3"
+		},
+		{
+			"id": 43,
+			"imgUrl":"../img/豆奶.jpeg",
+			"price": "54",
+			"title": "義美無加糖豆奶",
+			"category": "其他",
+			"term": "1個月",
+			"remain": "3"
+		},
+		{
+			"id": 44,
+			"imgUrl":"../img/金針菇.png",
+			"price": "39",
+			"title": "金針菇",
+			"category": "其他",
+			"term": "1個月",
+			"remain": "3"
+		},
+		{
+			"id": 45,
+			"imgUrl":"../img/維力炸醬麵.jpeg",
+			"price": "77",
+			"title": "維力炸醬麵",
+			"category": "其他",
+			"term": "1個月",
+			"remain": "3"
+		},
+		{
+			"id": 46,
+			"imgUrl":"../img/花雕雞麵.png",
+			"price": "129",
+			"title": "台酒花雕雞麵",
+			"category": "其他",
+			"term": "1個月",
+			"remain": "3"
+		},
+		{
+			"id": 47,
+			"imgUrl":"../img/木耳.png",
+			"price": "89",
+			"title": "有機黑木耳",
+			"category": "其他",
+			"term": "1個月",
+			"remain": "3"
+		},
+		{
+			"id": 48,
+			"imgUrl":"../img/杏鮑菇.jpg",
+			"price": "39",
+			"title": "有機杏鮑菇",
+			"category": "其他",
+			"term": "1個月",
+			"remain": "3"
+		},
+		{
+			"id": 50,
+			"imgUrl":"../img/雞蛋豆腐.jpg",
+			"price": "26",
+			"title": "雞蛋豆腐",
+			"category": "其他",
+			"term": "1個月",
+			"remain": "3"
+		}
+	]
+}

@@ -186,7 +186,7 @@
 }
 /* 產品圖 */
 .neighborProduct img {
-  max-width: 200px;
+  max-height: 200px;
   position: relative;
 }
 /* 聊天室 */

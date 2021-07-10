@@ -1,0 +1,158 @@
+{
+	"goods": [
+		{
+			"id": 2,
+			"imgUrl":"../img/家裡物資_210527_1.jpg",
+			"price": "100",
+			"title": "千層蛋糕",
+			"category": "生鮮食品",
+			"term": "1個月",
+			"remain": "3",
+            "distance": "120",
+            "desc": "太大一塊，我一個人吃不完"
+		},
+		{
+			"id": 3,
+			"imgUrl":"../img/家裡物資_210527_2.jpg",
+			"price": "100",
+			"title": "草莓蛋糕",
+			"category": "生鮮食品",
+			"term": "1個月",
+			"remain": "3",
+            "distance": "120",
+            "desc": "不小心多買一個，吃不完這麼多"
+		},
+		{
+			"id": 4,
+			"imgUrl":"../img/家裡物資_210527_3.jpg",
+			"price": "100",
+			"title": "蔓越莓蛋糕",
+			"category": "生鮮食品",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "太大一塊，我一個人吃不完"
+		},
+		{
+			"id": 5,
+			"imgUrl":"../img/家裡物資_210527_4.jpg",
+			"price": "100",
+			"title": "草莓千層蛋糕",
+			"category": "生鮮食品",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "太大一塊，我一個人吃不完"
+		},
+		{
+			"id": 6,
+			"imgUrl":"../img/家裡物資_210527_5.jpg",
+			"price": "100",
+			"title": "巧克力蛋糕",
+			"category": "生鮮食品",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "太大一塊，我一個人吃不完"
+		},
+		{
+			"id": 7,
+			"imgUrl":"../img/家裡物資_210527_6.jpg",
+			"price": "100",
+			"title": "核桃巧克力蛋糕",
+			"category": "生鮮食品",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "太大一塊，我一個人吃不完"
+		},
+		{
+			"id": 8,
+			"imgUrl":"../img/家裡物資_210527_7.jpg",
+			"price": "100",
+			"title": "黑森林蛋糕",
+			"category": "生鮮食品",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "太大一塊，我一個人吃不完"
+		},
+		{
+			"id": 9,
+			"imgUrl":"../img/家裡物資_210527_8.jpg",
+			"price": "100",
+			"title": "草莓奶油蛋糕",
+			"category": "生鮮食品",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "太大一塊，我一個人吃不完"
+		},
+		{
+			"id": 10,
+			"imgUrl":"../img/家裡物資_210527_9.jpg",
+			"price": "90",
+			"title": "草莓波士頓",
+			"category": "生鮮食品",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "太大一塊，我一個人吃不完"
+		},
+		{
+			"id": 11,
+			"imgUrl":"../img/家裡物資_210527_10.jpg",
+			"price": "150",
+			"title": "oreo蛋糕",
+			"category": "生鮮食品",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "太大一塊，我一個人吃不完"
+		},
+		{
+			"id": 16,
+			"imgUrl":"../img/家裡物資_210527_15.jpg",
+			"price": "45",
+			"title": "雀巢全脂牛奶",
+			"category": "生鮮食品",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "太大一瓶，我一個人吃不完"
+		},
+		{
+			"id": 17,
+			"imgUrl":"../img/家裡物資_210527_0_0.jpg",
+			"price": "40",
+			"title": "香蕉",
+			"category": "生鮮食品",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "太多了，我一個人吃不完"
+		},
+		{
+			"id": 18,
+			"imgUrl":"../img/家裡物資_210527_1_0.jpg",
+			"price": "150",
+			"title": "哈密瓜",
+			"category": "生鮮食品",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "太大一塊，我一個人吃不完"
+		},
+		{
+			"id": 19,
+			"imgUrl":"../img/家裡物資_210527_2_0.jpg",
+			"price": "30",
+			"title": "白吐司",
+			"category": "生鮮食品",
+			"term": "1個月",
+			"remain": "3",
+            "distance":"120",
+            "desc": "太大一包，我一個人吃不完"
+		}
+	]
+}
