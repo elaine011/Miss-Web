@@ -24,6 +24,11 @@
      <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
 
+    <script type="text/javascript">
+        function addtocart(){
+            alert("已加入購物車!");
+        }
+    </script>
 </head>
 
 <body style="background-color: #fef7e6;">
@@ -89,7 +94,7 @@
 					$.each(res.goods, function(idx, val) {
 						//Acquire detailed data according to id
 						if(id == val.id) {
-							var str = "<div class=\"wrap\"><div class=\"product-item\"><img src='" + val.imgUrl + "'/><button>加入購物車</button><div class=\"heart\"><a href=\"#\"><i class=\"fas fa-heart fa-2x\"></i></a></div></div><div class=\"info\"><h2>" + val.title + "</h2><p>效期: " + val.term + "</p><s>原價: $" + val.price + "元</s><span> $" + val.price + "元</span><p>剩餘數量: " + val.remain + "份</p><div class=\"info2\"><p>更多資訊:</p><div class=\"info2-item\"><p>產地:美國</p><p>規格:100g±10</p></div><div class=\"pricebutton\"><ul class=\"counter\"><li id=\"minus\"><input type=\"button\" value=\"-\"/></li><li id=\"countnum\">"+1+"</li><li id=\"plus\"><input type=\"button\" value=\"+\"/></li></ul></div></div></div></div></div>";
+							var str = "<div class=\"wrap\"><div class=\"product-item\"><img src='" + val.imgUrl + "'/><button id=\"btn\" onclick=\"addtocart()\">加入購物車</button><div class=\"heart\"><a href=\"#\"><i class=\"fas fa-heart fa-2x\"></i></a></div></div><div class=\"info\"><h2>" + val.title + "</h2><p>效期: " + val.term + "</p><s>原價: $" + val.price + "元</s><span> $" + val.price + "元</span><p>剩餘數量: " + val.remain + "份</p><div class=\"info2\"><p>更多資訊:</p><div class=\"info2-item\"><p>產地:美國</p><p>規格:100g±10</p></div><div class=\"pricebutton\"><ul class=\"counter\"><li id=\"minus\"><input type=\"button\" value=\"-\"/></li><li id=\"countnum\">"+1+"</li><li id=\"plus\"><input type=\"button\" value=\"+\"/></li></ul></div></div></div></div></div>";
 						}
 						$('.goodsDeatail').append(str);
 					});
@@ -269,7 +274,8 @@
   <div class="top">
     <a href="#"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a>
   </div>
-
+    
 </body>
 <script src="../js/index.js"></script>
+
 </html>

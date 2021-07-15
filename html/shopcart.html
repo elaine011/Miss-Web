@@ -64,7 +64,7 @@
             <!-- 頭 -->
             <div class="item_header">
                 <div class="checkbox">
-                    <input type="checkbox" id="check" name="all" value="all" onclick="check_all(this,'c')">
+                    <input type="checkbox" id="check" name="all" value="all" checked="checked" onclick="check_all(this,'c')">
                 </div>
                 <!-- 固定的 -->
                 <div class="item_detail">商品</div>
@@ -77,7 +77,7 @@
             <!-- 購買物的主體 -->
             <div class="item_header item_body" v-for="(item,index) in itemList" :data-key="item.id">
                 <div class="checkboxall">
-                    <input type="checkbox"id="check" name="c" value="item1">
+                    <input type="checkbox"id="check" name="c" value="item1" checked="checked">
                 </div>
                 <!-- 不斷重複的item開始 -->
                 <div class="item_detail">

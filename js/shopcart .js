@@ -5,32 +5,18 @@ let app = new Vue({
       itemList: [
         {
             id:'1',
-            name:'Murdock Lodon Bread Shampoo 250ML',
-            imgUrl:'https://images.unsplash.com/photo-1599447068894-089fabc9876c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
-            price:'500',
-            count:'2'
-        },
-        {
-            id:'2',
-            name:'橘子',
-            imgUrl:'https://images.unsplash.com/photo-1576181178011-b03109fcc81d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1955&q=80',
-            price:'5',
-            count:'3'
-        },
-        {
-            id:'3',
-            name:'馬卡龍',
-            imgUrl:'https://images.unsplash.com/photo-1558024920-b41e1887dc32?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
-            price:'8',
+            name:'牛肉片',
+            imgUrl:'https://s.yimg.com/zp/images/4C1E80B8803447128535D7B954E6514DBD1EABFF',
+            price:'699',
             count:'1'
         },
         {
-            id:'4',
-            name:'漢堡',
-            imgUrl:'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=902&q=80',
-            price:'40',
-            count:'1'
-        }
+          id:'2',
+          name:'冷凍豬瘦肉絞肉',
+          imgUrl:'https://img.shop.com/Image/270000/275600/275616/products/lg_1735632476__800x800__.jpg',
+          price:'80',
+          count:'1'
+      }
       ],
       count: 0,
       total3: 0
