@@ -29,7 +29,7 @@
                 <h1>
                     Miss覓食
                 </h1>
-                <a href="#">Hi~inin</a>
+                <a class="logname" href="./personindex.html">Hi~inin</a>
                 <a href="./shopcart.html"><i class="fas fa-shopping-cart"></i></a>
                 <a href="#"><i class="fas fa-bell"></i></a>             
                 <!-- 搜尋框 -->
@@ -63,7 +63,7 @@
         <form>
             
             <img class="facephoto" src="../images/S__7791001.jpg" alt="圓形圖">
-            <button>更換相片</button>
+            <button>更換頭貼</button>
             
             <!--
                     <div>
@@ -90,9 +90,9 @@
             <nav id="side">
                 <a href="./personindex.html"><i class="far fa-address-book"></i>個人簡介</a>
                 <a href="./persongoods.html"><i class="far fa-plus-square"></i>我的商品</a>
-                <a href="./personorder.html"><i class="far fa-list-alt"></i>我的訂單</a>
+                <a href="./personorder.html"><i class="far fa-list-alt"></i>購買訂單</a>
                 <!--<a href="./personrecipe.html"><i class="fas fa-utensils"></i>我的食譜</a>-->
-                <a href="./personevaluate.html"><i class="fas fa-star"></i>個人評價</a>
+                <a href="./personevaluate.html"><i class="fas fa-star"></i>我的評價</a>
                 <a href="./personlike.html"><i class="far fa-heart"></i>按讚好物</a>
             </nav>
         </div>
@@ -107,7 +107,7 @@
             <table>
             <tr>
                 <th><i class="fas fa-asterisk"></i>商品名稱:</th>
-                <td><input id="goodsname" class="goodsname" type="text" name="goodsname" value="" placeholder="限25字" maxlength="25" required></td>
+                <td><input class="goodsname" type="text" name="goodsname" value="" placeholder="限25字" maxlength="25" required></td>
             </tr>
             <tr>
                 <th><i class="fas fa-asterisk"></i>商品類別:</th>
@@ -128,7 +128,7 @@
                     </td>
             </tr>
             <tr>
-                <th><i class="fas fa-asterisk"></i>庫存數量:</th>
+                <th><i class="fas fa-asterisk"></i>數量:</th>
                 <td>
                     <input class="amount" type="number" name="amount" id="amount" value="" min="0" required/>    
                 </td>
@@ -170,7 +170,7 @@
             <tr>
                 <th>商品描述:</th>
                 <td>
-                    <textarea id="description" class="description" placeholder="限250字" minlength="0" maxlength="250" rows="20" cols="50" ></textarea>
+                    <textarea class="description" placeholder="限250字" minlength="0" maxlength="250" rows="20" cols="50" ></textarea>
                 </td>
                 
             </tr>
@@ -178,7 +178,7 @@
             </table>
             <input class="see" type="button" value="預覽">
             <input class="cancel" type="reset" value="取消">
-            <input class="submit" type="button" value="上架商品" onclick="insert()">
+            <input class="submit"  type="button" value="上架商品" onclick="insert()">
         </form>
         </div>
 </div>

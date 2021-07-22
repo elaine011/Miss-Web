@@ -54,7 +54,6 @@ h2 {
   margin-top: 15px;
   margin-right: 15px;
   color: #67755c;
-  text-decoration: none;
 }
 .header .logo :nth-child(3) {
   width: 75px;
@@ -174,9 +173,11 @@ h2 {
 #menuToggle input:checked ~ ul {
   transform: none;
 }
-
+.logname {
+  text-decoration: none;
+}
 /*左側選單*/
-.facephoto {
+div form img {
   margin: 3rem 5rem 1rem 5.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,8 +186,8 @@ h2 {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 50%;
-  height: 120px;
   width: 120px;
+  height: 120px;
 }
 div form button {
   display: -webkit-box;
@@ -199,7 +200,7 @@ div form button {
 }
 .side-menu nav {
   width: 10rem;
-  height: 21rem;
+  height: 25rem;
   background-color: #ffff;
   box-sizing: border-box;
   display: flex;
@@ -214,8 +215,11 @@ div form button {
   text-decoration: none;
   position: relative;
 }
-#side i {
-  margin-right: 0.5rem;
+#side a.useranalist {
+  color: black;
+  padding: 20px 1px 20px 10px;
+  text-decoration: none;
+  position: relative;
 }
 #side a + a::before {
   content: "";
@@ -225,6 +229,10 @@ div form button {
   right: 10px;
   top: 0;
 }
+#side i {
+  margin-right: 0.5rem;
+}
+
 .side-menu a:hover {
   background-color: #dfd0a8;
 }
@@ -241,6 +249,7 @@ div form button {
 #footer {
   clear: both;
 }
+
 /*個人簡介*/
 div h2 {
   font-weight: 600;
@@ -248,117 +257,106 @@ div h2 {
   color: #000;
   margin: 50px 100px 0px 300px;
 }
-th {
-  background-color: #ebdfc3;
-  border-bottom: 1px solid #67755c;
-  font-size: 1rem;
-  padding: 25px 10px 25px 5px;
-}
-td {
+div.score {
+  width: 800px;
+  height: 250px;
+  margin-top: 50px;
+  margin-bottom: 30px;
   background-color: white;
-  border-bottom: 1px solid #67755c;
-  padding: 25px 25px 25px 25px;
+  position: relative;
   text-align: center;
 }
-
-table {
+.circle {
+  width: 180px;
+  height: 160px;
+  margin: 10px 20px 10px 20px;
+}
+.five {
+  position: absolute;
+  font-weight: bold;
+  top: 55px;
+  left: 365px;
+  font-size: 50px;
+  color: #f3be70;
+}
+.star i {
+  font-size: 25px;
+  padding: 5px;
+  color: #ffe000;
+}
+div .evaluate {
   width: 800px;
-  border: 3px dotted #67755c;
-  border-collapse: collapse;
-  margin-top: 30px;
+  margin-top: 10px;
+  background-color: white;
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: black solid 1px;
+  border-left: black solid 1px;
+  border-right: black solid 1px;
+}
+.t1a,
+.pline,
+.t2a {
+  display: inline;
+  padding: 80px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:active {
+  text-decoration: underline;
+  color: #f3be70;
+}
+#t1 table {
+  background-color: white;
+  width: 800px;
+  padding: 20px;
+  border: black solid 1px;
+  margin-bottom: 20px;
+}
+table {
+  background-color: white;
+  width: 800px;
+  border-collapse: collapse; /* 取消表格边框 */
+  letter-spacing: 1px; /* 文字缩进 */
+}
+table,
+th,
+tr,
+td {
+  border-bottom: 1px solid black; /* 表格横线 */
+  padding: 20px;
+}
+.tatitle {
+  margin-left: 350px;
+  font-size: 20px;
+}
+.td1 {
+  width: 100px;
+  padding: 10px 40px 10px 20px;
+}
+.td1 p {
+  font-size: 10px;
 }
 .td2 {
-  max-width: 20%;
+  width: 580px;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
-.edit {
-  width: 70px;
-  height: 25px;
-  position: absolute;
-  display: block;
-  margin: -12px 350px 0px 10px;
-  background-color: #ffe000;
-  border: 1px;
-  border-radius: 15px;
-  box-shadow: 0 3px #67755c;
-  font-size: 15px;
+.td2 i {
+  color: #ffe000;
 }
-.edit:hover {
-  background-color: #ffe000;
-  color: #67755c;
-  border: 1px solid #fef7e6;
+.td3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-.edit:active {
-  background-color: #ffe000;
-  transform: translateY(4px);
+.td3 p {
+  font-size: 16px;
 }
-.delete {
-  width: 70px;
-  height: 25px;
-  position: absolute;
-  display: block;
-  margin: -12px 0px 0px 100px;
-  background-color: #ffe000;
-  border: 1px;
-  border-radius: 15px;
-  box-shadow: 0 3px #67755c;
-  font-size: 15px;
-}
-.delete:hover {
-  background-color: #ffe000;
-  color: #67755c;
-  border: 1px solid #fef7e6;
-}
-.delete:active {
-  background-color: #ffe000;
-  transform: translateY(4px);
-}
-.addgoods {
-  width: 90px;
-  height: 30px;
-  position: absolute;
-  display: block;
-  margin: -35px 0px 20px 650px;
-  background-color: #ffe000;
-  border: 1px;
-  border-radius: 15px;
-  box-shadow: 0 3px #67755c;
-  font-size: 18px;
-}
-.addgoods:hover {
-  background-color: #ffe000;
-  color: #67755c;
-  border: 1px solid #fef7e6;
-}
-.addgoods:active {
-  background-color: #ffe000;
-  transform: translateY(4px);
-}
-.light-table-filter {
-  display: inline-block;
-  border: #dfd0a8 1px solid;
-  height: 40px;
-  width: 400px;
-  margin-left: 20px;
-  margin-right: -2px;
-}
-.searchbut {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  margin-left: -1px;
-  background-color: #dfd0a8;
-  border: unset;
-  color: #67755c;
-  font-size: 15px;
-}
-.search2 {
-  width: 800px;
-  height: 80px;
-  background-color: white;
-  margin-top: 50px;
-  padding: 15px 10px 10px 10px;
-  border: #dfd0a8 dotted 2px;
-}
+
 /* Site footer */
 .site-footer {
   background-color: #67755c;
@@ -415,9 +413,7 @@ table {
 .copyright-text {
   margin: 0;
 }
-.logname {
-  text-decoration: none;
-}
+
 /* 返回頂端箭頭 */
 .top {
   position: fixed;

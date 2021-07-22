@@ -54,7 +54,6 @@ h2 {
   margin-top: 15px;
   margin-right: 15px;
   color: #67755c;
-  text-decoration: none;
 }
 .header .logo :nth-child(3) {
   width: 75px;
@@ -176,7 +175,7 @@ h2 {
 }
 
 /*左側選單*/
-.facephoto {
+div form img {
   margin: 3rem 5rem 1rem 5.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,8 +184,8 @@ h2 {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 50%;
-  height: 120px;
   width: 120px;
+  height: 120px;
 }
 div form button {
   display: -webkit-box;
@@ -199,7 +198,7 @@ div form button {
 }
 .side-menu nav {
   width: 10rem;
-  height: 21rem;
+  height: 25rem;
   background-color: #ffff;
   box-sizing: border-box;
   display: flex;
@@ -214,8 +213,11 @@ div form button {
   text-decoration: none;
   position: relative;
 }
-#side i {
-  margin-right: 0.5rem;
+#side a.useranalist {
+  color: black;
+  padding: 20px 1px 20px 10px;
+  text-decoration: none;
+  position: relative;
 }
 #side a + a::before {
   content: "";
@@ -225,6 +227,10 @@ div form button {
   right: 10px;
   top: 0;
 }
+#side i {
+  margin-right: 0.5rem;
+}
+
 .side-menu a:hover {
   background-color: #dfd0a8;
 }
@@ -241,6 +247,7 @@ div form button {
 #footer {
   clear: both;
 }
+
 /*個人簡介*/
 div h2 {
   font-weight: 600;
@@ -263,101 +270,192 @@ td {
 
 table {
   width: 800px;
-  border: 3px dotted #67755c;
-  border-collapse: collapse;
+  border: none;
+  margin-top: 0px;
+}
+.box {
+  position: relative;
+  width: 900px;
+  height: 620px;
   margin-top: 30px;
+  margin-left: -30px;
+  margin-bottom: 3rem;
 }
-.td2 {
-  max-width: 20%;
+.oback {
+  position: relative;
+  width: 900px;
+  height: auto;
 }
-.edit {
-  width: 70px;
-  height: 25px;
-  position: absolute;
+.righttop,
+.perright {
+  list-style: none;
+}
+.righttop {
+  position: relative;
+  display: flex;
+}
+.perright {
+  flex: 1;
+  height: 60px;
+}
+.perright input {
+  display: none;
+}
+.perright input + label {
   display: block;
-  margin: -12px 350px 0px 10px;
-  background-color: #ffe000;
-  border: 1px;
-  border-radius: 15px;
-  box-shadow: 0 3px #67755c;
-  font-size: 15px;
-}
-.edit:hover {
-  background-color: #ffe000;
-  color: #67755c;
-  border: 1px solid #fef7e6;
-}
-.edit:active {
-  background-color: #ffe000;
-  transform: translateY(4px);
-}
-.delete {
-  width: 70px;
-  height: 25px;
-  position: absolute;
-  display: block;
-  margin: -12px 0px 0px 100px;
-  background-color: #ffe000;
-  border: 1px;
-  border-radius: 15px;
-  box-shadow: 0 3px #67755c;
-  font-size: 15px;
-}
-.delete:hover {
-  background-color: #ffe000;
-  color: #67755c;
-  border: 1px solid #fef7e6;
-}
-.delete:active {
-  background-color: #ffe000;
-  transform: translateY(4px);
-}
-.addgoods {
-  width: 90px;
-  height: 30px;
-  position: absolute;
-  display: block;
-  margin: -35px 0px 20px 650px;
-  background-color: #ffe000;
-  border: 1px;
-  border-radius: 15px;
-  box-shadow: 0 3px #67755c;
+  width: 100%;
+  height: 100%;
+  background: white;
   font-size: 18px;
+  text-align: center;
+  line-height: 60px;
+  color: #333;
 }
-.addgoods:hover {
+.perright input + label + div {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 60px;
+}
+.perright input:checked + label {
+  border-bottom: #ffe000 5px solid;
+  color: #67755c;
+}
+.perright input:checked + label + div {
+  display: block;
+  width: 900px;
+  min-height: 300px;
+  border-top: darkgray 1px solid;
+  background-color: white;
+}
+.innercon {
+  width: 90%;
+  min-height: 370px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fef7e6;
+}
+.face1 {
+  display: inline;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px 20px;
+  vertical-align: middle;
+}
+.facebeside {
+  display: inline;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+.time {
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.price {
+  float: right;
+  margin-top: 35px;
+  margin-right: 20px;
+}
+.total {
+  float: right;
+  margin-top: 8px;
+  margin-right: 20px;
+}
+.mach {
+  display: inline;
+  width: 100px;
+  height: 80px;
+  margin: 10px 20px;
+  vertical-align: middle;
+}
+.othtext {
+  display: inline;
+  margin-left: 5px;
+  font-size: 18px;
+  color: black;
+}
+.fa-cart-arrow-down {
+  font-size: 20px;
+  color: #67755c;
+  margin: 10px 0px 10px 30px;
+}
+.fa-truck {
+  font-size: 20px;
+  color: #67755c;
+  margin: 10px 0px 10px 30px;
+}
+.fa-times-circle {
+  font-size: 20px;
+  color: #67755c;
+  margin: 10px 0px 10px 30px;
+}
+.ordernum {
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 18px;
+  color: black;
+}
+.cancleorder {
+  position: relative;
+  width: 80px;
+  height: 30px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 20px;
+  background-color: #ffe000;
+  border: 1px;
+  border-radius: 15px;
+  box-shadow: 0 3px #67755c;
+  font-size: 15px;
+  color: #67755c;
+  padding: 5px;
+}
+.cancleorder:hover {
   background-color: #ffe000;
   color: #67755c;
   border: 1px solid #fef7e6;
 }
-.addgoods:active {
+
+.cancleorder:active {
   background-color: #ffe000;
   transform: translateY(4px);
 }
-.light-table-filter {
-  display: inline-block;
-  border: #dfd0a8 1px solid;
-  height: 40px;
-  width: 400px;
-  margin-left: 20px;
-  margin-right: -2px;
-}
-.searchbut {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  margin-left: -1px;
-  background-color: #dfd0a8;
-  border: unset;
-  color: #67755c;
+.prepareorder {
+  position: relative;
+  width: 80px;
+  height: 30px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 30px;
+  background-color: #ffe000;
+  border: 1px;
+  border-radius: 15px;
+  box-shadow: 0 3px #67755c;
   font-size: 15px;
+  color: #67755c;
+  padding: 5px;
 }
-.search2 {
-  width: 800px;
-  height: 80px;
-  background-color: white;
-  margin-top: 50px;
-  padding: 15px 10px 10px 10px;
-  border: #dfd0a8 dotted 2px;
+.prepareorder:hover {
+  background-color: #ffe000;
+  color: #67755c;
+  border: 1px solid #fef7e6;
+}
+
+.prepareorder:active {
+  background-color: #ffe000;
+  transform: translateY(4px);
+}
+.logname {
+  text-decoration: none;
 }
 /* Site footer */
 .site-footer {
@@ -415,9 +513,7 @@ table {
 .copyright-text {
   margin: 0;
 }
-.logname {
-  text-decoration: none;
-}
+
 /* 返回頂端箭頭 */
 .top {
   position: fixed;

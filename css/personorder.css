@@ -309,7 +309,7 @@ div h2 {
 /*右側下方內容*/
 .innercon {
   width: 90%;
-  min-height: 270px;
+  min-height: 370px;
   position: relative;
   margin: 0 auto;
   margin-top: 1rem;
@@ -325,11 +325,14 @@ div h2 {
   vertical-align: middle;
 }
 .facebeside {
-  display: inline;
-  margin-left: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
   text-decoration: none;
   font-size: 18px;
   color: black;
+  vertical-align: middle;
 }
 .time {
   float: right;
@@ -396,7 +399,9 @@ div h2 {
   background-color: #ffe000;
   transform: translateY(4px);
 }
-
+.logname {
+  text-decoration: none;
+}
 /* Site footer */
 .site-footer {
   background-color: #67755c;

@@ -240,7 +240,9 @@ div form button {
 .side-menu a:hover {
   background-color: #dfd0a8;
 }
-
+.logname {
+  text-decoration: none;
+}
 /*區塊劃分*/
 #sidebar {
   float: left;

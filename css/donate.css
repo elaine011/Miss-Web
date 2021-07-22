@@ -337,7 +337,9 @@ div h2 {
   color: #67755c;
   border: #67755c 1px solid;
 }
-
+.logname {
+  text-decoration: none;
+}
 /* Site footer */
 .site-footer {
   background-color: #67755c;

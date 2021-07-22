@@ -432,7 +432,9 @@ textarea {
 .copyright-text {
   margin: 0;
 }
-
+.logname {
+  text-decoration: none;
+}
 /* 返回頂端箭頭 */
 .top {
   position: fixed;

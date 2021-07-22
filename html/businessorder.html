@@ -13,9 +13,14 @@
     <!--字型-->
       <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/businessprofile.css"/>
-    
+    <link rel="stylesheet" href="../css/businessorder.css"/>
+    <script src="/jquery/jquery-1.11.1.min.js"></script>
     <script src="https://kit.fontawesome.com/71e88eb3c1.js" crossorigin="anonymous"></script>
+    <script>
+        function clearcontent(elementID) {
+            document.getElementById(elementID).innerHTML = "";
+        }
+    </script>
     
 </head>
 <body bgcolor="#FEF7E6">
@@ -75,46 +80,62 @@
         </div>
         </div>
         <div class="title">
-            <h2><i class="far fa-address-book" style="margin-right: 0.5rem;"></i>商家簡介</h2>
+            <h2><i class="far fa-list-alt" style="margin-right: 0.5rem;"></i>我的訂單</h2>
         </div>
         <!--右側資料 -->
         <div id="content">
         <div class="content">
-            <form action="" method="GET">
-            <table>
-            <tr>
-                <th><i class="fas fa-asterisk"></i>店家名稱</th>
-                <td><p>全聯信義六合店</p></td>
-            </tr>
-            <tr>
-                <th><i class="fas fa-asterisk"></i>聯絡電話</th>
-                <td>02-27201907</td>
-            </tr>
-            
-            <tr rowspan="2">
-                <th><i class="fas fa-asterisk"></i>地址</th>
-                <td><p>11046台北市信義區松仁路240巷19號</p>
-                </td>
-            </tr>
-            <tr>
-                <th><i class="fas fa-asterisk"></i>電子信箱</th>
-                <td><p>abc2345@gmail.com</p></td>
-                
-            </tr>
-            <tr >
-                <th>商家簡介</th>
-                <td>
-                    <textarea class="introduction" placeholder="上限150字" minlength="0" maxlength="150" rows="10" cols="50" ></textarea>
+            <div class="box">
+                <ul class="righttop">
+                    <li class="perright">
+                        <input type="radio" name="check" id="active1" checked><label for="active1">待出貨</label>
+                        <div class="oback">
+                            <div id="clear" class="innercon">
+                                <img class="face1" src="../images/S__7791001.jpg" alt="">
+                                <a href="#" class="facebeside">inin</a>
+                                <p class="time">訂單編號:123456</p>
+                                <hr>
+                                <img class="mach" src="https://s.yimg.com/zp/images/4C1E80B8803447128535D7B954E6514DBD1EABFF" alt="">
+                                <p class="othtext">牛肉片</p>
+                                <p class="price">數量 : 1  $699</p><br>
+                                <img class="mach" src="https://img.shop.com/Image/270000/275600/275616/products/lg_1735632476__800x800__.jpg" alt="">
+                                <p class="othtext">冷凍豬瘦肉絞肉</p>
+                                <p class="price">數量 : 1 $80</p>
+                                <hr>
+                                <i class="fas fa-cart-arrow-down"></i>
+                                <p class="othtext">待出貨</p>
+                                <p class="total"> $ 779</p>
+                                <hr>
+                                <button class="cancleorder"  onclick="clearcontent('clear')">取消訂單</button>
+                                <button id="btn1" class="prepareorder">出貨</button>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    <li class="perright">
+                        <input type="radio" name="check" id="active4"><label for="active4">準備中</label>
+                        <div class="oback">
+                            
+                        </div>
+                    </li>
+                    <li class="perright">
+                        <input type="radio" name="check" id="active2"><label for="active2">已完成</label>
+                        <div>
+        
+                        </div>
+                    </li>
+                    <li class="perright">
+                        <input type="radio" name="check" id="active3"><label for="active3">已取消</label>
+                        <div>
+                            
+                        </div>
+                    </li>
                     
-                </td>
-                
-            </tr>
-        <!--下方按鈕-->
-            </table>
-            <input class="reset" type="reset" value="編輯"><input class="submit" type="submit" value="完成">
-        </form>
+                </ul>
+            </div>
         </div>
-</div>
+        </div>
+            
 
 <!--footer-->
 <div id="footer">

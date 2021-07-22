@@ -55,7 +55,7 @@
 </head>
 <body>
         <span>
-            <img  class="logo" src="../images/logo有背-removebg-preview.png" alt="Miss覓食">
+            <img  class="logo" src="../images/logo底修改.png" alt="Miss覓食">
         </span><br>
         <span>
             <h2 class="logintext">Miss覓食登入</h2>  
@@ -72,12 +72,12 @@
 
 <div id="boxes1">
 <div id="dialog1" class="window">
-<form action="" class="login">
+<form action="" class="login" name="login1">
     <span>
         <a href="#" class="close"><i class="fas fa-times"></i></a>
     </span>
     <span>
-        <img  class="logo2" src="../images/logo有背-removebg-preview.png" alt="Miss覓食">
+        <img  class="logo2" src="../images/logo底修改.png" alt="Miss覓食">
     </span><br>
     <span>
         <p class="logintext2">個人登入</p>  
@@ -85,12 +85,12 @@
     <span>
         <div class="account">
             <i class="far fa-user"></i>
-            <input type="email" placeholder="電子信箱" name="" value="" required>
+            <input id="email" type="email" placeholder="電子信箱" name="email" value="" required>
             
         </div>
         <div class="password">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="密碼" id="pwd" name="" minlength="6" maxlength="20" value="" required><i class="fa fa-eye-slash" onclick="hideShowPsw()" id="eye"></i>
+            <input type="password" placeholder="密碼" id="pwd" name="pwd" minlength="6" maxlength="20" value="" required><i class="fa fa-eye-slash" onclick="hideShowPsw()" id="eye"></i>
                 
                 <script type="text/javascript">
                     var eye = document.getElementById("eye");
@@ -111,8 +111,24 @@
     </span>
     <span>
         <div>
-        <button class="loginbutton" type="submit">登入</button>
+        <button id="personlog" class="loginbutton" type="button" onclick="check1()">登入</button>
         </div>
+        <script>
+            $(document).ready(function(){
+               $("#personlog").click(function(){
+                   if($("#email").val()==""){
+                       alert("你尚未填寫帳號");
+                       eval("document.form1['email'].focus()");       
+                   }else if($("#pwd").val()==""){
+                       alert("你尚未填寫密碼");
+                       eval("document.form1['pwd'].focus()");    
+                   }else{
+                    alert("登入成功!!");
+                    window.location.href="./index.html";
+                   }
+               })
+            })
+           </script>
     </span>
     <span>
         <div>
@@ -140,28 +156,28 @@
 
 <div id="boxes2" >
     <div id="dialog2" class="window">
-    <form action="" class="login">
+    <form action="./businessadd.html" class="login">
         <span>
             <a href="#" class="close"><i class="fas fa-times"></i></a>
         </span>
         <span>
-            <img  class="logo2" src="../images/logo有背-removebg-preview.png" alt="Miss覓食">
+            <img  class="logo2" src="../images/logo底修改.png" alt="Miss覓食">
         </span><br>
         <span>
             <p class="logintext2">廠商登入</p>  
         </span><br>
         <span>
-            <p class="one">*</p><p class="two">廠商登入前須先填寫</p><a class="four" href="https://docs.google.com/forms/d/e/1FAIpQLSeuCcohHqSJ25OHygFkPcasDdK-MNfgpJjpbtSPw9_B2dgStg/viewform?embedded=true">登入表單</a><p class="three">驗證身份，受理後才可進行登入</p>
+            <p class="one">*</p><p class="two">廠商登入前須先填寫</p><a class="four" href="https://docs.google.com/forms/d/e/1FAIpQLSeuCcohHqSJ25OHygFkPcasDdK-MNfgpJjpbtSPw9_B2dgStg/viewform?embedded=true">註冊表單</a><p class="three">驗證身份，受理後才可進行登入</p>
         </span>
         <span>
             <div class="account2">
                 <i class="far fa-user"></i>
-                <input type="text" placeholder="帳號" name="" minlength="6" maxlength="20" value="" required>
+                <input id="acc1" type="text" placeholder="帳號" name="acc1" minlength="6" maxlength="20" value="" required>
                 
             </div>
             <div class="password2">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="密碼" id="pwd1" name="" minlength="6" maxlength="20" value="" required><i class="fa fa-eye-slash" onclick="hideShowPsw1()" id="eye1"></i>
+                <input type="password" placeholder="密碼" id="pwd1" name="pwd1" minlength="6" maxlength="20" value="" required><i class="fa fa-eye-slash" onclick="hideShowPsw1()" id="eye1"></i>
                 
                 <script type="text/javascript">
                     var eye1 = document.getElementById("eye1");
@@ -183,8 +199,24 @@
         
         <span>
             <div>
-            <button class="loginbutton" type="submit">登入</button>
+            <input id="bulog" class="loginbutton" name="登入" value="登入" type="button" onclick="check2()"/>
             </div>
+            <script>
+                $(document).ready(function(){
+                   $("#bulog").click(function(){
+                       if($("#acc1").val()==""){
+                           alert("你尚未填寫帳號");
+                           eval("document.form1['acc1'].focus()");       
+                       }else if($("#pwd1").val()==""){
+                           alert("你尚未填寫密碼");
+                           eval("document.form1['pwd1'].focus()");    
+                       }else{
+                        alert("登入成功!!");
+                        window.location.href="./businessadd.html";
+                       }
+                   })
+                })
+               </script>
         </span>
         <span>
             <div>
@@ -208,23 +240,23 @@
                 <a href="#" class="close"><i class="fas fa-times"></i></a>
             </span>
             <span>
-                <img  class="logo2" src="../images/logo有背-removebg-preview.png" alt="Miss覓食">
+                <img  class="logo2" src="../images/logo底修改.png" alt="Miss覓食">
             </span><br>
             <span>
                 <p class="logintext2">福利機構登入</p>  
             </span><br>
             <span>
-                <p class="one2">*</p><p class="two2">福利機構登入前須先填寫</p><a class="four2" href="https://docs.google.com/forms/d/e/1FAIpQLSeuCcohHqSJ25OHygFkPcasDdK-MNfgpJjpbtSPw9_B2dgStg/viewform?embedded=true">登入表單</a><p class="three2">驗證身份，受理後才可進行登入</p>
+                <p class="one2">*</p><p class="two2">福利機構登入前須先填寫</p><a class="four2" href="https://docs.google.com/forms/d/e/1FAIpQLSeuCcohHqSJ25OHygFkPcasDdK-MNfgpJjpbtSPw9_B2dgStg/viewform?embedded=true">註冊表單</a><p class="three2">驗證身份，受理後才可進行登入</p>
             </span>
             <span>
                 <div class="account2">
                     <i class="far fa-user"></i>
-                    <input type="text" placeholder="帳號" name="" minlength="6" maxlength="20" value="" required>
+                    <input id="acc2" type="text" placeholder="帳號" name="acc2" minlength="6" maxlength="20" value="" required>
                     
                 </div>
                 <div class="password2">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="密碼" id="pwd2" name="" minlength="6" maxlength="20" value="" required><i class="fa fa-eye-slash" onclick="hideShowPsw2()" id="eye2"></i>
+                    <input type="password" placeholder="密碼" id="pwd2" name="pwd2" minlength="6" maxlength="20" value="" required><i class="fa fa-eye-slash" onclick="hideShowPsw2()" id="eye2"></i>
                     
                     <script type="text/javascript">
                         var eye = document.getElementById("eye");
@@ -246,8 +278,24 @@
             
             <span>
                 <div>
-                <button class="loginbutton" type="submit">登入</button>
+                <button id="welflog" class="loginbutton" type="submit" >登入</button>
                 </div>
+                <script>
+                    $(document).ready(function(){
+                       $("#welflog").click(function(){
+                           if($("#acc2").val()==""){
+                               alert("你尚未填寫帳號");
+                               eval("document.form1['acc2'].focus()");       
+                           }else if($("#pwd2").val()==""){
+                               alert("你尚未填寫密碼");
+                               eval("document.form1['pwd2'].focus()");    
+                           }else{
+                            alert("登入成功!!");
+                            window.location.href="./welfareadd.html";
+                           }
+                       })
+                    })
+                   </script>
             </span>
             <span>
                 <div>
@@ -263,7 +311,37 @@
         </div>
         
         <!-- Mask to cover the whole screen -->
-          <div id="mask3"></div>
-        
+  <div id="mask3"></div>
+<script>
+    var firebaseConfig = {
+            apiKey: "AIzaSyBzChAKyehauW4FXCk4DL8jRqtADWquNLA",
+            authDomain: "webtest-b833f.firebaseapp.com",
+            databaseURL: "https://webtest-b833f-default-rtdb.firebaseio.com",
+            projectId: "webtest-b833f",
+            storageBucket: "webtest-b833f.appspot.com",
+            messagingSenderId: "973102202097",
+            appId: "1:973102202097:web:cb78dfd5682687b519fd50"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          var database = firebase.database();
+          function personlog(){
+            var email=document.getElementById('email').value;
+            var pwd=document.getElementById('pwd').value;
+            firebase.auth().signInWithEmailAndPassword(email,pwd).then(function(){
+            
+
+                var id=firebase.auth().currentUser.uid;
+                window.location.replace("./questionnaire.html");
+                localStorage.setItem('id',id);
+                alert("log in");
+            }).catch(function(error){
+
+                var errorCode=error.code;
+                var errorMsg=error.message;
+
+            });
+            }
+            </script>          
 </body>
 </html>

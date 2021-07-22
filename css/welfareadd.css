@@ -48,7 +48,7 @@
 .header .logo a {
   float: right;
   margin-top: 15px;
-  margin-right: 15px;
+  margin-right: 10px;
   color: #67755c;
 }
 .header .logo :nth-child(3) {
@@ -375,7 +375,7 @@ textarea {
   border: none;
   border-radius: 15px;
   box-shadow: 0 5px #67755c;
-  margin: 30px 50px 3rem 50px;
+  margin: 30px 50px 3rem 270px;
 }
 
 .cancel:hover {
@@ -415,7 +415,9 @@ textarea {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
+.logname {
+  text-decoration: none;
+}
 /* Site footer */
 .site-footer {
   background-color: #67755c;

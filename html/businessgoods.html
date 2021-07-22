@@ -21,7 +21,7 @@
         function deleteRow(r)
         {
         var i=r.parentNode.parentNode.rowIndex;
-        var msg = "您確定要刪除嗎？";
+        var msg = "您確定要下架嗎？";
         if (confirm(msg)==true){
             document.getElementById('myTable').deleteRow(i);
             return true;
@@ -41,7 +41,7 @@
                 <h1>
                     Miss覓食
                 </h1>
-                <a href="#">Hi~han</a>        
+                <a class="logname" href="./businessprofile.html">Hi~px001</a>        
                 <a href="#"><i class="fas fa-bell"></i></a>          
                 <!-- 搜尋框 -->
                 <div class="search">
@@ -70,24 +70,24 @@
         <div id="sidebar">
         <div class="face">
         <form>
-            <img  src="../images/1618757563954.jpg" alt="圓形圖">
-            <button>更換相片</button>
+            <img  src="../images/全聯大頭貼.png" alt="圓形圖">
+            <button>更換頭貼</button>
             
         </form>
         </div>
         <div class="side-menu">
             <nav id="side">
                 <a href="./businessprofile.html"><i class="far fa-address-book"></i>商家簡介</a>
-                <a href="./businessgoods.html"><i class="far fa-plus-square"></i>我的商品</a>
-                <a href="#"><i class="far fa-list-alt"></i>我的訂單</a>
-                <a href="#"><i class="fas fa-star"></i>商家評價</a>
-                <a href="#" class="useranalist"><i class="far fa-chart-bar"></i>使用者分析</a>
+                <a href="./businessgoods.html"><i class="far fa-plus-square"></i>商品存貨</a>
+                <a href="./businessorder.html"><i class="far fa-list-alt"></i>我的訂單</a>
+                <a href="./businessevaluate.html"><i class="fas fa-star"></i>商家評價</a>
+                <a href="./analysis.html" class="useranalist"><i class="far fa-chart-bar"></i>使用者分析</a>
                 <a href="./donate.html"><i class="fas fa-hand-holding-heart"></i>捐贈物資</a>
             </nav>
         </div>
         </div>
         <div class="title">
-            <h2><i class="far fa-address-book" style="margin-right: 0.5rem;"></i>我的商品</h2>
+            <h2><i class="far fa-address-book" style="margin-right: 0.5rem;"></i>商品存貨</h2>
         </div>
         <div id="content">
             <div class="content">
@@ -151,35 +151,443 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>草莓蛋糕</td>
-                            <td>20塊</td>
+                            <td>牛肉片</td>
+                            <td>3盒</td>
                             <td>1個月</td>
                             <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
-                                <input class="delete" type="button" value="刪除" onclick="deleteRow(this)">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
                             </td>
                         </tr>
                         <tr>
-                            <td>鮭魚沙拉</td>
-                            <td>10份</td>
+                            <td>冷凍豬瘦肉絞肉</td>
+                            <td>3盒</td>
                             <td>1個月</td>
                             <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
-                                <input class="delete" type="button" value="刪除" onclick="deleteRow(this)">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
                             </td>
                         </tr>
                         <tr>
-                            <td>草莓</td>
-                            <td>8袋</td>
+                            <td>去骨雞腿排</td>
+                            <td>8個</td>
                             <td>1個月</td>
                             <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
-                                <input class="delete" type="button" value="刪除" onclick="deleteRow(this)">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
                             </td>
                         </tr>
                         <tr>
-                            <td>香蕉</td>
-                            <td>8袋</td>
+                            <td>霜降豬肉</td>
+                            <td>5盒</td>
                             <td>1個月</td>
                             <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
-                                <input class="delete" type="button" value="刪除" onclick="deleteRow(this)">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>台灣豬肉火鍋肉片</td>
+                            <td>8盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>冷藏雞里肌肉</td>
+                            <td>5盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>新鮮雞蛋</td>
+                            <td>3盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>鹹蛋</td>
+                            <td>5盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>皮蛋</td>
+                            <td>5盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>青蔥</td>
+                            <td>5包</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>有機紅蘿蔔</td>
+                            <td>5袋</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>有機馬鈴薯</td>
+                            <td>5袋</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>進口洋蔥</td>
+                            <td>10顆</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>蘆筍</td>
+                            <td>5袋</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>有機高麗菜</td>
+                            <td>5顆</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>有機櫛瓜</td>
+                            <td>5條</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>絲瓜</td>
+                            <td>5條</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>大白菜</td>
+                            <td>5顆</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>老薑</td>
+                            <td>5袋</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>美國空運進口酪梨</td>
+                            <td>5袋</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>紐西蘭富士蘋果</td>
+                            <td>10顆</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>牛蕃茄</td>
+                            <td>5袋</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>木瓜</td>
+                            <td>5顆</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>台灣香蕉</td>
+                            <td>5串</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Zespri 綠奇異果</td>
+                            <td>5袋</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>進口柳橙</td>
+                            <td>10顆</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>冷凍白蝦</td>
+                            <td>5盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>白蝦仁</td>
+                            <td>3盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>熟凍全殼淡菜</td>
+                            <td>5盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>澎湖白秋蝦仁</td>
+                            <td>5盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>台灣草蝦</td>
+                            <td>5盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>海鹽法國麵包</td>
+                            <td>5個</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>冰心維也納麵包</td>
+                            <td>5個</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>羅宋麵包</td>
+                            <td>5個</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>克林姆麵包</td>
+                            <td>5個</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>古早味三顆蔥麵包</td>
+                            <td>5個</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>手工牛角麵包</td>
+                            <td>5個</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>香菇</td>
+                            <td>5包</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>大漢傳統板豆腐</td>
+                            <td>5盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>中華水果豆花</td>
+                            <td>5盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>茉莉茶凍</td>
+                            <td>5盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>義美無加糖豆奶</td>
+                            <td>5瓶</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>金針菇</td>
+                            <td>10包</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>維力炸醬麵</td>
+                            <td>5包</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>台酒花雕雞麵</td>
+                            <td>5包</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>有機黑木耳</td>
+                            <td>5包</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>有機杏鮑菇</td>
+                            <td>5包</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>水蓮</td>
+                            <td>5包</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>雞蛋豆腐</td>
+                            <td>5盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>綠竹筍</td>
+                            <td>5包</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>鮭魚</td>
+                            <td>5盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>冷凍松阪豬</td>
+                            <td>5盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>莧菜</td>
+                            <td>5包</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>大黃瓜</td>
+                            <td>5條</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>里肌豬肉</td>
+                            <td>5盒</td>
+                            <td>1個月</td>
+                            <td><input class="edit" type="button" value="編輯" onclick="location.href='./businessedit.html'">
+                                <input class="delete" type="button" value="下架" onclick="deleteRow(this)">
                             </td>
                         </tr>
                     </tbody>

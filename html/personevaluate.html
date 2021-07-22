@@ -28,7 +28,7 @@
                 <h1>
                     Miss覓食
                 </h1>
-                <a href="#">Hi~inin</a>        
+                <a class="logname" href="./personindex.html">Hi~inin</a>        
                 <a href="./shopcart.html"><i class="fas fa-shopping-cart"></i></a>
                 <a href="#"><i class="fas fa-bell"></i></a>              
                 <!-- 搜尋框 -->
@@ -62,7 +62,7 @@
         <div class="face">
         <form>
             <img src="../images/S__7791001.jpg" alt="圓形圖">
-            <button>更換相片</button>
+            <button>更換頭貼</button>
             
         </form>
         </div>
@@ -70,15 +70,15 @@
             <nav id="side">
                 <a href="./personindex.html"><i class="far fa-address-book"></i>個人簡介</a>
                 <a href="./persongoods.html"><i class="far fa-plus-square"></i>我的商品</a>
-                <a href="./personorder.html"><i class="far fa-list-alt"></i>我的訂單</a>
+                <a href="./personorder.html"><i class="far fa-list-alt"></i>購買訂單</a>
                 <!--<a href="./personrecipe.html"><i class="fas fa-utensils"></i>我的食譜</a>-->
-                <a href="./personevaluate.html"><i class="fas fa-star"></i>個人評價</a>
+                <a href="./personevaluate.html"><i class="fas fa-star"></i>我的評價</a>
                 <a href="./personlike.html"><i class="far fa-heart"></i>按讚好物</a>
             </nav>
         </div>
         </div>
         <div class="title">
-            <h2><i class="fas fa-star" style="margin-right: 0.5rem;"></i>個人評價</h2>
+            <h2><i class="fas fa-star" style="margin-right: 0.5rem;"></i>我的評價</h2>
         </div>
         <div id="content">
         <div class="score">
@@ -86,86 +86,135 @@
             <span class="five">5.0</span>
             <p class="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
         </div>
-        <div class="evaluate">
-            <a class="t1a" id="a1" href="#">賣場評價</a>
-            <p class="pline">|</p>
-            <a class="t2a" id="a2" href="#">買家評價</a>
-            </div>
-            <script type="text/javascript"> 
-                $(document).ready(function() { 
-                    // hide the forms when page is ready 
-                    $('#t1').hide(); 
-                    $('#t2').hide(); 
+        <div class="box">
+            <ul class="righttop">
+                <li class="perright">
+                    <input type="radio" name="check" id="active1" checked><label for="active1">賣場評價</label>
+                    <div class="oback">
+                        <div class="innercon">
+                            <table>
+                                <tr>
+                                    <td class="td1">
+                                        <img style="border-radius: 50%;" width="60px" height="60px" src="../images/1618757411207.jpg" alt="圓形圖">
+                                        <p>2021/05/04</p>
+                                    </td>
+                                    <td class="td2"><p>betty</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        <p>好划算!!!</p>
+                                    </td>
+                                    <td class="td3"><img width="70px" height="70px" src="../img/家裡物資_210527_8_0.jpg" alt="">
+                                        <p>護手霜</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td1">
+                                        <img style="border-radius: 50%;" width="60px" height="60px" src="../images/1618757515390.jpg" alt="圓形圖">
+                                        <p>2021/05/05</p>
+                                    </td>
+                                    <td class="td2"><p>kk</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        <p>物超所值</p>
+                                    </td>
+                                    <td class="td3"><img width="70px" height="70px" src="../img/家裡物資_210527_4_1.jpg" alt="">
+                                        <p>洗面乳</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td1">
+                                        <img style="border-radius: 50%;" width="60px" height="60px" src="../images/1618757573454.jpg" alt="圓形圖">
+                                        <p>2021/05/06</p>
+                                    </td>
+                                    <td class="td2"><p>dong</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        <p>好好吃~</p>
+                                    </td>
+                                    <td class="td3"><img width="70px" height="70px" src="../img/家裡物資_210527_2.jpg" alt="">
+                                        <p>草莓蛋糕</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td1">
+                                        <img style="border-radius: 50%;" width="60px" height="60px" src="../images/1618757563954.jpg" alt="圓形圖">
+                                        <p>2021/05/07</p>
+                                    </td>
+                                    <td class="td2"><p>han</p>
+                                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                        <p>好便宜</p>
+                                    </td>
+                                    <td class="td3"><img width="70px" height="70px" src="../img/家裡物資_210527_6_1.jpg" alt="">
+                                        <p>牙膏</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                    </div>
+                </li>
+                <li class="perright">
+                    <input type="radio" name="check" id="active2"><label for="active2">買家評價</label>
+                    <div>
+                        <table>
+                            <tr>
+                                <td class="td1">
+                                    <img style="border-radius: 50%;" width="60px" height="60px" src="../images/1618757573454.jpg" alt="圓形圖">
+                                    <p>2021/05/10</p>
+                                </td>
+                                <td class="td2"><p>dong</p>
+                                    <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    <p>超讚的買家</p>
+                                </td>
+                                <td class="td3"><img width="70px" height="70px" src="../img/家裡物資_210527_11.jpg" alt="">
+                                    <p>洋芋片</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td1">
+                                    <img style="border-radius: 50%;" width="60px" height="60px" src="../images/1618757563954.jpg" alt="圓形圖">
+                                    <p>2021/05/14</p>
+                                </td>
+                                <td class="td2"><p>han</p>
+                                    <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    <p>好買家，取貨迅速</p>
+                                </td>
+                                <td class="td3"><img width="70px" height="70px" src="../img/家裡物資_210527_9_0.jpg" alt="">
+                                    <p>香水</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td1">
+                                    <img style="border-radius: 50%;" width="60px" height="60px" src="../images/1618757580950.jpg" alt="圓形圖">
+                                    <p>2021/05/15</p>
+                                </td>
+                                <td class="td2"><p>hong</p>
+                                    <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    <p>好棒的買家</p>
+                                </td>
+                                <td class="td3"><img width="70px" height="70px" src="../img/家裡物資_210527_4_0.jpg" alt="">
+                                    <p>草莓泡芙</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td1">
+                                    <img style="border-radius: 50%;" width="60px" height="60px" src="../images/全聯大頭貼.png" alt="圓形圖">
+                                    <p>2021/05/18</p>
+                                </td>
+                                <td class="td2"><p>全聯</p>
+                                    <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                                    <p>好買家</p>
+                                </td>
+                                <td class="td3"><img width="70px" height="70px" src="../img/柳橙.jpeg" alt="">
+                                    <p>柳橙</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+               
                 
-                    $('#a1').click(function(){ 
-                     $('#t1').show(); 
-                    }); 
-                    $('#a2').click(function(){ 
-                     $('#t2').show(); 
-                    }); 
-                }); 
-                </script> 
-        <div class="table">               
-                <div id="t1">
-                <table>
-                    <tr>
-                        <td class="td1">
-                            <img style="border-radius: 50%;" width="60px" height="60px" src="../images/S__7791001.jpg" alt="圓形圖">
-                            <p>2021/05/04</p>
-                        </td>
-                        <td class="td2"><p>inin011</p>
-                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                            <p>棒</p>
-                        </td>
-                        <td class="td3"><img width="70px" height="70px" src="../images/karly-gomez-lK1Q5RyD6tc-unsplash.jpg" alt="">
-                            <p>草莓奶酪</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="td1">
-                            <img style="border-radius: 50%;" width="60px" height="60px" src="../images/S__7791001.jpg" alt="圓形圖">
-                            <p>2021/05/04</p>
-                        </td>
-                        <td class="td2"><p>inin011</p>
-                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                            <p>棒</p>
-                        </td>
-                        <td class="td3"><img width="70px" height="70px" src="../images/karly-gomez-lK1Q5RyD6tc-unsplash.jpg" alt="">
-                            <p>草莓奶酪</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="td1">
-                            <img style="border-radius: 50%;" width="60px" height="60px" src="../images/S__7791001.jpg" alt="圓形圖">
-                            <p>2021/05/04</p>
-                        </td>
-                        <td class="td2"><p>inin011</p>
-                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                            <p>棒</p>
-                        </td>
-                        <td class="td3"><img width="70px" height="70px" src="../images/karly-gomez-lK1Q5RyD6tc-unsplash.jpg" alt="">
-                            <p>草莓奶酪</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="td1">
-                            <img style="border-radius: 50%;" width="60px" height="60px" src="../images/S__7791001.jpg" alt="圓形圖">
-                            <p>2021/05/04</p>
-                        </td>
-                        <td class="td2"><p>inin011</p>
-                            <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-                            <p>棒</p>
-                        </td>
-                        <td class="td3"><img width="70px" height="70px" src="../images/karly-gomez-lK1Q5RyD6tc-unsplash.jpg" alt="">
-                            <p>草莓奶酪</p>
-                        </td>
-                    </tr>
-                </table>
-                </div>
- 
-          </div>  
+            </ul>
         </div>
-
+    </div>
+        
 
         <!--footer-->
 <div id="footer">

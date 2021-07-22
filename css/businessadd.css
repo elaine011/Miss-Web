@@ -442,7 +442,9 @@ textarea {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
+.logname {
+  text-decoration: none;
+}
 /* Site footer */
 .site-footer {
   background-color: #67755c;

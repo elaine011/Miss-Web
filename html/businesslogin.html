@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descriotion" content="即期品與物資共享平台">
+    <meta name="robots" content="index,follow">
+    <!--網頁標籤-->
+    <link rel="shortcut icon" href="./images/盈盈ㄉlogo2_last_-removebg-preview (2).png"/>
+      <link rel="bookmark" href="./images/盈盈ㄉlogo2_last_-removebg-preview (2).png"/>
+      <title>Miss覓食</title>
+    <!--字型-->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./login.css"/>
+    
+    <script src="https://kit.fontawesome.com/71e88eb3c1.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+<script>
+
+$(document).ready(function() {  
+    //select all the a tag with name equal to modal
+    $('a[name=modal]').click(function(e) {
+        //Cancel the link behavior
+        e.preventDefault();
+        //Get the A tag
+        var id = $(this).attr('href');
+        //Get the screen height and width
+        var maskHeight = $(document).height();
+        var maskWidth = $(window).width();
+        //Set heigth and width to mask to fill up the whole screen
+        $('#mask').css({'width':maskWidth,'height':maskHeight});
+        //transition effect     
+        $('#mask').fadeIn(1000);    
+        $('#mask').fadeTo("slow",0.8);  
+        //Get the window height and width
+        var winH = $(window).height();
+        var winW = $(window).width();
+        //Set the popup window to center
+        $(id).css('top',  winH/2-$(id).height()/2);
+        $(id).css('left', winW/2-$(id).width()/2);
+        //transition effect
+        $(id).fadeIn(2000); 
+    });
+    //if close button is clicked
+    $('.window .close').click(function (e) {
+        //Cancel the link behavior
+        e.preventDefault();
+        $('#mask').hide();
+        $('.window').hide();
+    });             
+});
+</script>
+</head>
+<body>
+<h2>登入</h2>
+<ul>
+<li><a href="#dialog" name="modal">login</a></li>
+</ul>
+<div id="boxes">
+<div id="dialog" class="window">
+<form action=""class="login">
+    <span>
+        <a href="#"class="close"/><i class="fas fa-times"></i></a>
+    </span>
+    <span>
+        <img  class="logo" src="./images/logo有背-removebg-preview.png" alt="Miss覓食">
+    </span><br>
+    <span>
+        <h2 class="logintext">Miss覓食登入</h2>  
+    </span><br>
+    <span>
+        <button class="person"><a class="modal button" href="#dialog1" name="modal"><i class="fas fa-user-alt"aria-hidden="true"></i>我是個人</a></button>
+    </span>
+    <span>
+        <button class="business"><a class="modal button" href="#dialog2" name="modal"><i class="fas fa-store"aria-hidden="true"></i>我是廠商</a></button>
+    </span>
+    <span>
+        <button class="welfare"><a class="modal button" href="#dialog3" name="modal"><i class="far fa-building"aria-hidden="true"></i>我是福利機構</a></button>
+    </span>
+
+</form>
+</div>
+</div>
+
+<!-- Mask to cover the whole screen -->
+  <div id="mask"></div>
+</div>
+</body>
+</html>
