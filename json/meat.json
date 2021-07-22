@@ -2,12 +2,12 @@
 	"goods": [{
 			"id": 1,
 			"imgUrl":"https://s.yimg.com/zp/images/4C1E80B8803447128535D7B954E6514DBD1EABFF",
-			"price": "975",
-			"discount": "699",
+			"price": "333",
+			"discount": "200",
 			"title": "牛肉片",
 			"category": "肉",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/10/07",
+			"remain": "5"
 		},
 		{
 			"id": 2,

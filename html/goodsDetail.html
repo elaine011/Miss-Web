@@ -41,7 +41,7 @@
             <h1>
                 Miss覓食
             </h1>
-            <a href="./alllogin.html">LOG IN</a>
+            <a href="./alllogin.html">Hi~inin</a>
             <a href="./shopcart.html"><i class="fas fa-shopping-cart"></i></a>          
             <!-- 搜尋框 -->
             <div class="search">
@@ -94,7 +94,7 @@
 					$.each(res.goods, function(idx, val) {
 						//Acquire detailed data according to id
 						if(id == val.id) {
-							var str = "<div class=\"wrap\"><div class=\"product-item\"><img src='" + val.imgUrl + "'/><button id=\"btn\" onclick=\"addtocart()\">加入購物車</button><div class=\"heart\"><a href=\"#\"><i class=\"fas fa-heart fa-2x\"></i></a></div></div><div class=\"info\"><h2>" + val.title + "</h2><p>效期: " + val.term + "</p><s>原價: $" + val.price + "元</s><span> $" + val.price + "元</span><p>剩餘數量: " + val.remain + "份</p><div class=\"info2\"><p>更多資訊:</p><div class=\"info2-item\"><p>產地:美國</p><p>規格:100g±10</p></div><div class=\"pricebutton\"><ul class=\"counter\"><li id=\"minus\"><input type=\"button\" value=\"-\"/></li><li id=\"countnum\">"+1+"</li><li id=\"plus\"><input type=\"button\" value=\"+\"/></li></ul></div></div></div></div></div>";
+							var str = "<div class=\"wrap\"><div class=\"product-item\"><img src='" + val.imgUrl + "'/><button id=\"btn\" onclick=\"addtocart()\">加入購物車</button><div class=\"heart\"><a href=\"#\"><i class=\"fas fa-heart fa-2x\"></i></a></div></div><div class=\"info\"><h2>" + val.title + "</h2><p>效期: " + val.term + "</p><s>原價: $" + val.price + "元</s><span> $" + val.discount + "元</span><p>剩餘數量: " + val.remain + "份</p><div class=\"info2\"><p>更多資訊:</p><div class=\"info2-item\"><p>產地:美國</p><p>規格:100g±10</p></div><div class=\"pricebutton\"><ul class=\"counter\"><li id=\"minus\"><input type=\"button\" value=\"-\"/></li><li id=\"countnum\">"+1+"</li><li id=\"plus\"><input type=\"button\" value=\"+\"/></li></ul></div></div></div></div></div>";
 						}
 						$('.goodsDeatail').append(str);
 					});
@@ -156,18 +156,18 @@
 	<!-- 相關食譜 -->
     <div class="recipe">
         <div class="title">
-            <h3>相關食譜</h3>
+            <h3>相關商品</h3>
         </div>
         <table>
             <tr>
-                <td><img src="../img/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt=""></td>
-                <td><img src="../img/chad-montano-M0lUxgLnlfk-unsplash.jpg" alt=""></td>
-                <td><img src="../img/vladimir-gladkov-oSZ8WBaCbcg-unsplash.jpg" alt=""></td>
+                <td><img src="https://img.shop.com/Image/270000/275600/275616/products/lg_1735632476__800x800__.jpg" alt=""></td>
+                <td><img src="https://cdn.cybassets.com/media/W1siZiIsIjExMzA2L3Byb2R1Y3RzLzI2MzU2MjQ4L-eUoumKt-mcnOmZjeixrF9jMDIxNTBjYjI0NDVmZGIwZjhlZS5qcGVnIl0sWyJwIiwidGh1bWIiLCI2MDB4NjAwIl1d.jpeg?sha=eea319d7eea0f856" alt=""></td>
+                <td><img src="https://image.azureedge.net/0239680_300g-_S.png" alt=""></td>
             </tr>
             <tr>
-                <td><p>【西班牙料理】板腱牛排烤飯</p></td>
-                <td><p>嫩煎板腱牛</p></td>
-                <td><p>板腱牛排佐三色料理</p></td>
+                <td><p>冷凍豬瘦肉絞肉</p></td>
+                <td><p>霜降豬肉</p></td>
+                <td><p>冷藏雞里肌肉</p></td>
             </tr>
         </table>
     </div>

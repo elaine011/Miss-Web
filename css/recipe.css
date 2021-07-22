@@ -49,6 +49,7 @@
   margin-top: 15px;
   margin-right: 15px;
   color: #67755c;
+  text-decoration: none;
 }
 .header .logo :nth-child(3) {
   width: 75px;
