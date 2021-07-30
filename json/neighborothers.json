@@ -3,34 +3,34 @@
 		{
 			"id": 13,
 			"imgUrl":"../img/家裡物資_210527_12.jpg",
-			"price": "25",
+			"price": "15",
 			"title": "滿漢大餐(單包)",
 			"category": "其他",
-			"term": "1個月",
-			"remain": "3",
-            "distance":"120",
+			"term": "2021/10/10",
+			"remain": "1",
+            "distance":"新北市淡水區",
             "desc": "不想吃這個口味了"
 		},
 		{
 			"id": 14,
 			"imgUrl":"../img/家裡物資_210527_13.jpg",
-			"price": "70",
+			"price": "60",
 			"title": "滿漢大餐(開封過)",
 			"category": "其他",
-			"term": "1個月",
-			"remain": "3",
-            "distance":"120",
+			"term": "2021/10/15",
+			"remain": "1",
+            "distance":"新北市淡水區",
             "desc": "不想吃這個口味了"
 		},
 		{
 			"id": 15,
 			"imgUrl":"../img/家裡物資_210527_14.jpg",
-			"price": "75",
+			"price": "60",
 			"title": "滿漢大餐",
 			"category": "其他",
-			"term": "1個月",
-			"remain": "3",
-            "distance":"120",
+			"term": "2021/10/03",
+			"remain": "1",
+            "distance":"新北市淡水區",
             "desc": "不想吃這個口味了"
 		}
 	]

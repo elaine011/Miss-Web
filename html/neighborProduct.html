@@ -85,7 +85,7 @@
 					$.each(res.goods, function(idx, val) {
 						//Acquire detailed data according to id
 						if(id == val.id) {
-							var str = "<div class=\"wrap\"><div class=\"product-item\"><img src='" + val.imgUrl + "'/><a href=\"./chat.html\"><button>聊天室</button></a><div class=\"heart\"><a href=\"#\"><i class=\"fas fa-heart fa-2x\"></i></a></div></div><div class=\"info\"><h2>" + val.title + "</h2><p>商品描述: " + val.desc + "</p><p>效期: " + val.term + "</p><p>價格: $" + val.price + "元</p><p>剩餘數量: " + val.remain + "份</p><p>距離: " + val.distance + "公尺</p><div class=\"pricebutton\"><ul class=\"counter\"><li id=\"minus\"><input type=\"button\" value=\"-\"/></li><li id=\"countnum\">"+1+"</li><li id=\"plus\"><input type=\"button\" value=\"+\"/></li></ul></div></div></div></div></div>";
+							var str = "<div class=\"wrap\"><div class=\"product-item\"><img src='" + val.imgUrl + "'/><a href=\"./chat.html\"><button>聊天室</button></a><div class=\"heart\"><a href=\"#\"><i class=\"fas fa-heart fa-2x\"></i></a></div></div><div class=\"info\"><h2>" + val.title + "</h2><p>商品描述: " + val.desc + "</p><p>效期: " + val.term + "</p><p>價格: $" + val.price + "元</p><p>剩餘數量: " + val.remain + "份</p><p>位置: " + val.distance + "</p><div class=\"pricebutton\"><ul class=\"counter\"><li id=\"minus\"><input type=\"button\" value=\"-\"/></li><li id=\"countnum\">"+1+"</li><li id=\"plus\"><input type=\"button\" value=\"+\"/></li></ul></div></div></div></div></div>";
 						}
 						$('.neighborProduct').append(str);
 					});

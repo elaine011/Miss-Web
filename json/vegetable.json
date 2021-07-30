@@ -3,137 +3,152 @@
 		{
 			"id": 11,
 			"imgUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKwFZUqfNoCHcPcrdjW2uPeCTeFusewPYmJg&usqp=CAU",
-			"price": "39",
-			"title": "青蔥",
+			"price": "52",
+			"discount": "39",
+			"title": "履歷青蔥",
 			"category": "蔬菜",
-			"term": "1個月",
+			"term": "2021/10/02",
 			"remain": "3"
 		},
 		{
 			"id": 12,
 			"imgUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLM5I5uk-CyqJWYg4LrZRlv-FoQN19tC4pGg&usqp=CAU",
-			"price": "39",
+			"price": "45",
+			"discount": "39",
 			"title": "有機紅蘿蔔",
 			"category": "蔬菜",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/10/15",
+			"remain": "12"
 		},
 		{
 			"id": 13,
 			"imgUrl":"https://image-cdn-flare.qdm.cloud/q56e767ea6c206/image/cache/data/2019/04/16/b22c17f263b8beaadd9e6579d35f130e-max-w-1024.jpg",
-			"price": "59",
+			"price": "72",
+			"discount": "59",
 			"title": "有機馬鈴薯",
 			"category": "蔬菜",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/10/03",
+			"remain": "10"
 		},
 		{
 			"id": 14,
 			"imgUrl":"https://www.costco.com.tw/medias/sys_master/images/hb7/h2b/33857916633118.jpg",
-			"price": "49",
+			"price": "60",
+			"discount": "49",
 			"title": "進口洋蔥",
 			"category": "蔬菜",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/10/09",
+			"remain": "9"
 		},
 		{
 			"id": 15,
 			"imgUrl":"https://s.yimg.com/ut/api/res/1.2/r.mQzWolTQF3hPksnHgtrA--~B/YXBwaWQ9eXR3bWFsbDtjYz0zMTUzNjAwMDtoPTYwMDtxPTEwMDt3PTYwMA--/https://s.yimg.com/fy/73f6/item/p05301864915-item-0b99xf4x0600x0600-m.jpg",
-			"price": "45",
+			"price": "58",
+			"discount": "45",
 			"title": "蘆筍",
 			"category": "蔬菜",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/10/06",
+			"remain": "6"
 		},
 		{
 			"id": 16,
 			"imgUrl":"../img/高麗菜.jpeg",
-			"price": "62",
+			"price": "80",
+			"discount": "69",
 			"title": "有機高麗菜",
 			"category": "蔬菜",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/09/27",
+			"remain": "5"
 		},
 		{
 			"id": 17,
 			"imgUrl":"https://img.shop.com/Image/270000/275600/275616/products/lg_1747601322__800x800__.jpg",
-			"price": "115",
+			"price": "130",
+			"discount": "115",
 			"title": "有機櫛瓜",
 			"category": "蔬菜",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/10/04",
+			"remain": "8"
 		},
 		{
 			"id": 18,
 			"imgUrl":"https://kmweb.coa.gov.tw/files/production_map/133/A01_1_m.jpg",
-			"price": "33",
+			"price": "52",
+			"discount": "33",
 			"title": "絲瓜",
 			"category": "蔬菜",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/09/27",
+			"remain": "4"
 		},
 		{
 			"id": 19,
 			"imgUrl":"https://life.tw/upload_file/53/content/98069de6-5ee9-f22f-daba-1dbc15a7766e.png",
-			"price": "49",
+			"price": "60",
+			"discount": "49",
 			"title": "大白菜",
 			"category": "蔬菜",
-			"term": "1個月",
+			"term": "2021/10/02",
 			"remain": "3"
 		},
 		{
 			"id": 20,
 			"imgUrl":"https://img.ltn.com.tw/Upload/food/page/2017/02/27/170227-5400-11-RVWn6.jpg",
-			"price": "39",
+			"price": "45",
+			"discount": "39",
 			"title": "老薑",
 			"category": "蔬菜",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/10/20",
+			"remain": "5"
 		},
 		{
 			"id": 49,
 			"imgUrl":"../img/水蓮.jpg",
-			"price": "48",
+			"price": "60",
+			"discount": "48",
 			"title": "水蓮",
 			"category": "蔬菜",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/09/27",
+			"remain": "2"
 		},
 		{
 			"id": 51,
 			"imgUrl":"../img/竹筍.jpg",
-			"price": "89",
+			"price": "99",
+			"discount": "89",
 			"title": "綠竹筍",
 			"category": "蔬菜",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/10/02",
+			"remain": "4"
 		},
 		{
 			"id": 52,
 			"imgUrl":"../img/鮭魚.jpg",
-			"price": "158",
+			"price": "180",
+			"discount": "158",
 			"title": "鮭魚",
 			"category": "蔬菜",
-			"term": "1個月",
+			"term": "2021/10/09",
 			"remain": "3"
 		},
 		{
 			"id": 54,
 			"imgUrl":"../img/莧菜.jpg",
-			"price": "25",
+			"price": "42",
+			"discount": "25",
 			"title": "莧菜",
 			"category": "蔬菜",
-			"term": "1個月",
+			"term": "2021/10/02",
 			"remain": "3"
 		},
 		{
 			"id": 55,
 			"imgUrl":"../img/大黃瓜.jpg",
-			"price": "69",
+			"price": "75",
+			"discount": "69",
 			"title": "大黃瓜",
 			"category": "蔬菜",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/09/28",
+			"remain": "2"
 		}
 	]
 }

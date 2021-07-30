@@ -3,46 +3,51 @@
 		{
 			"id": 28,
 			"imgUrl":"../img/冷凍白蝦.jpeg",
-			"price": "99",
+			"price": "130",
+			"discount": "99",
 			"title": "冷凍白蝦",
 			"category": "海鮮",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/10/15",
+			"remain": "7"
 		},
 		{
 			"id": 29,
 			"imgUrl":"../img/白蝦仁.png",
-			"price": "149",
+			"price": "160",
+			"discount": "149",
 			"title": "白蝦仁",
 			"category": "海鮮",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/10/02",
+			"remain": "5"
 		},
 		{
 			"id": 30,
 			"imgUrl":"../img/淡菜.png",
-			"price": "179",
+			"price": "199",
+			"discount": "179",
 			"title": "熟凍全殼淡菜",
 			"category": "海鮮",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/10/05",
+			"remain": "6"
 		},
 		{
 			"id": 31,
 			"imgUrl":"../img/澎湖蝦仁.jpeg",
-			"price": "239",
+			"price": "250",
+			"discount": "239",
 			"title": "澎湖白秋蝦仁",
 			"category": "海鮮",
-			"term": "1個月",
-			"remain": "3"
+			"term": "2021/10/06",
+			"remain": "8"
 		},
 		{
 			"id": 32,
 			"imgUrl":"../img/台灣草蝦.jpeg",
-			"price": "389",
+			"price": "400",
+			"discount": "389",
 			"title": "台灣草蝦",
 			"category": "海鮮",
-			"term": "1個月",
+			"term": "2021/10/01",
 			"remain": "3"
 		}
 	]
