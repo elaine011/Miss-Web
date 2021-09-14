@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descriotion" content="即期品與物資共享平台">
+    <meta name="robots" content="index,follow">
+    <!--網頁標籤-->
+    <link rel="shortcut icon" href="../images/盈盈ㄉlogo2_last_-removebg-preview (2).png"/>
+      <link rel="bookmark" href="../images/盈盈ㄉlogo2_last_-removebg-preview (2).png"/>
+      <title>Miss覓食</title>
+    <!--字型-->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/analysis.css"/>
+    <!--圖表-->
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/analysis.js"></script>
+    <!--icon-->
+    <script src="https://kit.fontawesome.com/71e88eb3c1.js" crossorigin="anonymous"></script>
+    
+</head>
+<body bgcolor="#FEF7E6">
+        <div id="header">
+        <div class="header">
+            <!-- logo+文字 +購物車+登入-->
+            
+            <div class="logo">
+                <img src="../images/盈盈ㄉlogo2_last_-removebg-preview (2).png " alt="Miss覓食">
+                <h1>
+                    Miss覓食
+                </h1>
+                <a class="logname" href="./businessprofile.html">Hi~px001</a>        
+                <a href="#"><i class="fas fa-bell"></i></a>          
+                <!-- 搜尋框 -->
+                <div class="search">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <input class="searchbar" type="text" name="search" id="search" placeholder="我想要找...">
+                </div>
+            </div>
+     <!-- 漢堡選單 -->
+     <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <a href="./businessadd.html"><li>首頁</li></a>
+                <a href="./businessprofile.html"><li>商家簡介</li></a>
+                <a href="./alllogin.html"><li>登出</li></a>
+            </ul>
+        </div>
+    </nav>
+    </div>
+    </div>
+
+        <!--左側列表-->
+        <div id="sidebar">
+        <div class="face">
+        <form>
+            <img src="../images/全聯大頭貼.png" alt="圓形圖">
+            <button>更換頭貼</button>
+            
+        </form>
+        </div>
+        <div class="side-menu">
+         <nav id="side">
+            <a href="./businessprofile.html"><i class="far fa-address-book"></i>商家簡介</a>
+            <a href="./businessgoods.html"><i class="far fa-plus-square"></i>商品存貨</a>
+            <a href="./businessorder.html"><i class="far fa-list-alt"></i>我的訂單</a>
+            <a href="./businessevaluate.html"><i class="fas fa-star"></i>商家評價</a>
+            <a href="./analysis.html" class="useranalist"><i class="far fa-chart-bar"></i>使用者分析</a>
+            <a href="./donate.html"><i class="fas fa-hand-holding-heart"></i>捐贈物資</a>
+        </nav>
+        </div>
+        </div>
+        <div class="title">
+            <h2><i class="far fa-chart-bar" style="margin-right: 0.5rem;"></i>使用者分析</h2>
+        </div>
+        <!--右側資料 -->
+        <div id="content">
+            <div class="content">
+               <figure class="highcharts-figure1">
+                  <div id="container"></div>
+                  <p class="highcharts-description">
+               </p>
+               </figure>
+               <script>
+                  Highcharts.chart('container', {
+                     
+               chart: {
+                  plotBackgroundColor: null,
+                  plotBorderWidth: null,
+                  plotShadow: false,
+                  type: 'pie'
+               },
+               colors: ['#FAEC71', '#FFD3B4','#A4CDFE','#60A3F1'],
+               title: {
+                  text: '會員性別'
+               },
+               tooltip: {
+                  pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+               },
+               accessibility: {
+                  point: {
+                  valueSuffix: '%'
+                  }
+               },
+               credits:{
+               enabled:false
+               },
+               exporting: {
+               enabled:false
+               },
+               plotOptions: {
+                  pie: {
+                  allowPointSelect: true,
+                  cursor: 'pointer',
+                  dataLabels: {
+                     enabled: false
+                  },
+                  showInLegend: true
+                  }
+               },
+                    
+               series: [{
+                  name: '佔比',
+                  colorByPoint: true,
+                  
+                  data: [{
+                  name: '女',
+                  y: 75.0,
+                  sliced: true,
+                  selected: true
+                  },{
+                  name: '男',
+                  y: 25.0
+                  }]
+               }]
+            });
+             
+               </script>
+               <figure class="highcharts-figure2">
+                  <div id="container2"></div>
+                  <p class="highcharts-description">
+               </p>
+               </figure>
+               <script>
+                  Highcharts.chart('container2', {
+               chart: {
+                  plotBackgroundColor: null,
+                  plotBorderWidth: null,
+                  plotShadow: false,
+                  type: 'pie'
+               },
+               colors: ['#FAEC71', '#FFE49D', '#FFD3B4', '#9ADAF5','#54CBF0','#1AACDA'],
+               title: {
+                  text: '會員年齡'
+               },
+               tooltip: {
+                  pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+               },
+               accessibility: {
+                  point: {
+                  valueSuffix: '%'
+                  }
+               },
+               credits:{
+               enabled:false
+               },
+               exporting: {
+               enabled:false
+               },
+               plotOptions: {
+                  pie: {
+                  allowPointSelect: true,
+                  cursor: 'pointer',
+                  dataLabels: {
+                     enabled: false
+                  },
+                  showInLegend: true
+                  }
+               },
+               series: [{
+                  name: '佔比',
+                  colorByPoint: true,
+                  data: [{
+                  name: '20歲以下',
+                  y: 10.0,
+                  colors:'#CCEBF9',
+                  }, {
+                  name: '20-30歲',
+                  y: 35.5,
+                  colors:'#FFF598',
+                  sliced: true,
+                  selected: true
+                  }, {
+                  name: '31-40歲',
+                  y: 20.5
+                  }, {
+                  name: '41-50歲',
+                  y: 31.6
+                  }, {
+                  name: '51-60歲',
+                  y: 1.7
+                  }, {
+                  name: '60歲以上',
+                  y: 0.7
+                  }]
+               }]
+            });
+               </script>
+               <figure class="highcharts-figure3">
+                  <div id="container3"></div>
+                  <p class="highcharts-description">
+               </p>
+               </figure>
+               <script>
+                  Highcharts.chart('container3', {
+                     
+               chart: {
+                  plotBackgroundColor: null,
+                  plotBorderWidth: null,
+                  plotShadow: false,
+                  type: 'pie'
+               },
+               colors: [  '#FFD3B4','#9ADAF5','#60A3F1'],
+               title: {
+                  text: '購物方式'
+               },
+               tooltip: {
+                  pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+               },
+               accessibility: {
+                  point: {
+                  valueSuffix: '%'
+                  }
+               },
+               credits:{
+               enabled:false
+               },
+               exporting: {
+               enabled:false
+               },
+               plotOptions: {
+                  pie: {
+                  allowPointSelect: true,
+                  cursor: 'pointer',
+                  dataLabels: {
+                     enabled: false
+                  },
+                  showInLegend: true
+                  }
+               },
+                    
+               series: [{
+                  name: '佔比',
+                  colorByPoint: true,
+                  data: [{
+                  name: '到店購物',
+                  y: 80.0,
+                  sliced: true,
+                  selected: true
+                  },{
+                  name: '線上購物',
+                  y: 20.0
+                  }]
+               }]
+            });
+             
+               </script>      
+            
+            <figure class="highcharts-figure">
+              <div id="container4"></div>
+            </figure>
+            <script>
+               Highcharts.chart('container4', {
+
+               title: {
+               text: '每月商品銷售折線圖'
+               },
+               credits:{
+               enabled:false
+               },
+               exporting: {
+               enabled:false
+               },
+               colors: ['#DFB2EE','#FF9983', '#FFE49D', '#73F4FC', '#FBCE8A','#A4CDFE','#60A3F1'],
+               yAxis: {
+               title: {
+                  text: '銷售量'
+               }
+               },
+
+               xAxis: {
+               accessibility: {
+                  rangeDescription: '1月到12月'
+               }
+               },
+
+               legend: {
+               layout: 'vertical',
+               align: 'right',
+               verticalAlign: 'middle'
+               },
+
+               plotOptions: {
+               series: {
+                  label: {
+                     connectorAllowed: false
+                  },
+                  pointStart: 1
+               }
+               },
+
+               series: [{
+               name: '麵包',
+               data: [9, 10, 8, 6, 9, 11, 18, 20, 19, 18, 21, 22]
+               },{
+               name: '蛋',
+               data: [10, 15, 13, 17, 16, 19, 16, 18, 18, 13, 17, 19]
+               },{
+               name: '蔬菜',
+               data: [29, 35, 32, 37, 33, 35, 38, 40, 38, 43, 37, 33]
+               },{
+               name: '水果',
+               data: [29, 24, 29, 27, 32, 30, 26, 34, 33, 25, 29, 32]
+               }, {
+               name: '海鮮',
+               data: [34, 37, 26, 29, 20, 24, 32, 39, 40, 33, 25, 22]
+               }, {
+               name: '肉',
+               data: [55, 34, 58, 32, 51, 42, 44, 57, 49, 48, 41, 32]
+               }, {
+               name: '其他',
+               data: [22, 28, 30, 15, 19, 33, 21, 24, 29, 18, 23, 21]
+               }],
+
+               responsive: {
+               rules: [{
+                  condition: {
+                     maxWidth: 500
+                  },
+                  chartOptions: {
+                     legend: {
+                     layout: 'horizontal',
+                     align: 'center',
+                     verticalAlign: 'bottom'
+                     }
+                  }
+               }]
+               }
+
+               });
+            </script>
+            
+            <div class="box">
+               <ul class="righttop">
+                   <li class="perright">
+                       <input type="radio" name="check" id="active1" checked><label for="active1">麵包</label>
+                       <div class="oback">
+                           <div class="innercon">
+                             
+                        <figure class="highcharts-figure5">
+                        <div id="container5"></div>
+                      </figure>
+                      <script>
+                        Highcharts.chart('container5', {
+                        chart: {
+                           type: 'column'
+                        },
+                        title: {
+                           text: '各年齡層偏好商品'
+                        },
+                        colors: ['#9ADAF5', '#FFD3B4', '#FBCE8A','#A4CDFE','#60A3F1'],
+                        credits:{
+                        enabled:false
+                        },
+                        exporting: {
+                        enabled:false
+                        },
+                        xAxis: {
+                           categories: [
+                              '20歲以下',
+                              '21-30歲',
+                              '31-40歲',
+                              '41-50歲',
+                              '51-60歲',
+                              '60歲以上'
+                           ],
+                           crosshair: true
+                        },
+                        yAxis: {
+                           min: 0,
+                           title: {
+                              text: '人數'
+                           }
+                        },
+                        tooltip: {
+                           headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                           pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                              '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+                           footerFormat: '</table>',
+                           shared: true,
+                           useHTML: true
+                        },
+                        plotOptions: {
+                           column: {
+                              pointPadding: 0.2,
+                              borderWidth: 0
+                           }
+                        },
+                        series: [{
+                           name: '男',
+                           data: [29, 41, 46, 29, 24, 16]
+
+                        }, {
+                           name: '女',
+                           data: [42, 53, 34, 49, 32, 25]
+
+                        }]
+                        });
+                      </script>
+                      </div>
+                      </div>
+                      </li>
+                      <li class="perright">
+                        <input type="radio" name="check" id="active2"><label for="active2">蛋</label>
+                        <div>
+                           <figure class="highcharts-figure5">
+                              <div id="container6"></div>
+                            </figure>
+                            <script>
+                              Highcharts.chart('container6', {
+                              chart: {
+                                 type: 'column'
+                              },
+                              title: {
+                                 text: '各年齡層偏好商品'
+                              },
+                              colors: ['#CCEBF9', '#FFD3B4', '#FBCE8A','#A4CDFE','#60A3F1'],
+                              credits:{
+                              enabled:false
+                              },
+                              exporting: {
+                              enabled:false
+                              },
+                              xAxis: {
+                                 categories: [
+                                    '20歲以下',
+                                    '21-30歲',
+                                    '31-40歲',
+                                    '41-50歲',
+                                    '51-60歲',
+                                    '60歲以上'
+                                 ],
+                                 crosshair: true
+                              },
+                              yAxis: {
+                                 min: 0,
+                                 title: {
+                                    text: '人數'
+                                 }
+                              },
+                              tooltip: {
+                                 headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                                 pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                                    '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+                                 footerFormat: '</table>',
+                                 shared: true,
+                                 useHTML: true
+                              },
+                              plotOptions: {
+                                 column: {
+                                    pointPadding: 0.2,
+                                    borderWidth: 0
+                                 }
+                              },
+                              series: [{
+                                 name: '男',
+                                 data: [3, 5, 16, 19, 14, 9]
+      
+                              }, {
+                                 name: '女',
+                                 data: [5, 6, 34, 49, 32, 12]
+      
+                              }]
+                              });
+                            </script>
+                        </div>
+                    </li>
+                    <li class="perright">
+                        <input type="radio" name="check" id="active3"><label for="active3">蔬菜</label>
+                        <div>
+                           <figure class="highcharts-figure5">
+                              <div id="container7"></div>
+                            </figure>
+                            <script>
+                              Highcharts.chart('container7', {
+                              chart: {
+                                 type: 'column'
+                              },
+                              title: {
+                                 text: '各年齡層偏好商品'
+                              },
+                              colors: ['#CCEBF9', '#FFD3B4', '#FBCE8A','#A4CDFE','#60A3F1'],
+                              credits:{
+                              enabled:false
+                              },
+                              exporting: {
+                              enabled:false
+                              },
+                              xAxis: {
+                                 categories: [
+                                    '20歲以下',
+                                    '21-30歲',
+                                    '31-40歲',
+                                    '41-50歲',
+                                    '51-60歲',
+                                    '60歲以上'
+                                 ],
+                                 crosshair: true
+                              },
+                              yAxis: {
+                                 min: 0,
+                                 title: {
+                                    text: '人數'
+                                 }
+                              },
+                              tooltip: {
+                                 headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                                 pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                                    '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+                                 footerFormat: '</table>',
+                                 shared: true,
+                                 useHTML: true
+                              },
+                              plotOptions: {
+                                 column: {
+                                    pointPadding: 0.2,
+                                    borderWidth: 0
+                                 }
+                              },
+                              series: [{
+                                 name: '男',
+                                 data: [9, 17, 46, 39, 22, 10]
+      
+                              }, {
+                                 name: '女',
+                                 data: [11, 23, 54, 59, 72, 25]
+      
+                              }]
+                              });
+                            </script>
+                        </div>
+                    </li>
+                    <li class="perright">
+                        <input type="radio" name="check" id="active4"><label for="active4">水果</label>
+                        <div>
+                           <figure class="highcharts-figure5">
+                              <div id="container8"></div>
+                            </figure>
+                            <script>
+                              Highcharts.chart('container8', {
+                              chart: {
+                                 type: 'column'
+                              },
+                              title: {
+                                 text: '各年齡層偏好商品'
+                              },
+                              colors: ['#CCEBF9', '#FFD3B4', '#FBCE8A','#A4CDFE','#60A3F1'],
+                              credits:{
+                              enabled:false
+                              },
+                              exporting: {
+                              enabled:false
+                              },
+                              xAxis: {
+                                 categories: [
+                                    '20歲以下',
+                                    '21-30歲',
+                                    '31-40歲',
+                                    '41-50歲',
+                                    '51-60歲',
+                                    '60歲以上'
+                                 ],
+                                 crosshair: true
+                              },
+                              yAxis: {
+                                 min: 0,
+                                 title: {
+                                    text: '人數'
+                                 }
+                              },
+                              tooltip: {
+                                 headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                                 pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                                    '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+                                 footerFormat: '</table>',
+                                 shared: true,
+                                 useHTML: true
+                              },
+                              plotOptions: {
+                                 column: {
+                                    pointPadding: 0.2,
+                                    borderWidth: 0
+                                 }
+                              },
+                              series: [{
+                                 name: '男',
+                                 data: [9, 21, 36, 29, 14, 6]
+      
+                              }, {
+                                 name: '女',
+                                 data: [8, 13, 44, 49, 22, 5]
+      
+                              }]
+                              });
+                            </script>
+                        </div>
+                    </li>
+                    <li class="perright">
+                        <input type="radio" name="check" id="active5"><label for="active5">海鮮</label>
+                        <div>
+                           <figure class="highcharts-figure5">
+                              <div id="container9"></div>
+                            </figure>
+                            <script>
+                              Highcharts.chart('container9', {
+                              chart: {
+                                 type: 'column'
+                              },
+                              title: {
+                                 text: '各年齡層偏好商品'
+                              },
+                              colors: ['#CCEBF9', '#FFD3B4', '#FBCE8A','#A4CDFE','#60A3F1'],
+                              credits:{
+                              enabled:false
+                              },
+                              exporting: {
+                              enabled:false
+                              },
+                              xAxis: {
+                                 categories: [
+                                    '20歲以下',
+                                    '21-30歲',
+                                    '31-40歲',
+                                    '41-50歲',
+                                    '51-60歲',
+                                    '60歲以上'
+                                 ],
+                                 crosshair: true
+                              },
+                              yAxis: {
+                                 min: 0,
+                                 title: {
+                                    text: '人數'
+                                 }
+                              },
+                              tooltip: {
+                                 headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                                 pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                                    '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+                                 footerFormat: '</table>',
+                                 shared: true,
+                                 useHTML: true
+                              },
+                              plotOptions: {
+                                 column: {
+                                    pointPadding: 0.2,
+                                    borderWidth: 0
+                                 }
+                              },
+                              series: [{
+                                 name: '男',
+                                 data: [3, 12, 26, 29, 24, 8]
+      
+                              }, {
+                                 name: '女',
+                                 data: [5, 15, 34, 40, 42, 7]
+      
+                              }]
+                              });
+                            </script>
+                        </div>
+                  </li>
+                  <li class="perright">
+                     <input type="radio" name="check" id="active6"><label for="active6">肉</label>
+                     <div>
+                        <figure class="highcharts-figure5">
+                           <div id="container10"></div>
+                         </figure>
+                         <script>
+                           Highcharts.chart('container10', {
+                           chart: {
+                              type: 'column'
+                           },
+                           title: {
+                              text: '各年齡層偏好商品'
+                           },
+                           colors: ['#CCEBF9', '#FFD3B4', '#FBCE8A','#A4CDFE','#60A3F1'],
+                           credits:{
+                           enabled:false
+                           },
+                           exporting: {
+                           enabled:false
+                           },
+                           xAxis: {
+                              categories: [
+                                 '20歲以下',
+                                 '21-30歲',
+                                 '31-40歲',
+                                 '41-50歲',
+                                 '51-60歲',
+                                 '60歲以上'
+                              ],
+                              crosshair: true
+                           },
+                           yAxis: {
+                              min: 0,
+                              title: {
+                                 text: '人數'
+                              }
+                           },
+                           tooltip: {
+                              headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                              pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                                 '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+                              footerFormat: '</table>',
+                              shared: true,
+                              useHTML: true
+                           },
+                           plotOptions: {
+                              column: {
+                                 pointPadding: 0.2,
+                                 borderWidth: 0
+                              }
+                           },
+                           series: [{
+                              name: '男',
+                              data: [10, 23, 46, 39, 24, 12]
+   
+                           }, {
+                              name: '女',
+                              data: [12, 33, 54, 49, 62, 16]
+   
+                           }]
+                           });
+                         </script>
+                     </div>
+                 </li>
+                 <li class="perright">
+                  <input type="radio" name="check" id="active7"><label for="active7">其他</label>
+                  <div>
+                     <figure class="highcharts-figure5">
+                        <div id="container11"></div>
+                      </figure>
+                      <script>
+                        Highcharts.chart('container11', {
+                        chart: {
+                           type: 'column'
+                        },
+                        title: {
+                           text: '各年齡層偏好商品'
+                        },
+                        colors: ['#CCEBF9', '#FFD3B4', '#FBCE8A','#A4CDFE','#60A3F1'],
+                        credits:{
+                        enabled:false
+                        },
+                        exporting: {
+                        enabled:false
+                        },
+                        xAxis: {
+                           categories: [
+                              '20歲以下',
+                              '21-30歲',
+                              '31-40歲',
+                              '41-50歲',
+                              '51-60歲',
+                              '60歲以上'
+                           ],
+                           crosshair: true
+                        },
+                        yAxis: {
+                           min: 0,
+                           title: {
+                              text: '人數'
+                           }
+                        },
+                        tooltip: {
+                           headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                           pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                              '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+                           footerFormat: '</table>',
+                           shared: true,
+                           useHTML: true
+                        },
+                        plotOptions: {
+                           column: {
+                              pointPadding: 0.2,
+                              borderWidth: 0
+                           }
+                        },
+                        series: [{
+                           name: '男',
+                           data: [20, 31, 36, 19, 14, 8]
+
+                        }, {
+                           name: '女',
+                           data: [32, 43, 34, 39, 22, 13]
+
+                        }]
+                        });
+                      </script>
+                  </div>
+              </li>
+                      </ul>
+            </div>
+            </div>
+            </div>
+
+<!--footer-->
+<div id="footer">
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+            <div class="col-xs-6 col-md-4">
+              <h6>關於我們</h6>
+              <ul>
+                <li>
+                    <a href="./aboutus.html"><i class="fas fa-utensils"></i> 關於Miss覓食</a>
+                </li>
+            </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-4">
+                <h6>與我們合作</h6>
+                <ul>
+                  <li>
+                     <a href="https://forms.gle/DbVi9V12Nv5LKoZ58"><i class="fas fa-user-plus"></i> 商家合作表單</a>
+                 </li>
+                 <li>
+                   <a href="https://forms.gle/GcfpQxwjVro9oQhg9"><i class="fas fa-user-plus"></i> 福利機構合作表單</a>
+                 </li>
+                </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-4">
+              <h6>聯絡我們</h6>
+              <ul>
+                <li>
+                    <a href="#"><i class="fas fa-phone-alt"></i> 電話:02-29012345</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-envelope"></i> 信箱:abc123@gmail.com</a>
+                </li>
+            </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-4">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fas fa-mobile-alt"></i> APP版</a>
+                        <a href="#"><img src="../images/381407_0.jpg" alt="APP QRcode"></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <br>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">&copy; copyright 2021 by Miss覓食.
+              </p>
+            </div>
+
+          </div>
+        </div>
+        </div>
+  </footer>
+</div>
+  <!-- 返回頂端箭頭 -->
+  <div class="top">
+    <a href="#"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a>
+  </div>
+
+
+</body>
+</html>
