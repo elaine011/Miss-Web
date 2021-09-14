@@ -61,8 +61,8 @@
 
                     <ul id="menu">
                         <a href="./index.html"><li>首頁</li></a>
-                        <a href="./neighbor.html"><li>鄰里共享</li></a>
-                        <a href="./recipe.html"><li>食譜社群</li></a>
+                        <a href="./neighbor.html"><li>共享社群</li></a>
+                        <a href="./recipe.html"><li>食譜</li></a>
                         <a href="./personindex.html"><li>個人介面</li></a>
                         <a href="#"><li>登出</li></a>
                     </ul>
@@ -94,7 +94,7 @@
 					$.each(res.goods, function(idx, val) {
 						//Acquire detailed data according to id
 						if(id == val.id) {
-							var str = "<div class=\"wrap\"><div class=\"product-item\"><img src='" + val.imgUrl + "'/><button id=\"btn\" onclick=\"addtocart()\">加入購物車</button><div class=\"heart\"><a href=\"#\"><i class=\"fas fa-heart fa-2x\"></i></a></div></div><div class=\"info\"><h2>" + val.title + "</h2><p>效期: " + val.term + "</p><s>原價: $" + val.price + "元</s><span> $" + val.discount + "元</span><p>剩餘數量: " + val.remain + "份</p><div class=\"info2\"><p>更多資訊:</p><div class=\"info2-item\"><p>產地:美國</p><p>規格:100g±10</p></div><div class=\"pricebutton\"><ul class=\"counter\"><li id=\"minus\"><input type=\"button\" value=\"-\"/></li><li id=\"countnum\">"+1+"</li><li id=\"plus\"><input type=\"button\" value=\"+\"/></li></ul></div></div></div></div></div>";
+							var str = "<div class=\"wrap\"><div class=\"product-item\"><img src='" + val.imgUrl + "'/><button id=\"btn\" onclick=\"addtocart()\">加入購物車</button><div class=\"heart\"></div></div><div class=\"info\"><h2>" + val.title + "</h2><p>效期: " + val.term + "</p><s>原價: $" + val.price + "元</s><span> $" + val.discount + "元</span><p>剩餘數量: " + val.remain + "份</p><div class=\"info2\"><p>更多資訊:</p><div class=\"info2-item\"><p>產地:美國</p><p>規格:100g±10</p></div><div class=\"pricebutton\"><ul class=\"counter\"><li id=\"minus\"><input type=\"button\" value=\"-\"/></li><li id=\"countnum\">"+1+"</li><li id=\"plus\"><input type=\"button\" value=\"+\"/></li></ul></div></div></div></div></div>";
 						}
 						$('.goodsDeatail').append(str);
 					});
@@ -162,7 +162,7 @@
             <tr>
                 <td><img src="https://img.shop.com/Image/270000/275600/275616/products/lg_1735632476__800x800__.jpg" alt=""></td>
                 <td><img src="https://cdn.cybassets.com/media/W1siZiIsIjExMzA2L3Byb2R1Y3RzLzI2MzU2MjQ4L-eUoumKt-mcnOmZjeixrF9jMDIxNTBjYjI0NDVmZGIwZjhlZS5qcGVnIl0sWyJwIiwidGh1bWIiLCI2MDB4NjAwIl1d.jpeg?sha=eea319d7eea0f856" alt=""></td>
-                <td><img src="https://image.azureedge.net/0239680_300g-_S.png" alt=""></td>
+                <td><img src="../img/里肌肉.jpg" alt=""></td>
             </tr>
             <tr>
                 <td><p>冷凍豬瘦肉絞肉</p></td>

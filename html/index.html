@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miss覓食</title>
     <!-- vue -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js' ></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.2.1/vue-router.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.2.1/vue-router.js"></script>
     <!-- jquery -->
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <!-- css -->
@@ -54,8 +54,8 @@
 
                 <ul id="menu">
                     <a href="./index.html"><li>首頁</li></a>
-                    <a href="./neighbor.html"><li>鄰里共享</li></a>
-                    <a href="./recipe.html"><li>食譜社群</li></a>
+                    <a href="./neighbor.html"><li>共享社群</li></a>
+                    <a href="./recipe.html"><li>食譜</li></a>
                     <a href="./personindex.html"><li>個人介面</li></a>
                     <a href="#"><li>登出</li></a>
                 </ul>
@@ -180,6 +180,14 @@
 
 		</script>
 
+        <!-- 商品欄位測試 -->
+        <div class="product_try">
+            <ul id="trytry">
+                <li id="try_name"></li>
+                <li id="try_price"></li>
+            </ul>
+        </div>
+
         <!-- Site footer -->
         <footer class="site-footer">
             <div class="container">
@@ -254,13 +262,13 @@
     <script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
-        apiKey: "AIzaSyBzChAKyehauW4FXCk4DL8jRqtADWquNLA",
-        authDomain: "webtest-b833f.firebaseapp.com",
-        databaseURL: "https://webtest-b833f-default-rtdb.firebaseio.com",
-        projectId: "webtest-b833f",
-        storageBucket: "webtest-b833f.appspot.com",
-        messagingSenderId: "973102202097",
-        appId: "1:973102202097:web:cb78dfd5682687b519fd50"
+        apiKey: "AIzaSyDxT-OAmrrrLwVyqBrUZuVchk5KiINWP5s",
+        authDomain: "food-2fcf4.firebaseapp.com",
+        databaseURL: "https://food-2fcf4-default-rtdb.firebaseio.com",
+        projectId: "food-2fcf4",
+        storageBucket: "food-2fcf4.appspot.com",
+        messagingSenderId: "801914060441",
+        appId: "1:801914060441:web:291d6b957585b577618208"
     };
 
     // Initialize Firebase
@@ -289,20 +297,11 @@
 
     // window.onload(FetchAllData());
 
-    // way2
-    // var firebaseRef=firebase.database().ref("goods");
-    // firebaseRef.once("value", function(snapshot){
-    //     snapshot.forEach(function(element){
-    //         document.querySelector('#lp_li_name').innerHTML +=`
-    //             <p>${element.val()}</p>
-    //         `
-    //     });
-    // })
 
     // way3
     database=firebase.database();
 
-    var ref=database.ref('goods');
+    var ref=database.ref('store_product');
     ref.on('value', gotData, errData);
 
     function gotData(data){
@@ -312,14 +311,23 @@
         console.log(keys);
         for(var i=0;i<keys.length;i++){
             var k=keys[i];
-            var title=goods[k].title;
-            console.log(title);
-            // var name=createElement('p');
-            // name.parent('goodsname');
+            var name=goods[k].name;
+            console.log(name);
             
+            var price=goods[k].price;
+            console.log(price);
+
+            // var name1=document.getElementById('trytry').append("<p>" + name + "</p><p> " + price + "</p><br>");
+            
+            // $("#lp_li_name").append("<p>" + name + "</p><p> $" + price + "</p><br>");
+
+            // $("#lp_li_name").append("<p>" + name + "</p>");
+            // $("#lp_li_price").append("<p> $" + price + "</p>");
         }
-        
     }
+
+    window.onload(gotData());
+
     function errData(data){
         console.log('Error!');
         console.log(err);

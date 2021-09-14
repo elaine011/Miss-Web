@@ -7,14 +7,14 @@ let app = new Vue({
             id:'1',
             name:'牛肉片',
             imgUrl:'https://s.yimg.com/zp/images/4C1E80B8803447128535D7B954E6514DBD1EABFF',
-            price:'699',
+            price:'200',
             count:'1'
         },
         {
           id:'2',
           name:'冷凍豬瘦肉絞肉',
           imgUrl:'https://img.shop.com/Image/270000/275600/275616/products/lg_1735632476__800x800__.jpg',
-          price:'80',
+          price:'60',
           count:'1'
       }
       ],

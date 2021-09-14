@@ -51,7 +51,7 @@
 		},
 		{
 			"id": 6,
-			"imgUrl":"https://image.azureedge.net/0239680_300g-_S.png",
+			"imgUrl":"../img/里肌肉.jpg",
 			"price": "100",
 			"discount": "80",
 			"title": "冷藏雞里肌肉",
@@ -401,7 +401,7 @@
 		},
 		{
 			"id": 41,
-			"imgUrl":"../img/中華水果豆花.jpeg",
+			"imgUrl":"../img/中華豆花.jpeg",
 			"price": "40",
 			"discount": "36",
 			"title": "中華水果豆花",

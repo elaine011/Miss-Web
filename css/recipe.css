@@ -358,7 +358,27 @@ div.center {
 .copyright-text {
   margin: 0;
 }
-
+/* 外接食譜網站 */
+.other-recipe {
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  width: 80px;
+  height: 40px;
+}
+.other-recipe button {
+  background-color: #f3be70;
+  border-color: white;
+  padding: 7px;
+  border-radius: 20px;
+}
+.other-recipe a {
+  text-decoration: none;
+  color: white;
+}
+.other-recipe i:hover {
+  color: #fac87ec9;
+}
 /* 返回頂端箭頭 */
 .top {
   position: fixed;
