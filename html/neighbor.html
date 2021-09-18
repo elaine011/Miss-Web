@@ -1,50 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
     <title>Miss覓食</title>
     <!-- vue -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js'></script>
     <!-- jquery -->
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <!-- css -->
-    <link rel="stylesheet" href="../css/neighbor.css">
+    <link
+        rel="stylesheet"
+        href="../css/neighbor.css"
+    >
     <!-- top view -->
-    <link rel="shortcut icon" href="../img/Miss 覓食 logo.png">
-    <link rel="bookmark" href="../img/Miss 覓食 logo.png">
+    <link
+        rel="shortcut icon"
+        href="../img/Miss 覓食 logo.png"
+    >
+    <link
+        rel="bookmark"
+        href="../img/Miss 覓食 logo.png"
+    >
     <!-- reset web -->
-    <link rel="resetcss" href="../css/reset.css">
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://stackpath.Bootstrapcdn.com/Bootstrap/4.3.1/css/Bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <!-- Font awesome -->
-     <script src="https://kit.fontawesome.com/a828d3f0db.js" crossorigin="anonymous"></script>
-     <!-- google font -->
-     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+    <link
+        rel="resetcss"
+        href="../css/reset.css"
+    >
+    <!-- Bootstrap CSS -->
+    <link
+        rel="stylesheet"
+        href="https://stackpath.Bootstrapcdn.com/Bootstrap/4.3.1/css/Bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"
+    >
+    <!-- Font awesome -->
+    <script
+        src="https://kit.fontawesome.com/a828d3f0db.js"
+        crossorigin="anonymous"
+    ></script>
+    <!-- google font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap"
+        rel="stylesheet"
+    >
 </head>
+
 <body style="background-color: #fef7e6;">
 
     <div id="app">
-    <!-- header -->
-    <div class="header">
-        <!-- logo+文字 +購物車+登入-->
-        <div class="logo">
-            <img src="../img/Miss 覓食 logo.png" alt="Miss覓食">
-            <h1>
-                Miss覓食
-            </h1>
-            <a href="./alllogin.html">Hi~inin</a>
-            <a href="./shopcart.html"><i class="fas fa-shopping-cart"></i></a>          
-            <!-- 搜尋框 -->
-            <div class="search">
-                <button class="search-btn"><i class="fas fa-search"></i></button>
-                <input class="searchbar" type="text" name="search" id="search" placeholder="我想要找...">
+        <!-- header -->
+        <div class="header">
+            <!-- logo+文字 +購物車+登入-->
+            <div class="logo">
+                <img
+                    src="../img/Miss 覓食 logo.png"
+                    alt="Miss覓食"
+                >
+                <h1>
+                    Miss覓食
+                </h1>
+                <a href="./alllogin.html">Hi~inin</a>
+                <a href="./shopcart.html"><i class="fas fa-shopping-cart"></i></a>
+                <!-- 搜尋框 -->
+                <div class="search">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <input
+                        class="searchbar"
+                        type="text"
+                        name="search"
+                        id="search"
+                        placeholder="我想要找..."
+                    >
+                </div>
             </div>
-        </div>
 
-        
+
             <!-- 漢堡選單 -->
             <nav role="navigation">
                 <div id="menuToggle">
@@ -54,61 +97,104 @@
                     <span></span>
 
                     <ul id="menu">
-                        <a href="./index.html"><li>首頁</li></a>
-                        <a href="./neighbor.html"><li>共享社群</li></a>
-                        <a href="./recipe.html"><li>食譜</li></a>
-                        <a href="./personindex.html"><li>個人介面</li></a>
-                        <a href="#"><li>登出</li></a>
+                        <a href="./index.html">
+                            <li>首頁</li>
+                        </a>
+                        <a href="./neighbor.html">
+                            <li>共享社群</li>
+                        </a>
+                        <a href="./recipe.html">
+                            <li>食譜</li>
+                        </a>
+                        <a href="./personindex.html">
+                            <li>個人介面</li>
+                        </a>
+                        <a href="#">
+                            <li>登出</li>
+                        </a>
                     </ul>
                 </div>
             </nav>
 
-        <!-- 分類導覽列 -->
-        <nav>
-            <ul>
-                <li v-on:click="filter=false">
-                    <a href="./neighbor.html">全部</a>
-                </li>
-                <!-- <li v-on:click="filter='生活用品'">
+            <!-- 分類導覽列 -->
+            <nav>
+                <ul>
+                    <li v-on:click="filter=false">
+                        <a href="./neighbor.html">全部</a>
+                    </li>
+                    <!-- <li v-on:click="filter='生活用品'">
                     <a href="./neighbornecessities.html">生活用品</a>
                 </li> -->
-                <li v-on:click="filter='零嘴'">
-                    <a href="./neighborsnacks.html">零嘴</a>
-                </li>
-                <li v-on:click="filter='生鮮食品'">
-                    <a href="./neighborfreshfood.html">生鮮食品</a>
-                </li>
-                <li v-on:click="filter='其他'">
-                    <a href="./neighborothers.html">其他</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="container">
-        <!-- 廣告欄位 -->
-        <div class="banner">
-            <div id="list" style="left:0px">
-                <img src="../img/廣告圖4U-unsplash.jpg" alt="廣告欄位1">
-                <img src="../img/AD2 (1).jpg" alt="廣告欄位2">
-                <img src="../img/AD2 (2).jpg" alt="廣告欄位3">
-                <img src="../img/AD2 (3).jpg" alt="廣告欄位4">
-                <img src="../img/AD2 (4).jpg" alt="廣告欄位5">
-                <img src="../img/AD2 (6).jpg" alt="廣告欄位6">
-            </div>
-            <div id="buttons">
-                <span index="1" class="on"></span>  
-                <span index="2"></span>  
-                <span index="3"></span>  
-                <span index="4"></span>  
-                <span index="5"></span>  
-                <span index="6"></span>  
-            </div>
-            <a href="javascript:;" class="arrow" id="prev"><</a>  
-            <a href="javascript:;" class="arrow" id="next">></a> 
+                    <li v-on:click="filter='零嘴'">
+                        <a href="./neighborsnacks.html">零嘴</a>
+                    </li>
+                    <li v-on:click="filter='生鮮食品'">
+                        <a href="./neighborfreshfood.html">生鮮食品</a>
+                    </li>
+                    <li v-on:click="filter='其他'">
+                        <a href="./neighborothers.html">其他</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
 
-        <!-- 推薦商品
+        <div class="container">
+            <!-- 廣告欄位 -->
+            <div class="banner">
+                <div
+                    id="list"
+                    style="left:0px"
+                >
+                    <img
+                        src="../img/廣告圖4U-unsplash.jpg"
+                        alt="廣告欄位1"
+                    >
+                    <img
+                        src="../img/AD2 (1).jpg"
+                        alt="廣告欄位2"
+                    >
+                    <img
+                        src="../img/AD2 (2).jpg"
+                        alt="廣告欄位3"
+                    >
+                    <img
+                        src="../img/AD2 (3).jpg"
+                        alt="廣告欄位4"
+                    >
+                    <img
+                        src="../img/AD2 (4).jpg"
+                        alt="廣告欄位5"
+                    >
+                    <img
+                        src="../img/AD2 (6).jpg"
+                        alt="廣告欄位6"
+                    >
+                </div>
+                <div id="buttons">
+                    <span
+                        index="1"
+                        class="on"
+                    ></span>
+                    <span index="2"></span>
+                    <span index="3"></span>
+                    <span index="4"></span>
+                    <span index="5"></span>
+                    <span index="6"></span>
+                </div>
+                <a
+                    href="javascript:;"
+                    class="arrow"
+                    id="prev"
+                >
+                    << /a>
+                        <a
+                            href="javascript:;"
+                            class="arrow"
+                            id="next"
+                        >></a>
+            </div>
+
+            <!-- 推薦商品
         <div class="recommand">
             <h3>推薦商品</h3>
             <ul>
@@ -138,107 +224,113 @@
                 </li>
             </ul>
         </div> -->
-    </div> 
-    
+        </div>
 
-    <!-- 產品欄位 -->
-    <div class="content">
 
-	</div>
-	<script type="text/javascript">
-		$(function() {
-			$.ajax({
-				type: "get",
-				url: "../json/neighbor.json",
-				dataType: "json",
-				success: function(res) {
-					console.log(res.goods)
-					var str = "<ul class='con_ul'>";
-					$.each(res.goods, function(idx, val) {
-						str += "<li class=\"sec_li\"><a href='neighborProduct.html?goodsId=" + val.id + "' class='lp_li_a'><div class='lp_li_imgWrap'><img src='" + val.imgUrl + "'/></div><p class='lp_li_name'>" + val.title + "</p><p class='lp_li_price'>" + '$' + val.price +"</p></a></li>";
-						});
-						str += "</ul>";
-						$('.content').append(str);
-					},
-					error: function(error) {
-						console.log(error)
-					}
-				});
-			})
-		</script>
-        
-    <!-- #app end -->
+        <!-- 產品欄位 -->
+        <div class="content">
+
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $.ajax({
+                    type: "get",
+                    url: "../json/neighbor.json",
+                    dataType: "json",
+                    success: function (res) {
+                        console.log(res.goods)
+                        var str = "<ul class='con_ul'>";
+                        $.each(res.goods, function (idx, val) {
+                            str += "<li class=\"sec_li\"><a href='neighborProduct.html?goodsId=" + val.id + "' class='lp_li_a'><div class='lp_li_imgWrap'><img src='" + val.imgUrl + "'/></div><p class='lp_li_name'>" + val.title + "</p><p class='lp_li_price'>" + '$' + val.price + "</p></a></li>";
+                        });
+                        str += "</ul>";
+                        $('.content').append(str);
+                    },
+                    error: function (error) {
+                        console.log(error)
+                    }
+                });
+            })
+        </script>
+
+        <!-- #app end -->
     </div>
 
     <!-- Site footer -->
-<!--footer-->
-<div id="footer">
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-            <div class="col-xs-6 col-md-4">
-              <h6>關於我們</h6>
-              <ul>
-                <li>
-                    <a href="./aboutus.html"><i class="fas fa-utensils"></i> 關於Miss覓食</a>
-                </li>
-            </ul>
-            </div>
-  
-            <div class="col-xs-6 col-md-4">
-                <h6>與我們合作</h6>
-                <ul>
-                    <li>
-                        <a href="https://forms.gle/DbVi9V12Nv5LKoZ58"><i class="fas fa-user-plus"></i> 商家合作表單</a>
-                    </li>
-                    <li>
-                      <a href="https://forms.gle/GcfpQxwjVro9oQhg9"><i class="fas fa-user-plus"></i> 福利機構合作表單</a>
-                    </li>
-                </ul>
-            </div>
-  
-            <div class="col-xs-6 col-md-4">
-              <h6>聯絡我們</h6>
-              <ul>
-                <li>
-                    <a href="#"><i class="fas fa-phone-alt"></i> 電話:02-29012345</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-envelope"></i> 信箱:abc123@gmail.com</a>
-                </li>
-            </ul>
-            </div>
+    <!--footer-->
+    <div id="footer">
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-md-4">
+                        <h6>關於我們</h6>
+                        <ul>
+                            <li>
+                                <a href="./aboutus.html"><i class="fas fa-utensils"></i> 關於Miss覓食</a>
+                            </li>
+                        </ul>
+                    </div>
 
-            <div class="col-xs-6 col-md-4">
-                <ul>
-                    <li>
-                        <a href="#"><i class="fas fa-mobile-alt"></i> APP版</a>
-                        <a href="#"><img src="../images/381407_0.jpg" alt="APP QRcode"></a>
-                    </li>
-                </ul>
+                    <div class="col-xs-6 col-md-4">
+                        <h6>與我們合作</h6>
+                        <ul>
+                            <li>
+                                <a href="https://forms.gle/DbVi9V12Nv5LKoZ58"><i class="fas fa-user-plus"></i>
+                                    商家合作表單</a>
+                            </li>
+                            <li>
+                                <a href="https://forms.gle/GcfpQxwjVro9oQhg9"><i class="fas fa-user-plus"></i>
+                                    福利機構合作表單</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-6 col-md-4">
+                        <h6>聯絡我們</h6>
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fas fa-phone-alt"></i> 電話:02-29012345</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-envelope"></i> 信箱:abc123@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-6 col-md-4">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fas fa-mobile-alt"></i> APP版</a>
+                                <a href="#"><img
+                                        src="../images/381407_0.jpg"
+                                        alt="APP QRcode"
+                                    ></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <br>
+                <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <p class="copyright-text">&copy; copyright 2021 by Miss覓食.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
+        </footer>
+    </div>
 
-        </div>
-        <br>
-        <hr>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class="copyright-text">&copy; copyright 2021 by Miss覓食.
-              </p>
-            </div>
-
-          </div>
-        </div>
-        </div>
-  </footer>
-</div>
-
-  <!-- 返回頂端箭頭 -->
-  <div class="top">
-    <a href="#"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a>
-  </div>
+    <!-- 返回頂端箭頭 -->
+    <div class="top">
+        <a href="#"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a>
+    </div>
 
 </body>
 <script src="../js/neighbor.js"></script>
+
 </html>

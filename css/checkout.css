@@ -3,11 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
   font-family: "Noto Sans TC", sans-serif;
 }
 /* header  */
 .header {
-  padding: 6px 8px 0px 8px;
+  padding: 6px 0px 0px 0px;
   color: #67755c;
   margin-top: 55px;
 }
@@ -350,6 +351,7 @@
   position: relative;
   z-index: 0;
   margin-top: 20rem;
+  width: 100%;
 }
 .site-footer ul {
   padding-left: 0;
