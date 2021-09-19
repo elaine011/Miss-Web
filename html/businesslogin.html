@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descriotion" content="即期品與物資共享平台">
+    <meta name="robots" content="index,follow">
+    <!--網頁標籤-->
+    <link rel="shortcut icon" href="../images/盈盈ㄉlogo2_last_-removebg-preview (2).png"/>
+      <link rel="bookmark" href="../images/盈盈ㄉlogo2_last_-removebg-preview (2).png"/>
+      <title>Miss覓食</title>
+    <!--字型-->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bandwlogin.css"/>
+    
+    <script src="https://kit.fontawesome.com/71e88eb3c1.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+
+</head>
+<body>
+<div id="mask1">      
+
+<div id="boxes1">
+<div id="dialog1" class="window">
+    <form action="./businessadd.html" class="login">
+        <span>
+            <img  class="logo2" src="../images/logo底修改.png" alt="Miss覓食">
+        </span><br>
+        <span>
+            <p class="logintext2">廠商登入</p>  
+        </span><br>
+        <span>
+            <p class="one">*</p><p class="two">廠商登入前須先填寫</p><a class="four" href="https://forms.gle/DbVi9V12Nv5LKoZ58">註冊表單</a><p class="three">驗證身份，受理後才可進行登入</p>
+        </span>
+        <span>
+            <div class="account2">
+                <i class="far fa-user"></i>
+                <input id="acc1" type="text" placeholder="帳號" name="acc1" minlength="6" maxlength="20" value="" required>
+                
+            </div>
+            <div class="password2">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="密碼" id="pwd1" name="pwd1" minlength="6" maxlength="20" value="" required><i class="fa fa-eye-slash" onclick="hideShowPsw1()" id="eye1"></i>
+                
+                <script type="text/javascript">
+                    var eye1 = document.getElementById("eye1");
+                    var pwd1 = document.getElementById("pwd1");
+
+            function hideShowPsw1(){
+
+                    if (pwd1.type == "password") {
+                        pwd1.type = "text";
+                            eye1.className='fa fa-eye'
+                    }else {
+                        pwd1.type = "password";
+                        eye1.className='fa fa-eye-slash'
+                    }
+            }
+            </script>
+            </div>
+        </span>
+        
+        <span>
+            <div>
+            <input id="bulog" class="loginbutton" name="登入" value="登入" type="button" onclick="check2()"/>
+            </div>
+            <script>
+                $(document).ready(function(){
+                   $("#bulog").click(function(){
+                       if($("#acc1").val()==""){
+                           alert("你尚未填寫帳號");
+                           eval("document.form1['acc1'].focus()");
+                           return false;       
+                       }if($("#pwd1").val()==""){
+                           alert("你尚未填寫密碼");
+                           eval("document.form1['pwd1'].focus()");
+                           return false;    
+                       }if(($("#acc1").val()!="jack")&&($("#pwd1").val()!="0816")){
+                           alert("帳號或密碼輸入錯誤!請再試一次");
+                           return false; 
+                       }if(($("#acc1").val()=="jack")&&($("#pwd1").val()=="0816")){
+                        alert("登入成功!!");
+                        window.location.href="./businessadd.html";
+                       }
+                   })
+                })
+               </script>
+        </span>
+        <span>
+            <div>
+                <a class="forget" href="">忘記密碼?</a>
+                <p class="row">|</p>
+                <a class="register" href="https://forms.gle/DbVi9V12Nv5LKoZ58">申請表單</a>
+            </div>      
+        </span>
+           
+       
+    </form>
+    </div>
+    </div>
+</div> 
+
+      
+</body>
+</html>
