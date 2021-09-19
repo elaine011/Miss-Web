@@ -24,7 +24,7 @@
 
 <div id="boxes1">
 <div id="dialog1" class="window">
-    <form action="./businessadd.html" class="login">
+    <form action="./businessadd.html" class="login" name="login1">
         <span>
             <img  class="logo2" src="../images/logo底修改.png" alt="Miss覓食">
         </span><br>
@@ -67,25 +67,22 @@
             <input id="bulog" class="loginbutton" name="登入" value="登入" type="button" onclick="check2()"/>
             </div>
             <script>
-                $(document).ready(function(){
-                   $("#bulog").click(function(){
-                       if($("#acc1").val()==""){
-                           alert("你尚未填寫帳號");
-                           eval("document.form1['acc1'].focus()");
-                           return false;       
-                       }if($("#pwd1").val()==""){
-                           alert("你尚未填寫密碼");
-                           eval("document.form1['pwd1'].focus()");
-                           return false;    
-                       }if(($("#acc1").val()!="jack")&&($("#pwd1").val()!="0816")){
-                           alert("帳號或密碼輸入錯誤!請再試一次");
-                           return false; 
-                       }if(($("#acc1").val()=="jack")&&($("#pwd1").val()=="0816")){
-                        alert("登入成功!!");
-                        window.location.href="./businessadd.html";
-                       }
-                   })
-                })
+                function check2(){
+                   if(document.login1.acc1.value==""||document.login1.acc1.value==null){
+                       alert("你尚未填寫帳號");
+                       return false;         
+                   }if(document.login1.pwd1.value==""||document.login1.pwd1.value==null){
+                       alert("你尚未填寫密碼");
+                       return false;  
+                   }if(document.login1.acc1.value!="jack"&&document.login1.pwd1.value!="0816"){
+                    alert("帳號或密碼輸入錯誤!請再試一次");
+                       return false;  
+                   }
+                   if(document.login1.acc1.value=="jack"&&document.login1.pwd1.value=="0816"){
+                    alert("登入成功!!");
+                    window.location.href="./businessadd.html";
+                   }
+               }
                </script>
         </span>
         <span>
