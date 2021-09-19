@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descriotion" content="即期品與物資共享平台">
+    <meta name="robots" content="index,follow">
+    <!--網頁標籤-->
+    <link rel="shortcut icon" href="../images/盈盈ㄉlogo2_last_-removebg-preview (2).png"/>
+      <link rel="bookmark" href="../images/盈盈ㄉlogo2_last_-removebg-preview (2).png"/>
+      <title>Miss覓食</title>
+    <!--字型-->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/personlogin.css"/>
+    
+    <script src="https://kit.fontawesome.com/71e88eb3c1.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+
+</head>
+<body>
+<div id="mask1">      
+
+<div id="boxes1">
+<div id="dialog1" class="window">
+<form action="" class="login" name="login1">
+
+    <span>
+        <img  class="logo2" src="../images/logo底修改.png" alt="Miss覓食">
+    </span><br>
+    <span>
+        <p class="logintext2">個人登入</p>  
+    </span><br>
+    <span>
+        <div class="account">
+            <i class="far fa-user"></i>
+            <input id="email" type="email" placeholder="電子信箱" name="email" value="" required>
+            
+        </div>
+        <div class="password">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="密碼" id="pwd" name="pwd" minlength="6" maxlength="20" value="" required><i class="fa fa-eye-slash" onclick="hideShowPsw()" id="eye"></i>
+                
+                <script type="text/javascript">
+                    var eye = document.getElementById("eye");
+                    var pwd = document.getElementById("pwd");
+
+            function hideShowPsw(){
+
+                    if (pwd.type == "password") {
+                        pwd.type = "text";
+                            eye.className='fa fa-eye'
+                    }else {
+                        pwd.type = "password";
+                        eye.className='fa fa-eye-slash'
+                    }
+            }
+            </script>
+        </div>
+    </span>
+    <span>
+        <div>
+        <button id="personlog" class="loginbutton" type="button" onclick="check1()">登入</button>
+        </div>
+        <script>
+            $(document).ready(function(){
+               $("#personlog").click(function(){
+                   if($("#email").val()==""){
+                       alert("你尚未填寫帳號");
+                       eval("document.form1['email'].focus()");       
+                   }else if($("#pwd").val()==""){
+                       alert("你尚未填寫密碼");
+                       eval("document.form1['pwd'].focus()");    
+                   }else{
+                    alert("登入成功!!");
+                    window.location.href="./index.html";
+                   }
+               })
+            })
+           </script>
+    </span>
+    <span>
+        <div>
+            <a class="forget" href="">忘記密碼?</a>
+            <p class="row">|</p>
+            <a class="register" href="./law.html">註冊帳號</a>
+        </div>      
+    </span>
+        <div class="divide">
+            <span class="line"></span>
+            <span style="white-space:pre">   </span><span class="txt">或者</span>
+            <span style="white-space:pre">   </span><span class="line"></span>
+        </div>
+    <span>
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-google-plus"></i></a>
+        </span>
+   
+</form>
+</div>
+</div>
+</div> 
+
+<script>
+    var firebaseConfig = {
+            apiKey: "AIzaSyBzChAKyehauW4FXCk4DL8jRqtADWquNLA",
+            authDomain: "webtest-b833f.firebaseapp.com",
+            databaseURL: "https://webtest-b833f-default-rtdb.firebaseio.com",
+            projectId: "webtest-b833f",
+            storageBucket: "webtest-b833f.appspot.com",
+            messagingSenderId: "973102202097",
+            appId: "1:973102202097:web:cb78dfd5682687b519fd50"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          var database = firebase.database();
+          function personlog(){
+            var email=document.getElementById('email').value;
+            var pwd=document.getElementById('pwd').value;
+            firebase.auth().signInWithEmailAndPassword(email,pwd).then(function(){
+            
+
+                var id=firebase.auth().currentUser.uid;
+                window.location.replace("./questionnaire.html");
+                localStorage.setItem('id',id);
+                alert("log in");
+            }).catch(function(error){
+
+                var errorCode=error.code;
+                var errorMsg=error.message;
+
+            });
+            }
+            </script>          
+</body>
+</html>
