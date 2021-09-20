@@ -212,7 +212,6 @@
   max-width: 80px;
   margin-bottom: 3rem;
   justify-content: center;
-  
 }
 .provide .wrap ul {
   margin-left: 180px;
@@ -221,6 +220,7 @@
   display: inline;
   float: left;
   padding: 20px 100px;
+  max-width: 320px;
 }
 /* 關於我們 */
 .abouts {
