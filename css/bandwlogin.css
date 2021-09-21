@@ -12,7 +12,7 @@ body {
   position: relative;
   display: block;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 3.5rem;
   box-shadow: 0rem 0.5rem 0.9rem rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
