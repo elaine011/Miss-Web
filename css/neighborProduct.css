@@ -397,7 +397,27 @@
 .copyright-text {
   margin: 0;
 }
-
+/* 聊天室總覽 */
+.chatroom {
+  position: fixed;
+  bottom: 50px;
+  right: 6px;
+  width: 80px;
+  height: 40px;
+}
+.chatroom button {
+  background-color: #f3be70;
+  border-color: white;
+  padding: 7px;
+  border-radius: 20px;
+}
+.chatroom a {
+  text-decoration: none;
+  color: white;
+}
+.chatroom i:hover {
+  color: #fac87ec9;
+}
 /* 返回頂端箭頭 */
 .top {
   position: fixed;
