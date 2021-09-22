@@ -17,7 +17,7 @@
     
     <script src="https://kit.fontawesome.com/71e88eb3c1.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 <div id="mask1">      
@@ -85,16 +85,20 @@
                }
                </script>
         </span>
+        </form>
         <span>
             <div>
-                <a class="forget" href="">忘記密碼?</a>
+                <button class="forget" id="demo2">忘記密碼?</button>
                 <p class="row">|</p>
                 <a class="register" href="https://forms.gle/DbVi9V12Nv5LKoZ58">申請表單</a>
-            </div>      
+            </div>
+            <script>
+                document.getElementById("demo2").addEventListener("click",function(){
+                swal("聯絡我們", "電話: (02)2901-2345\n信箱: abc123@gmail.com", "info",{button: "確認"});
+                });
+            </script>
+                   
         </span>
-           
-       
-    </form>
     </div>
     </div>
 </div> 
