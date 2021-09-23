@@ -16,9 +16,16 @@
     <link rel="stylesheet" href="../css/businessorder.css"/>
     <script src="/jquery/jquery-1.11.1.min.js"></script>
     <script src="https://kit.fontawesome.com/71e88eb3c1.js" crossorigin="anonymous"></script>
-    <script>
-        function clearcontent(elementID) {
-            document.getElementById(elementID).innerHTML = "";
+   <script>
+        function clearcontent() {
+            var elem = document.getElementById("clear");
+            var msg = "您確定要取消出貨嗎？";
+        if (confirm(msg)==true){
+            elem.remove();
+            return true;
+        }else{
+            return false;
+        }
         }
     </script>
     
@@ -107,7 +114,7 @@
                                 <p class="total"> $ 260</p>
                                 <hr>
                                 <button id="btn1" class="prepareorder">出貨</button>
-                                <button class="cancleorder"  onclick="clearcontent('clear')">取消出貨</button>
+                                <button class="cancleorder"  onclick="clearcontent()">取消出貨</button>
 
                             </div>
                             
@@ -121,9 +128,26 @@
                     </li>
                     <li class="perright">
                         <input type="radio" name="check" id="active3"><label for="active3">已取消</label>
-                        <div>
-                            
-                        </div>
+                       <div class="oback">
+                            <div class="innercon">
+                                <img class="face1" src="../images/S__7791001.jpg" alt="">
+                                <a href="#" class="facebeside">inin</a>
+                                <p class="time">訂單編號:123456</p>
+                                <hr>
+                                <img class="mach" src="https://s.yimg.com/zp/images/4C1E80B8803447128535D7B954E6514DBD1EABFF" alt="">
+                                <p class="othtext">牛肉片</p>
+                                <p class="price">數量 : 1  $200</p><br>
+                                <img class="mach" src="https://img.shop.com/Image/270000/275600/275616/products/lg_1735632476__800x800__.jpg" alt="">
+                                <p class="othtext">冷凍豬瘦肉絞肉</p>
+                                <p class="price">數量 : 1 $60</p>
+                                <hr>
+                                <i class="fas fa-cart-arrow-down"></i>
+                                <p class="othtext">準備中</p>
+                                <p class="total"> $ 260</p>
+                                <hr>
+                                <p class="total">已取消</p>
+
+                            </div>
                     </li>
                     
                 </ul>
