@@ -48,8 +48,8 @@
 
             <ul id="menu">
                 <a href="./index.html"><li>首頁</li></a>
-                <a href="./neighbor.html"><li>共享社群</li></a>
-                <a href="./recipe.html"><li>食譜</li></a>
+                <a href="./neighbor.html"><li>鄰里共享</li></a>
+                <a href="./recipe.html"><li>食譜社群</li></a>
                 <a href="./personindex.html"><li>個人簡介</li></a>
                 <a href="./alllogin.html"><li>登出</li></a>
             </ul>
@@ -91,7 +91,9 @@
                 <a href="./personindex.html"><i class="far fa-address-book"></i>個人簡介</a>
                 <a href="./persongoods.html"><i class="far fa-plus-square"></i>我的商品</a>
                 <a href="./personorder.html"><i class="far fa-list-alt"></i>購買訂單</a>
+                <!--<a href="./personrecipe.html"><i class="fas fa-utensils"></i>我的食譜</a>-->
                 <a href="./personevaluate.html"><i class="fas fa-star"></i>我的評價</a>
+                <!--<a href="./personlike.html"><i class="far fa-heart"></i>按讚好物</a>-->
             </nav>
         </div>
         </div>
@@ -105,7 +107,7 @@
             <table>
             <tr>
                 <th><i class="fas fa-asterisk"></i>商品名稱:</th>
-                <td><input class="goodsname" type="text" name="goodsname" value="" placeholder="限25字" maxlength="25" required></td>
+                <td><input class="goodsname" type="text" name="name" id="name" value="" placeholder="限25字" maxlength="25" required></td>
             </tr>
             <tr>
                 <th><i class="fas fa-asterisk"></i>商品類別:</th>
@@ -119,7 +121,7 @@
             <tr>
                 <th><i class="fas fa-asterisk"></i>商品效期:</th>
                 <td>
-                    <input class="day" list="daylist" type="date" name="day" id="day" min="0" max="31" placeholder="日" required/>
+                    <input class="day" list="daylist" type="date" name="date" id="date" min="0" max="31" placeholder="日" required/>
                     <datalist id="daylist">
                     </datalist>
                     </td>
@@ -127,7 +129,7 @@
             <tr>
                 <th><i class="fas fa-asterisk"></i>數量:</th>
                 <td>
-                    <input class="amount" type="number" name="amount" id="amount" value="" min="0" required/>    
+                    <input class="amount" type="number" name="quantity" id="quantity" value="" min="0" required/>    
                 </td>
             </tr>
             <tr>
@@ -139,7 +141,7 @@
             </tr>
             <tr>
                 <th><i class="fas fa-asterisk"></i>商品位置:</th>
-                <td><input class="address" type="text" name="address" value="" required> <a href="#"><i class="fas fa-map-marked-alt"></i></a></td>
+                <td><input class="address" type="text" name="address" id="address" value="" required> <a href="#"><i class="fas fa-map-marked-alt"></i></a></td>
             </tr> 
             <tr>
                 <th>上傳圖片:</th>
@@ -167,7 +169,7 @@
             <tr>
                 <th>商品描述:</th>
                 <td>
-                    <textarea class="description" placeholder="限250字" minlength="0" maxlength="250" rows="20" cols="50" ></textarea>
+                    <textarea id="description" class="description" placeholder="限250字" minlength="0" maxlength="250" rows="20" cols="50" ></textarea>
                 </td>
                 
             </tr>
@@ -249,12 +251,13 @@
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
 <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+    https://firebase.google.com/docs/web/setup#available-libraries -->
 
 <script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
+// Your web app's Firebase configuration
+var firebaseConfig = {
     apiKey: "AIzaSyDxT-OAmrrrLwVyqBrUZuVchk5KiINWP5s",
     authDomain: "food-2fcf4.firebaseapp.com",
     databaseURL: "https://food-2fcf4-default-rtdb.firebaseio.com",
@@ -262,20 +265,22 @@
     storageBucket: "food-2fcf4.appspot.com",
     messagingSenderId: "801914060441",
     appId: "1:801914060441:web:291d6b957585b577618208"
-  };
+};
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
   var storeProducts=document.getElementById("ShareProductList");
-  var databaseRef=firebase.database().ref('share_products/');
+  var databaseRef=firebase.database().ref('share/');
+
+         
     
   function insert(){
-        var nameV=document.getElementById("goodsname").value;
-        var dateV=document.getElementById("day").value;
+        var nameV=document.getElementById("name").value;
+        var dateV=document.getElementById("date").value;
         var priceV=document.getElementById("price").value;
-        var quantityV=document.getElementById("amount").value;
+        var quantityV=document.getElementById("quantity").value;
         var descriptionV=document.getElementById("description").value;
-        var ShareProduct=firebase.database().ref().child("share_products").push().key;
+        var ShareProduct=firebase.database().ref().child("share").push().key;
         var data={
             name:nameV,
             date:dateV,
@@ -284,17 +289,17 @@
             description:descriptionV
         }
         var updates={};
-        updates['/share_products/'+ShareProduct]=data;
+        updates['/share/'+ShareProduct]=data;
         firebase.database().ref().update(updates);
 
         alert('商品上架成功!');
         reload_page();
     }
     function update_product(){
-        var nameV=document.getElementById("goodsname").value;
-        var dateV=document.getElementById("day").value;
+        var nameV=document.getElementById("name").value;
+        var dateV=document.getElementById("date").value;
         var priceV=document.getElementById("price").value;
-        var quantityV=document.getElementById("amount").value;
+        var quantityV=document.getElementById("quantity").value;
         var descriptionV=document.getElementById("description").value;
     
         var data={
@@ -305,14 +310,14 @@
             description:descriptionV
         }
         var updates={};
-        updates['/share_products/'+ShareProduct]=data;
+        updates['/share/'+ShareProduct]=data;
         firebase.database().ref.update(updates);
 
         alert('商品更新成功!');
         reload_page();
     }  
     function delete_product(){
-        firebase.database().ref().child('/share_products/').remove();
+        firebase.database().ref().child('/share/').remove();
         alert('商品刪除成功!');
         reload_page();
     }  
