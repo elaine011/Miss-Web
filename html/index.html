@@ -29,20 +29,6 @@
 
     <!-- 首頁header -->
     <div class="header">
-        <!-- logo+文字 +購物車+登入-->
-        <div class="logo">
-            <img src="../img/Miss 覓食 logo.png" alt="Miss覓食">
-            <h1>
-                Miss覓食
-            </h1>
-            <a href="./alllogin.html" id="try_user">Hi~inin</a>
-            <a href="./shopcart.html"><i class="fas fa-shopping-cart"></i></a>          
-            <!-- 搜尋框 -->
-            <div class="search">
-                <button class="search-btn"><i class="fas fa-search"></i></button>
-                <input class="searchbar" type="text" name="search" id="search" placeholder="我想要找...">
-            </div>
-        </div>
 
         <!-- 漢堡選單 -->
         <nav role="navigation">
@@ -62,8 +48,31 @@
             </div>
         </nav>
 
-   
-        <!-- 分類導覽列 -->
+        <!-- logo+文字 -->
+        <div class="logo">
+            <img src="../img/Miss 覓食 logo.png" alt="Miss覓食">
+            <h1>
+                Miss覓食
+            </h1>
+        </div>
+
+        <!-- 購物車+登入 -->
+         <div class="header-wrap">
+            <div class="header-item">
+                <a href="./shopcart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="./alllogin.html">Hi~</a>
+            </div>
+            <div class="header-search">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+                <input class="searchbar" type="text" name="search" id="search" placeholder="我想要找...">
+            </div>
+        </div>
+    </div>
+
+    <!-- 分類導覽列 -->
+    <div class="category">
         <nav>
             <ul>
                 <li class=".filter_link">
@@ -92,7 +101,6 @@
                 </li>
             </ul>
         </nav>
-        
     </div>
 
     <div class="container">
