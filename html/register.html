@@ -140,16 +140,16 @@
             </tr>
             <tr>
                 <td class="topname">設定登入密碼:</td>
-                <td><input id="pwd" class="pwd" type="password" name="pwd" onblur="ppwd()" minlength="6" maxlength="20" placeholder="請輸入密碼" required><i class="far fa-eye-slash" onclick="hideShowPsw()" id="eye"></i></td>
+                <td><input id="pw" class="pw" type="password" name="pw" onblur="ppwd()" minlength="6" maxlength="20" placeholder="請輸入密碼" required><i class="far fa-eye-slash" onclick="hideShowPsw()" id="eye"></i></td>
                 <td><div id="nullpwd"></div></td>
                 <script type="text/javascript">
                     var eye = document.getElementById("eye");
-                    var pwd = document.getElementById("pwd");
+                    var pw = document.getElementById("pw");
 
             function hideShowPsw(){
 
-                    if (pwd.type == "password") {
-                        pwd.type = "text";
+                    if (pw.type == "password") {
+                        pw.type = "text";
                             eye.className='fa fa-eye'
                     }else {
                         pw.type = "password";
@@ -191,32 +191,33 @@
     </div>
     
 <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
 
 
 <script>
     var firebaseConfig = {
-    apiKey: "AIzaSyDxT-OAmrrrLwVyqBrUZuVchk5KiINWP5s",
-    authDomain: "food-2fcf4.firebaseapp.com",
-    databaseURL: "https://food-2fcf4-default-rtdb.firebaseio.com",
-    projectId: "food-2fcf4",
-    storageBucket: "food-2fcf4.appspot.com",
-    messagingSenderId: "801914060441",
-    appId: "1:801914060441:web:291d6b957585b577618208"
-};
+    apiKey: "AIzaSyBzChAKyehauW4FXCk4DL8jRqtADWquNLA",
+    authDomain: "webtest-b833f.firebaseapp.com",
+    databaseURL: "https://webtest-b833f-default-rtdb.firebaseio.com",
+    projectId: "webtest-b833f",
+    storageBucket: "webtest-b833f.appspot.com",
+    messagingSenderId: "973102202097",
+    appId: "1:973102202097:web:cb78dfd5682687b519fd50"
+  };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   var database= firebase.database();
   
   function reg() {
    var email=document.getElementById('email').value;
-   var pwd=document.getElementById('pwd').value;
+   var pw=document.getElementById('pw').value;
    var pw2=document.getElementById('pw2').value;
    var acc=document.getElementById('acc').value;
    var user =firebase.auth().currentUser;
         registerbtn.addEventListener('click', () => {
+        // firebase.auth().languageCode = 'zh-TW'; // 發信模版改中文
         user.sendEmailVerification().then(function(){
           // 驗證信發送完成
           window.alert('驗證信已發送到您的信箱，請查收。')
@@ -227,7 +228,7 @@
         });
       });
     
-    firebase.auth().createUserWithEmailAndPassword(email,pwd).then(function(){
+    firebase.auth().createUserWithEmailAndPassword(email,pw).then(function(){
     alert('請前往信箱驗證!!');
     var id=firebase.auth().currentUser.uid;
     firebase.database().ref('Users/'+id).set({

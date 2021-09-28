@@ -84,7 +84,7 @@ td {
   font-size: 18px;
 }
 .name,
-.pwd,
+.pw,
 .pw2,
 .phone,
 .email {
@@ -133,3 +133,4 @@ td {
 .name {
   margin-top: 8px;
 }
+
