@@ -14,86 +14,24 @@ h2 {
 
 /* header  */
 .header {
-  padding: 6px 8px 0px 8px;
-  color: #67755c;
-  margin-top: 55px;
-}
-.header h1 {
-  font-size: 1.8rem;
-  display: inline;
-  text-align: center;
-  margin-left: 38rem;
-  position: relative;
-  top: 15px;
-}
-
-/* 固定最上方欄位 */
-.header .logo {
-  position: fixed;
   width: 100%;
   background-color: #fef7e6;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10000;
+  display: flex;
+  min-height: 70px;
+  padding: 0.5rem 0px;
+  color: #67755c;
   background-color: #dfd0a8;
-  padding-bottom: 1rem;
+  position: fixed;
+  z-index: 10000;
+  top: 0%;
 }
 
-.header .logo img {
-  height: 5rem;
-  width: 5rem;
-  padding: 15px;
-  vertical-align: middle;
-  display: inline;
-  position: absolute;
-  left: 32rem;
-}
-/* 登入 */
-.header .logo a {
-  float: right;
-  margin-top: 15px;
-  margin-right: 15px;
-  color: #67755c;
-}
-.header .logo :nth-child(3) {
-  width: 75px;
-}
-/* 購物車icon */
-.header .logo :nth-child(4) {
-  width: 15px;
-  padding-right: 0;
-}
-/* 搜尋框 */
-.header .logo .search {
-  float: right;
-  margin-top: 48px;
-  margin-right: -100px;
-}
-.header .logo .search .searchbar {
-  border: 1px solid #fef7e6;
-  background-color: #fef7e6;
-}
-.header .logo .search .search-btn {
-  background-color: #dfd0a8;
-  outline: none;
-  border: 0px solid #fef7e6;
-  cursor: pointer;
-}
-.header .logo .search i {
-  color: #fef7e6;
-}
-.header .logo .search i:hover {
-  color: #ebe5d5;
-}
 /* 漢堡選單 */
 #menuToggle {
   display: block;
   position: relative;
-  top: 26px;
   top: 30px;
   left: 10px;
-  z-index: 1;
   z-index: 10000;
   -webkit-user-select: none;
   user-select: none;
@@ -117,7 +55,6 @@ h2 {
   left: -5px;
   cursor: pointer;
   opacity: 0;
-  z-index: 2;
   z-index: 10001;
   -webkit-touch-callout: none;
 }
@@ -158,13 +95,15 @@ h2 {
   margin: -70px 0 0 -50px;
   padding: 10px 50px;
   padding-top: 100px;
-  padding-left: 50px;
+  padding-left: 80px;
   background-image: linear-gradient(0deg, #fef7e6, #dfd0a8);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
+
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
+
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 #menu li {
@@ -175,9 +114,99 @@ h2 {
   transform: none;
 }
 
+.logo {
+  display: flex;
+  width: 50%;
+  margin-left: 40%;
+}
+.logo img {
+  max-height: 3.5rem;
+}
+.logo h1 {
+  margin-left: 1rem;
+}
+
+.header-wrap {
+  float: right;
+  margin-right: 1rem;
+}
+.header-wrap a {
+  color: #67755c;
+  text-decoration: none;
+}
+.header-wrap a:hover {
+  color: #000;
+}
+.header-item i {
+  padding-right: 0.5rem;
+}
+.header-search {
+  display: flex;
+  margin-top: 0.5rem;
+}
+.header-search input {
+  width: 8rem;
+}
+.searchbar {
+  border: 1px solid #fef7e6;
+  background-color: #fef7e6;
+}
+.search-btn {
+  background-color: #dfd0a8;
+  outline: none;
+  border: 0px solid #fef7e6;
+  cursor: pointer;
+}
+.header-search i {
+  color: #fef7e6;
+  padding-right: 5px;
+}
+.header-search i:hover {
+  color: #ebe5d5;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    margin-left: 35%;
+    width: 65%;
+  }
+  .header-wrap {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 374px) and (max-width: 767px) {
+  .logo {
+    margin-left: 20%;
+    width: 80%;
+  }
+  .logo h1 {
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+  }
+  .header-search input {
+    width: 4rem;
+  }
+}
+@media screen and (min-width: 319px) and (max-width: 373px) {
+  .logo {
+    margin-left: 18%;
+    width: 82%;
+  }
+  .logo img {
+    max-height: 2.5rem;
+    padding-top: 0.5rem;
+  }
+  .logo h1 {
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+  }
+  .header-search input {
+    width: 3.5rem;
+  }
+}
 /*左側選單*/
 .facephoto {
-  margin: 3rem 5rem 1rem 5.2rem;
+  margin: 0.5rem 5rem 1rem 5.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,7 +276,7 @@ div h2 {
   font-weight: 600;
   font-size: 2rem;
   color: #000;
-  margin: 50px 100px 0px 300px;
+  margin: 7rem 100px 0px 300px;
 }
 .content th {
   background-color: white;
