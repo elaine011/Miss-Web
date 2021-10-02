@@ -27,58 +27,64 @@
 <body style="background-color: #fef7e6;">
 
     <div id="app">
-    <!-- header -->
+    <!-- 首頁header -->
     <div class="header">
-        <!-- logo+文字 +購物車+登入-->
+
+        <!-- 漢堡選單 -->
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <a href="./index.html"><li>首頁</li></a>
+                    <a href="./neighbor.html"><li>共享社群</li></a>
+                    <a href="./recipe.html"><li>食譜</li></a>
+                    <a href="./personindex.html"><li>個人介面</li></a>
+                    <a href="./alllogin.html"><li>登出</li></a>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- logo+文字 -->
         <div class="logo">
             <img src="../img/Miss 覓食 logo.png" alt="Miss覓食">
             <h1>
                 Miss覓食
             </h1>
-            <a href="./alllogin.html">Hi~inin</a>
-            <a href="./shopcart.html"><i class="fas fa-shopping-cart"></i></a>          
-            <!-- 搜尋框 -->
-            <div class="search">
+        </div>
+
+        <!-- 購物車+登入 -->
+         <div class="header-wrap">
+            <div class="header-item">
+                <a href="./shopcart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="./alllogin.html">Hi~</a>
+            </div>
+            <div class="header-search">
                 <button class="search-btn"><i class="fas fa-search"></i></button>
                 <input class="searchbar" type="text" name="search" id="search" placeholder="我想要找...">
             </div>
         </div>
+    </div>
 
-        
-            <!-- 漢堡選單 -->
-            <nav role="navigation">
-                <div id="menuToggle">
-                    <input type="checkbox" />
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                    <ul id="menu">
-                        <a href="./index.html"><li>首頁</li></a>
-                        <a href="./neighbor.html"><li>共享社群</li></a>
-                        <a href="./recipe.html"><li>食譜</li></a>
-                        <a href="./personindex.html"><li>個人介面</li></a>
-                        <a href="./alllogin.html"><li>登出</li></a>
-                    </ul>
-                </div>
-            </nav>
-
-        <!-- 分類導覽列 -->
+    <!-- 分類導覽列 -->
+    <div class="category">
         <nav>
             <ul>
-                <li v-on:click="filter=false">
+                <li class=".filter_link">
                     <a href="./neighbor.html">全部</a>
                 </li>
-                <!-- <li v-on:click="filter='生活用品'">
-                    <a href="./neighbornecessities.html">生活用品</a>
-                </li> -->
-                <li v-on:click="filter='零嘴'">
+                <li class=".filter_link">
                     <a href="./neighborsnacks.html">零嘴</a>
                 </li>
-                <li v-on:click="filter='生鮮食品'">
+                <li class=".filter_link">
                     <a href="./neighborfreshfood.html">生鮮食品</a>
                 </li>
-                <li v-on:click="filter='其他'">
+                <li class=".filter_link">
                     <a href="./neighborothers.html">其他</a>
                 </li>
             </ul>

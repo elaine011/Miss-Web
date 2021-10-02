@@ -27,22 +27,8 @@
 <body style="background-color: #fef7e6;">
 
     <div id="app">
-    <!-- 首頁header -->
-    <div class="header">
-        <!-- logo+文字 +購物車+登入-->
-        <div class="logo">
-            <img src="../img/Miss 覓食 logo.png" alt="Miss覓食">
-            <h1>
-                Miss覓食
-            </h1>
-            <a href="./alllogin.html">Hi~inin</a>
-            <a href="./shopcart.html"><i class="fas fa-shopping-cart"></i></a>          
-            <!-- 搜尋框 -->
-            <div class="search">
-                <button class="search-btn"><i class="fas fa-search"></i></button>
-                <input class="searchbar" type="text" name="search" id="search" placeholder="我想要找...">
-            </div>
-        </div>
+      <!-- 首頁header -->
+      <div class="header">
 
         <!-- 漢堡選單 -->
         <nav role="navigation">
@@ -62,39 +48,60 @@
             </div>
         </nav>
 
+        <!-- logo+文字 -->
+        <div class="logo">
+            <img src="../img/Miss 覓食 logo.png" alt="Miss覓食">
+            <h1>
+                Miss覓食
+            </h1>
+        </div>
 
-        <!-- 分類導覽列 -->
+        <!-- 購物車+登入 -->
+         <div class="header-wrap">
+            <div class="header-item">
+                <a href="./shopcart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="./alllogin.html">Hi~</a>
+            </div>
+            <div class="header-search">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+                <input class="searchbar" type="text" name="search" id="search" placeholder="我想要找...">
+            </div>
+        </div>
+    </div>
+
+    <!-- 分類導覽列 -->
+    <div class="category">
         <nav>
             <ul>
-                <li v-on:click="filter=false">
+                <li class=".filter_link">
                     <a href="./recipe.html">全部 </a>
                 </li>
-                <li v-on:click="filter='肉'">
+                <li class=".filter_link">
                     <a href="./recipemeat.html">肉  </a>
                 </li>
-                <li v-on:click="filter='蛋'">
+                <li class=".filter_link">
                     <a href="./recipeegg.html">蛋  </a>
                 </li>
-                <li v-on:click="filter='蔬菜'">
+                <li class=".filter_link">
                     <a href="./recipevegetable.html">蔬菜</a>
                 </li>
-                <li v-on:click="filter='水果'">
+                <li class=".filter_link">
                     <a href="./recipefruit.html">水果</a>
                 </li>
-                <li v-on:click="filter='海鮮'">
+                <li class=".filter_link">
                     <a href="./recipeseafood.html">海鮮</a>
                 </li>
-                <li v-on:click="filter='麵包'">
+                <li class=".filter_link">
                     <a href="./recipebread.html">麵包</a>
                 </li>
-                <li v-on:click="filter='其他'">
+                <li class=".filter_link">
                     <a href="./recipeother.html">其他</a>
                 </li>
             </ul>
         </nav>
-
     </div>
-
     <!-- 食譜 -->
 	<div class="content">
 

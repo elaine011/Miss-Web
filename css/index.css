@@ -127,6 +127,7 @@
 }
 .header-wrap a {
   color: #67755c;
+  text-decoration: none;
 }
 .header-wrap a:hover {
   color: #000;
